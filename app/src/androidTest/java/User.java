@@ -3,43 +3,104 @@
 import android.widget.EditText;
 
     public class User {
-        private String name;
-        private String lastName;
-        private String passWord;
-        private String district;
-        public User (String name, String lastName, String passWord, String district){
-            this.name= name;
-            this.lastName=lastName;
-            this.passWord= passWord;
-            this.district= district;
+        private String ID;
+        private boolean approve;
+        private String email;
+        private String fname;
+        private String lname;
+        private String phone;
+        private String team;
+        private String teamName;
+        private String type;
+
+        public User(String ID, boolean approve, String email, String fname, String lname, String phone, String team, String teamName, String type) {
+            this.ID = ID;
+            this.approve = approve;
+            this.email = email;
+            this.fname = fname;
+            this.lname = lname;
+            this.phone = phone;
+            this.team = team;
+            this.teamName = teamName;
+            this.type = type;
         }
-        public User (){
+
+        public User() {
 
         }
-        public void setName(String name){
-            this.name= name;
+
+        public void setID(String ID) {
+            this.ID = ID;
         }
-        public void setLastName(String lastName){
-            this.lastName= lastName;
+
+        public void setApprove(boolean approve) {
+            this.approve = approve;
         }
-        public void setpassWord(String passWord){
-            this.passWord= passWord;
+
+        public void setEmail(String email) {
+            this.email = email;
         }
-        public void setdistrict(String district){
-            this.district= district;
+
+        public void setFname(String fname) {
+            this.fname = fname;
         }
-        public String getName(){
-            return name;
+
+        public void setLname(String lname) {
+            this.lname = lname;
         }
-        public String getLastName(){
-            return lastName;
+
+        public void setPhone(String phone) {
+            this.phone = phone;
         }
-        public String getpassWord(){
-            return passWord;
+
+        public void setTeam(String team) {
+            this.team = team;
         }
-        public String getdistrict(){
-            return district;
+
+        public void setTeamName(String teamName) {
+            this.teamName = teamName;
         }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+
+        public String getID() {
+            return ID;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public String getFname() {
+            return fname;
+        }
+
+        public String getLname() {
+            return lname;
+        }
+
+        public String getPhone() {
+            return phone;
+        }
+
+        public String getTeam() {
+            return team;
+        }
+
+        public String getTeamName() {
+            return teamName;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public boolean isApprove() {
+            return approve;
+        }
+
     }
 
 

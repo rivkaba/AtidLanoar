@@ -1,4 +1,4 @@
-
+package com.rivkaba.atidlanoar;
 
 import android.widget.EditText;
 

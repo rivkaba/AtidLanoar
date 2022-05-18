@@ -47,18 +47,30 @@ public class SignUp extends AppCompatActivity {
         EditText Phone=findViewById(R.id.editPhone);
         String   Team=findViewById(R.id.editPhone).toString();//*************************
         String TeamName=findViewById(R.id.editPhone).toString();//***********
-        EditText Password =findViewById(R.id.editPhone);
         String id=ID.getText().toString();
         String email=Email.getText().toString();
+        String fname=Fname.getText().toString();
         String lname=Lname.getText().toString();
+
+
         String phone=Phone.getText().toString();
 
     //  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;
         Map<String, Object> waitforapproval = new HashMap<>();
         waitforapproval.put("ID",id);
+        waitforapproval.put("approve","false");
         waitforapproval.put("email", email);
+        waitforapproval.put("fname", fname);
         waitforapproval.put("lname", lname);
         waitforapproval.put("phone", phone);
+        waitforapproval.put("team", phone);
+        waitforapproval.put("teamName", phone);
+        waitforapproval.put("type", "students");
+       // uid
+
+
+
+
 
 // Add a new document with a generated ID
         db.collection("waitforapproval")

@@ -34,31 +34,47 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void register(View view) {
-        //Create a new user with a first, middle, and last name
-//        Map<String, Object> user = new HashMap<>();
-//        user.put("first", "Alan");
-//        user.put("middle", "Mathison");
-//        user.put("last", "Turing");
-//        user.put("born", 1912)
+
        EditText ID= findViewById(R.id.editTexID);
         EditText Email=findViewById(R.id.editTextEmail);
         EditText Fname= findViewById(R.id.editTextName);
         EditText Lname=findViewById(R.id.editTextLName);
         EditText Phone=findViewById(R.id.editPhone);
+
+     mAuth.createUserWithEmailAndPassword(Email.getText().toString(), Phone.getText().toString())
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(SignUp.this," בתור התחלה מס' הפלאפון ישמש כסיסמה",Toast.LENGTH_LONG).show();
+                            // Sign in success, upda
+                            // te UI with the signed-in user's information
+
+                        } else {
+                            Toast.makeText(SignUp.this,"ההרשמה נכשלה:)",Toast.LENGTH_LONG).show();
+                            // If sign in fails, display a message to the user.
+
+                        }
+                    }
+                });
+
+
+
         String   Team=findViewById(R.id.editPhone).toString();//*************************
         String TeamName=findViewById(R.id.editPhone).toString();//***********
         String id=ID.getText().toString();
         String email=Email.getText().toString();
         String fname=Fname.getText().toString();
         String lname=Lname.getText().toString();
-
-
         String phone=Phone.getText().toString();
+        String uid= mAuth.getUid();
 
-    //  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;
+       // Toast.makeText(SignUp.this,uid,Toast.LENGTH_LONG).show();
+
+        //  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;
         Map<String, Object> waitforapproval = new HashMap<>();
         waitforapproval.put("ID",id);
-        waitforapproval.put("approve","false");
+        waitforapproval.put("approve",false);
         waitforapproval.put("email", email);
         waitforapproval.put("fname", fname);
         waitforapproval.put("lname", lname);
@@ -66,7 +82,8 @@ public class SignUp extends AppCompatActivity {
         waitforapproval.put("team", phone);
         waitforapproval.put("teamName", phone);
         waitforapproval.put("type", "students");
-       // uid
+        waitforapproval.put("uid", uid);
+
 
 
 
@@ -93,21 +110,5 @@ public class SignUp extends AppCompatActivity {
                 });
 //        EditText email=findViewById(R.id.editTextEmail);
 //        EditText password =findViewById(R.id.editPhone);
-//        mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
-//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if (task.isSuccessful()) {
-//                            Toast.makeText(SignUp.this," בתור התחלה מס' הפלאפון ישמש כסיסמה",Toast.LENGTH_LONG).show();
-//                            // Sign in success, upda
-//                            // te UI with the signed-in user's information
-//
-//                        } else {
-//                            Toast.makeText(SignUp.this,"ההרשמה נכשלה:)",Toast.LENGTH_LONG).show();
-//                            // If sign in fails, display a message to the user.
-//
-//                        }
-//                    }
-//                });
     }
 }

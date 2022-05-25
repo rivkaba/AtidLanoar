@@ -108,7 +108,7 @@ public class SignUp extends AppCompatActivity {
                         Toast.makeText(SignUp.this,"הרשמה נכשלה" ,Toast.LENGTH_LONG).show();
                     }
                 });
-//        EditText email=findViewById(R.id.editTextEmail);
-//        EditText password =findViewById(R.id.editPhone);
+
+
     }
 }

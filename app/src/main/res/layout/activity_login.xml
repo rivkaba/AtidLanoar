@@ -18,7 +18,8 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:textSize="22dp"/>
 
     <TextView
         android:id="@+id/textView"
@@ -28,7 +29,8 @@
         android:text="התחברות"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25dp"/>
 
     <EditText
         android:id="@+id/editPassword"
@@ -40,7 +42,8 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/editEmail"
         app:layout_constraintStart_toStartOf="@+id/editEmail"
-        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/editEmail"
+        android:textSize="22dp"/>
 
     <Button
         android:id="@+id/button16"
@@ -51,7 +54,9 @@
         android:text="כניסה"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editPassword"
+        android:textSize="22dp"
+       />
 
     <Button
         android:id="@+id/button4"
@@ -61,7 +66,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button16" />
+        app:layout_constraintTop_toBottomOf="@+id/button16"
+        android:textSize="22dp"
+ />
 
     <Button
         android:id="@+id/button5"
@@ -71,6 +78,8 @@
         android:text="שכחתי סיסמא"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+
+        android:textSize="22dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

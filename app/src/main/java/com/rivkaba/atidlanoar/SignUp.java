@@ -18,7 +18,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -110,5 +112,30 @@ public class SignUp extends AppCompatActivity {
                 });
 
 
+
     }
+    private void loadTeam(){
+        db.collection("Teams").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                Map<String, Object> team = new HashMap<>();
+                for (DocumentSnapshot doc : task.getResult()) {
+                    if ((doc.getBoolean("old")) == false)
+                        team.put("name", doc.getString("name"));
+
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(SignUp.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
 }
+
+}
+

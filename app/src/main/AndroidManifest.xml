@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtidLanoar">
         <activity
+            android:name=".Opening_questionnaire"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity

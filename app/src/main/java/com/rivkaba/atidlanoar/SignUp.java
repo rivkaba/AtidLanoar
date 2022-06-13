@@ -31,35 +31,39 @@ import java.util.Map;
 public class SignUp extends AppCompatActivity {
     public FirebaseAuth mAuth;
     public FirebaseFirestore db ;
-    public String[] ArrayTeam= new String[] { "רשות מקומית", "עמותה ", "פרטי" };
+    ArrayList<String> team = new ArrayList<String>();
+  //  public String[] ArrayTeam= new String[] { "רשות מקומית", "עמותה ", "פרטי" };
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
-        Spinner dynamicSpinner = (Spinner) findViewById(R.id.team_spinner);
+        Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner);
 
         loadTeam();
+        //$$$$$$$$$$$$$$$$$$$
+
+        //$$$$$$$$$$$$$$$$$$
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
         db.collection("Teams")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                   public String[] ArrayTeamm;
+                 //  public String[] ArrayTeamm;
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             ArrayList<String> team = new ArrayList<String>();
                             for (QueryDocumentSnapshot doc : task.getResult()) {
-                                if ((doc.getBoolean("old")) != true) {
+                            //    if ((doc.getBoolean("old")) != true) {
                                team.add(doc.getString("name"));
-                               Toast.makeText(SignUp.this, doc.getString("name"), Toast.LENGTH_SHORT).show();
+                              // Toast.makeText(SignUp.this, doc.getString("name"), Toast.LENGTH_SHORT).show();
 
+                             //   }
                                 }
-                                }
-                            ArrayTeamm = new String[team.size()];
-                            team.toArray(ArrayTeamm);
+                         //   ArrayTeamm = new String[team.size()];
+                        //    team.toArray(ArrayTeamm);
                         } else {
                                                Toast.makeText(SignUp.this,"Error", Toast.LENGTH_LONG).show();
 
@@ -106,11 +110,11 @@ public class SignUp extends AppCompatActivity {
         //***********************************
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, ArrayTeam);
+                android.R.layout.simple_spinner_item, team);
+   //     adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        teamSpinner.setAdapter(adapter);
 
-        dynamicSpinner.setAdapter(adapter);
-
-        dynamicSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
@@ -168,6 +172,9 @@ public class SignUp extends AppCompatActivity {
                                         @Override
                                         public void onSuccess(DocumentReference documentReference) {
                                             Toast.makeText(SignUp.this, "נרשמת בהצלחה ", Toast.LENGTH_LONG).show();
+                                            //Opening questionnaire
+                                            Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
+//                                          startActivity(intent);
                                         }
 //                                         Intent intent = new Intent(SignUp.this, Student.class);
 //                                          startActivity(intent);

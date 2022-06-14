@@ -174,7 +174,7 @@ public class SignUp extends AppCompatActivity {
                                             Toast.makeText(SignUp.this, "נרשמת בהצלחה ", Toast.LENGTH_LONG).show();
                                             //Opening questionnaire
                                             Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
-//                                          startActivity(intent);
+                                          startActivity(intent);
                                         }
 //                                         Intent intent = new Intent(SignUp.this, Student.class);
 //                                          startActivity(intent);

@@ -24,15 +24,15 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 public class SignUp extends AppCompatActivity {
     public FirebaseAuth mAuth;
-    public FirebaseFirestore db ;
+    public FirebaseFirestore db;
     ArrayList<String> team = new ArrayList<String>();
-  //  public String[] ArrayTeam= new String[] { "רשות מקומית", "עמותה ", "פרטי" };
+
+    //  public String[] ArrayTeam= new String[] { "רשות מקומית", "עמותה ", "פרטי" };
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
@@ -40,40 +40,33 @@ public class SignUp extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner);
 
-        loadTeam();
         //$$$$$$$$$$$$$$$$$$$
-
         //$$$$$$$$$$$$$$$$$$
-
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
         db.collection("Teams")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                 //  public String[] ArrayTeamm;
+                    //  public String[] ArrayTeamm;
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            ArrayList<String> team = new ArrayList<String>();
+
                             for (QueryDocumentSnapshot doc : task.getResult()) {
-                            //    if ((doc.getBoolean("old")) != true) {
-                               team.add(doc.getString("name"));
-                              // Toast.makeText(SignUp.this, doc.getString("name"), Toast.LENGTH_SHORT).show();
-
-                             //   }
-                                }
-                         //   ArrayTeamm = new String[team.size()];
-                        //    team.toArray(ArrayTeamm);
+                                    if ((Boolean.TRUE.equals(doc.getBoolean("old"))) != true) {
+                                team.add(doc.getString("name"));
+                               //  Toast.makeText(SignUp.this, doc.getString("name"), Toast.LENGTH_SHORT).show();
+                                   }
+                            }
+                            //   ArrayTeamm = new String[team.size()];
+                            //    team.toArray(ArrayTeamm);
                         } else {
-                                               Toast.makeText(SignUp.this,"Error", Toast.LENGTH_LONG).show();
-
-                         //   Log.d(TAG, "Error getting documents: ", task.getException());
+                            Toast.makeText(SignUp.this, "Error", Toast.LENGTH_LONG).show();
+                            //   Log.d(TAG, "Error getting documents: ", task.getException());
                         }
                     }
                 });
         //@@@@@@@@@@@@@@@@@@@@@@
         // *********************************************
-
 //        db.collection("Teams").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
 //            public String[] ArrayTeamm;
 //            @Override
@@ -106,14 +99,11 @@ public class SignUp extends AppCompatActivity {
 //                Toast.makeText(SignUp.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
 //            }
 //        });
-
         //***********************************
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, team);
-   //     adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        //     adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         teamSpinner.setAdapter(adapter);
-
         teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
@@ -126,8 +116,8 @@ public class SignUp extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
         });
-
     }
+
     public void register(View view) {
         EditText ID = findViewById(R.id.editTexID);
         EditText Email = findViewById(R.id.editTextEmail);
@@ -141,7 +131,6 @@ public class SignUp extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(SignUp.this, " בתור התחלה מס' הפלאפון ישמש כסיסמה", Toast.LENGTH_LONG).show();
                             // Sign in success, upda
-
                             // te UI with the signed-in user's information
                             //register in waitforapproval
                             String Team = findViewById(R.id.editPhone).toString();//*************************
@@ -174,12 +163,12 @@ public class SignUp extends AppCompatActivity {
                                             Toast.makeText(SignUp.this, "נרשמת בהצלחה ", Toast.LENGTH_LONG).show();
                                             //Opening questionnaire
                                             Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
-                                          startActivity(intent);
+//                                          startActivity(intent);
+                                            startActivity(intent);
                                         }
 //                                         Intent intent = new Intent(SignUp.this, Student.class);
 //                                          startActivity(intent);
 //                                      startActivity(new Intent(SignUp.this,Student.class));
-
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
@@ -187,50 +176,15 @@ public class SignUp extends AppCompatActivity {
                                             Toast.makeText(SignUp.this, "הרשמה נכשלה", Toast.LENGTH_LONG).show();
                                         }
                                     });
-
                         } else {
                             Toast.makeText(SignUp.this, "ההרשמה נכשלה:)", Toast.LENGTH_LONG).show();
                             // If sign in fails, display a message to the user.
                         }
                     }
                 });
-
 //        EditText email=findViewById(R.id.editTextEmail);
 //        EditText password =findViewById(R.id.editPhone);
     }
-   public void loadTeam() {
-//        db.collection("Teams").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//        //    String namee;
-//            @Override
-//           public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                //   Map<String, Object> team = new HashMap<>();
-//
-//
-//               ArrayList<String> team = new ArrayList<String>();
-//       team.add("1");
-//       team.add("2");
-//       team.add("3");
-//
-//
-//              //  for (DocumentSnapshot doc : task.getResult()) {
-//                    //if ((doc.getBoolean("old")) != true) {
-//              //      namee=doc.getString("name");
-//                       // team.add(doc.getString("name"));
-//
-//                  //  }
-//           //    }
-//              ArrayTeam = new String[team.size()];
-//              team.toArray(ArrayTeam);
-//
-//
-//            }
-//       }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Toast.makeText(SignUp.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
 
-    }
-    }
+}

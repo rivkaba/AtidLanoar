@@ -15,24 +15,24 @@ public class Opening_questionnaire extends AppCompatActivity {
         TabHost tabHost=(TabHost) findViewById(R.id.tabHost);
         tabHost.setup();
 //tab1
-        TabHost.TabSpec spec= tabHost.newTabSpec("Tab One");
+        TabHost.TabSpec spec= tabHost.newTabSpec("חלק א'");
         spec.setContent(R.id.tab1);
-        spec.setIndicator("Tab One");
+        spec.setIndicator("חלק א'");
         tabHost.addTab(spec);
         //tab2
-        spec= tabHost.newTabSpec("Tab Two");
+        spec= tabHost.newTabSpec("חלק ב");
         spec.setContent(R.id.tab2);
-        spec.setIndicator("Tab Two");
+        spec.setIndicator("חלק ב");
         tabHost.addTab(spec);
         //tab3
-        spec= tabHost.newTabSpec("Tab Three");
+        spec= tabHost.newTabSpec("חלק ג");
         spec.setContent(R.id.tab3);
-        spec.setIndicator("Tab Three");
+        spec.setIndicator("חלג ג");
         tabHost.addTab(spec);
         //tab4
-        spec= tabHost.newTabSpec("Tab four");
+        spec= tabHost.newTabSpec("חלק ד");
         spec.setContent(R.id.tab4);
-        spec.setIndicator("Tab four");
+        spec.setIndicator("חלק ד");
         tabHost.addTab(spec);
 
 

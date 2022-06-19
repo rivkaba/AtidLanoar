@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Opening_questionnaire">
+    tools:context=".Opening_questionnaire"
+    android:background="@drawable/pi">
 
     <TextView
         android:id="@+id/textView16"
@@ -21,7 +22,9 @@
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="חניכי וחניכות מנהיגות עסקית צעירה בתוכנית עתיד לנוער שלום רב,"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -29,7 +32,9 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="זהו המפגש הראשון בתוכנית, ואנחנו מאחלים לכם בהצלחה! :)"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -37,7 +42,9 @@
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="בפניכם שאלון קצר הנוגע לתכנים השונים בהם תעסקו במהלך השנה. "
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -46,15 +53,19 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="אנא קראו את השאלות וענו בהתאם לתחושותיכם."
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
-     <TextView
+    <TextView
         android:id="@+id/textView21"
         android:layout_width="392dp"
         android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
         android:text="זכרו, השאלון אנונימי ואין תשובות נכונות ולא נכונות. אתם מתבקשים לענות את התשובה הכי נכונה עבורכם."
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
@@ -81,25 +92,87 @@
 
             <TabWidget
                 android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-             />
+                android:layout_width="389dp"
+                android:layout_height="61dp" />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 //דף 1
+
                 <LinearLayout
                     android:id="@+id/tab1"
-                    android:layout_width="match_parent"
+                    android:layout_width="392dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
+
                     <TextView
                         android:id="@+id/textView23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="חלק א'"></TextView>
+                        android:layout_width="366dp"
+                        android:layout_height="35dp"
+                        android:text="חלק א'"
+                        android:textSize="16sp"></TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="171dp"
+                            android:layout_height="match_parent"
+                            android:text=" מגדר*"
+                            android:textSize="16sp"></TextView>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:orientation="horizontal">
+
+                        <Space
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioGroup
+                            android:layout_width="248dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton6"
+                                android:layout_width="122dp"
+                                android:layout_height="wrap_content"
+                                android:text="זכר"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton7"
+                                android:layout_width="118dp"
+                                android:layout_height="match_parent"
+                                android:text="נקבה"
+                                android:textSize="16sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName2"
+                        android:layout_width="198dp"
+                        android:layout_height="60dp"
+                        android:ems="10"
+                        android:hint="אחר"
+                        android:inputType="textPersonName"
+                        android:textSize="16sp" />
+
                 </LinearLayout>
                 //דף 2
                 <LinearLayout
@@ -124,6 +197,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="חלק ג'"></TextView>
+
                 </LinearLayout>
                 //דף 4
                 <LinearLayout

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View view) {
 
-        startActivity(new Intent(MainActivity.this,Opening_questionnaire.class));
+        startActivity(new Intent(MainActivity.this,Login.class));
     }
 
     public void SignUp(View view) {

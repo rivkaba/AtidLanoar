@@ -31,6 +31,7 @@ public class SignUp extends AppCompatActivity {
     public FirebaseAuth mAuth;
     public FirebaseFirestore db;
     ArrayList<String> team = new ArrayList<String>();
+    String teamName;
 
     //  public String[] ArrayTeam= new String[] { "רשות מקומית", "עמותה ", "פרטי" };
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +110,10 @@ public class SignUp extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 Log.v("item", (String) parent.getItemAtPosition(position));
+                Toast.makeText(SignUp.this,(String) parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
+
+                teamName =(String) parent.getItemAtPosition(position);
+
             }
 
             @Override
@@ -134,7 +139,7 @@ public class SignUp extends AppCompatActivity {
                             // te UI with the signed-in user's information
                             //register in waitforapproval
                             String Team = findViewById(R.id.editPhone).toString();//*************************
-                            String TeamName = findViewById(R.id.editPhone).toString();//***********
+
                             String id = ID.getText().toString();
                             String email = Email.getText().toString();
                             String fname = Fname.getText().toString();
@@ -151,7 +156,7 @@ public class SignUp extends AppCompatActivity {
                             waitforapproval.put("lname", lname);
                             waitforapproval.put("phone", phone);
                             waitforapproval.put("team", phone);
-                            waitforapproval.put("teamName", phone);
+                            waitforapproval.put("teamName", teamName);
                             waitforapproval.put("type", "students");
                             waitforapproval.put("uid", uid);
 // Add a new document with a generated ID

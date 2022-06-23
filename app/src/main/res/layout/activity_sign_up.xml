@@ -9,12 +9,16 @@
     android:background="@drawable/pi">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="279dp"
+        android:layout_height="574dp"
+
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -68,7 +72,7 @@
 
             <Spinner
                 android:id="@+id/team_spinner"
-                android:layout_width="404dp"
+                android:layout_width="204dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="24dp"
                 android:textSize="25dp"

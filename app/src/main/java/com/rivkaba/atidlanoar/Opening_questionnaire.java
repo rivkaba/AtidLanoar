@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class Opening_questionnaire extends AppCompatActivity {
@@ -69,11 +70,14 @@ public class Opening_questionnaire extends AppCompatActivity {
         TextView textView4=(TextView) findViewById(R.id.textView4);
         TextView textView5=(TextView) findViewById(R.id.textView5);
         Button questionnaire=(Button) findViewById(R.id.questionnaire);
+        ScrollView scrollView=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire);
         textView1.setVisibility(view.INVISIBLE);
         textView2.setVisibility(view.INVISIBLE);
         textView3.setVisibility(view.INVISIBLE);
         textView4.setVisibility(view.INVISIBLE);
         textView5.setVisibility(view.INVISIBLE);
         questionnaire.setVisibility(view.INVISIBLE);
+        scrollView.setVisibility(view.VISIBLE);
+
     }
 }

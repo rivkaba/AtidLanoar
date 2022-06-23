@@ -89,88 +89,113 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:ignore="OnClick" />
 
-    <!--//    <TextView-->
-    <!--        android:id="@+id/textView22"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="* חובה"-->
-    <!--        android:textSize="19sp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.498"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/button19" />-->
+    <ScrollView
+        android:id="@+id/ScrollViewQuestionnaire"
+        android:layout_width="313dp"
+        android:layout_height="477dp"
+        android:layout_marginTop="100dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!--    <TabHost-->
-    <!--        android:id="@+id/tabHost"-->
-    <!--        android:layout_width="366dp"-->
-    <!--        android:layout_height="200dp"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/textView22">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <!--        <LinearLayout-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:orientation="vertical">-->
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="366dp"
+                android:layout_height="35dp"
+                android:text="חלק א'"
+                android:textSize="16sp"></TextView>
 
-    <!--            <FrameLayout-->
-    <!--                android:id="@android:id/tabcontent"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="match_parent">-->
-    <!--                //דף 1-->
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* חובה"
+                android:textSize="19sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button19" />
 
-    <!--                <LinearLayout-->
-    <!--                    android:id="@+id/tab1"-->
-    <!--                    android:layout_width="407dp"-->
-    <!--                    android:layout_height="407dp"-->
-    <!--                    android:orientation="vertical">-->
+            <!--    <TabHost-->
+            <!--        android:id="@+id/tabHost"-->
+            <!--        android:layout_width="366dp"-->
+            <!--        android:layout_height="200dp"-->
+            <!--        app:layout_constraintStart_toStartOf="parent"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/textView22">-->
+
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:orientation="vertical">-->
+
+            <!--            <FrameLayout-->
+            <!--                android:id="@android:id/tabcontent"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent">-->
+            <!--                //דף 1-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:id="@+id/tab1"-->
+            <!--                    android:layout_width="407dp"-->
+            <!--                    android:layout_height="407dp"-->
+            <!--                    android:orientation="vertical">-->
 
 
-    <!--                    <LinearLayout-->
-    <!--                        android:layout_width="match_parent"-->
-    <!--                        android:layout_height="38dp"-->
-    <!--                        android:orientation="horizontal">-->
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="38dp"-->
+            <!--                        android:orientation="horizontal">-->
 
-    <!--                        <Space-->
-    <!--                            android:layout_width="100dp"-->
-    <!--                            android:layout_height="wrap_content"-->
-    <!--                            android:layout_weight="1" />-->
+            <!--                        <Space-->
+            <!--                            android:layout_width="100dp"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_weight="1" />-->
 
-    <!--                        <RadioGroup-->
-    <!--                            android:layout_width="248dp"-->
-    <!--                            android:layout_height="wrap_content">-->
+            <RadioGroup
+                android:layout_width="248dp"
+                android:layout_height="wrap_content">
 
-    <!--                            <RadioButton-->
-    <!--                                android:id="@+id/radioButton6"-->
-    <!--                                android:layout_width="122dp"-->
-    <!--                                android:layout_height="wrap_content"-->
-    <!--                                android:text="זכר"-->
-    <!--                                android:textSize="16sp"-->
-    <!--                                tools:ignore="TouchTargetSizeCheck" />-->
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:text="זכר"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
 
-    <!--                            <RadioButton-->
-    <!--                                android:id="@+id/radioButton7"-->
-    <!--                                android:layout_width="118dp"-->
-    <!--                                android:layout_height="match_parent"-->
-    <!--                                android:text="נקבה"-->
-    <!--                                android:textSize="16sp" />-->
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="118dp"
+                    android:layout_height="match_parent"
+                    android:text="נקבה"
+                    android:textSize="16sp" />
 
-    <!--                            <TextView-->
-    <!--                                android:id="@+id/textView23"-->
-    <!--                                android:layout_width="366dp"-->
-    <!--                                android:layout_height="35dp"-->
-    <!--                                android:text="חלק א'"-->
-    <!--                                android:textSize="16sp"></TextView>-->
-    <!--                        </RadioGroup>-->
-    <!--                    </LinearLayout>-->
 
-    <!--                    <EditText-->
-    <!--                        android:id="@+id/editTextTextPersonName2"-->
-    <!--                        android:layout_width="198dp"-->
-    <!--                        android:layout_height="60dp"-->
-    <!--                        android:ems="10"-->
-    <!--                        android:hint="אחר"-->
-    <!--                        android:inputType="textPersonName"-->
-    <!--                        android:textSize="16sp" />-->
+                <EditText
+                    android:id="@+id/editTextTextPersonName2"
+                    android:layout_width="198dp"
+                    android:layout_height="60dp"
+                    android:ems="10"
+                    android:hint="אחר"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button20"
+                    android:layout_width="171dp"
+                    android:layout_height="wrap_content"
+                    android:text="חלק ב'" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+
 
     <!--                    <LinearLayout-->
     <!--                        android:layout_width="match_parent"-->

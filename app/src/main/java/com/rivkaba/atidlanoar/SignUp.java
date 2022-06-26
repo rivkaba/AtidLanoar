@@ -33,7 +33,7 @@ public class SignUp extends AppCompatActivity {
     ArrayList<String> team = new ArrayList<String>();
     String teamName;
 
-    //  public String[] ArrayTeam= new String[] { "רשות מקומית", "עמותה ", "פרטי" };
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
@@ -41,8 +41,7 @@ public class SignUp extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner);
 
-        //$$$$$$$$$$$$$$$$$$$
-        //$$$$$$$$$$$$$$$$$$
+
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         db.collection("Teams")
                 .get()

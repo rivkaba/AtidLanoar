@@ -1,20 +1,81 @@
 package com.rivkaba.atidlanoar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
+import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
 
 public class Opening_questionnaire extends AppCompatActivity {
-   // public TextView textView1=(TextView) findViewById(R.id.textVie1);
+    public FirebaseFirestore db;
+    ArrayList<String> team = new ArrayList<String>();
+    private TextView textView;
+    private ProgressBar progressBar;
+    private SeekBar seekBar;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire);
+        db = FirebaseFirestore.getInstance();
+        Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner2);
+        db.collection("Teams")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+
+                            for (QueryDocumentSnapshot doc : task.getResult()) {
+                                if ((Boolean.TRUE.equals(doc.getBoolean("old"))) != true) {
+                                    team.add(doc.getString("name"));
+
+                                }
+                            }
+                        } else {
+                            Toast.makeText(Opening_questionnaire.this, "Error", Toast.LENGTH_LONG).show();
+                            //   Log.d(TAG, "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, team);
+        teamSpinner.setAdapter(adapter);
+        teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                Log.v("item", (String) parent.getItemAtPosition(position));
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
+            }
+        });
 
 //        TabHost tabHost=(TabHost) findViewById(R.id.tabHost);
 //        tabHost.setup();
@@ -59,9 +120,30 @@ public class Opening_questionnaire extends AppCompatActivity {
 //        spec.setContent(R.id.tab4);
 //        spec.setIndicator("חלק ד");
 //        tabHost.addTab(spec);
+        textView = (TextView) findViewById(R.id.textView);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        seekBar = (SeekBar) findViewById(R.id.seekBar);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressBar.setProgress(progress);
+                textView.setText("" + progress);
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
 
 
-    }
+
+        }
 
     public void questionnaire(View view) {
  TextView textView1=(TextView) findViewById(R.id.textVie1);

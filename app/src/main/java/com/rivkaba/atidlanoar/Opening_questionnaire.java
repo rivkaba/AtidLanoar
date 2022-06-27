@@ -28,10 +28,15 @@ public class Opening_questionnaire extends AppCompatActivity {
     public FirebaseFirestore db;
     ArrayList<String> team = new ArrayList<String>();
     private TextView textView;
-    private ProgressBar progressBar;
     private SeekBar seekBar;
 
-
+    private  TextView textView1;
+    private TextView textView2;
+    private TextView textView3;
+    private TextView textView4;
+    private  TextView textView5;
+    private  Button questionnaire;
+    private   ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,13 +150,14 @@ public class Opening_questionnaire extends AppCompatActivity {
         }
 
     public void questionnaire(View view) {
- TextView textView1=(TextView) findViewById(R.id.textVie1);
-        TextView textView2=(TextView) findViewById(R.id.textView2);
-        TextView textView3=(TextView) findViewById(R.id.textView3);
-        TextView textView4=(TextView) findViewById(R.id.textView4);
-        TextView textView5=(TextView) findViewById(R.id.textView5);
-        Button questionnaire=(Button) findViewById(R.id.questionnaire);
-        ScrollView scrollView=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire);
+        textView1=(TextView) findViewById(R.id.textVie1);
+         textView2=(TextView) findViewById(R.id.textView2);
+         textView3=(TextView) findViewById(R.id.textView3);
+         textView4=(TextView) findViewById(R.id.textView4);
+         textView5=(TextView) findViewById(R.id.textView5);
+         questionnaire=(Button) findViewById(R.id.questionnaire);
+         scrollView=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire);
+
         textView1.setVisibility(view.INVISIBLE);
         textView2.setVisibility(view.INVISIBLE);
         textView3.setVisibility(view.INVISIBLE);
@@ -159,6 +165,11 @@ public class Opening_questionnaire extends AppCompatActivity {
         textView5.setVisibility(view.INVISIBLE);
         questionnaire.setVisibility(view.INVISIBLE);
         scrollView.setVisibility(view.VISIBLE);
+
+    }
+//part 2
+    public void button2(View view) {
+        scrollView.setVisibility(view.INVISIBLE);
 
     }
 }

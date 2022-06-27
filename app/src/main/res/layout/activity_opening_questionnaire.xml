@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/textView16"
         android:layout_width="371dp"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_marginTop="16dp"
         android:text="שאלון פתיחת שנה - תוכנית עתיד לנוער "
         android:textSize="25dp"
@@ -82,6 +82,7 @@
         android:layout_marginTop="36dp"
         android:onClick="questionnaire"
         android:text="לשאלון"
+        android:textSize="22sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -91,8 +92,9 @@
 
     <ScrollView
         android:id="@+id/ScrollViewQuestionnaire"
-        android:layout_width="317dp"
-        android:layout_height="476dp"
+        android:layout_width="266dp"
+        android:layout_height="462dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,23 +106,26 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="171dp"
+                android:layout_height="wrap_content"
+                android:onClick="button2"
+                android:text="חלק ב'" />
+
             <TextView
                 android:id="@+id/textView23"
-                android:layout_width="366dp"
-                android:layout_height="35dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
                 android:text="חלק א'"
-                android:textSize="16sp"></TextView>
+                android:textSize="22sp"></TextView>
 
             <TextView
                 android:id="@+id/textView22"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="* חובה"
-                android:textSize="19sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button19" />
+                android:textSize="22sp" />
 
             <!--    <TabHost-->
             <!--        android:id="@+id/tabHost"-->
@@ -157,6 +162,13 @@
             <!--                            android:layout_height="wrap_content"-->
             <!--                            android:layout_weight="1" />-->
 
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="מגדר*"
+                android:textSize="22sp" />
+
             <RadioGroup
                 android:layout_width="248dp"
                 android:layout_height="wrap_content">
@@ -166,75 +178,104 @@
                     android:layout_width="122dp"
                     android:layout_height="wrap_content"
                     android:text="זכר"
-                    android:textSize="16sp"
+                    android:textSize="22sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
                     android:id="@+id/radioButton7"
-                    android:layout_width="118dp"
+                    android:layout_width="122dp"
                     android:layout_height="match_parent"
                     android:text="נקבה"
-                    android:textSize="16sp" />
+                    android:textSize="22sp" />
 
+
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="122dp"
+                    android:layout_height="40dp"
+                    android:text="אחר"
+                    android:textSize="22sp" />
+            </RadioGroup>
 
                 <EditText
                     android:id="@+id/editTextTextPersonName2"
                     android:layout_width="198dp"
                     android:layout_height="60dp"
                     android:ems="10"
-                    android:hint="אחר"
                     android:inputType="textPersonName"
-                    android:textSize="16sp" />
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:textSize="22sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:max="20"
+                        android:min="12" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:text="גיל"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:text="גיל"
-                    android:textSize="30sp" />
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="24dp"
                     android:text="10"
-                    android:textSize="30sp" />
+                    android:textSize="22sp" />
+            </LinearLayout>
 
-                <SeekBar
-                    android:id="@+id/seekBar"
+            <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:max="20"
-                    android:min="12"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true" />
-
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=" נא סמנ/י את הקבוצה אליה אתה שייכ/ת
-                *"
-                    android:textSize="25dp" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
                 <Spinner
                     android:id="@+id/team_spinner2"
-                    android:layout_width="match_parent"
+                    android:layout_width="40dp"
                     android:layout_height="49dp"
                     android:layout_marginTop="24dp"
-                    android:textSize="45dp"
+                    android:textSize="50dp"
 
 
                     />
 
-                <Button
-                    android:id="@+id/button20"
-                    android:layout_width="171dp"
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="חלק ב'" />
-            </RadioGroup>
+                    android:text=" נא סמנ/י את הקבוצה אליה אתה שייכ/ת *"
+                    android:textSize="22dp" />
+                </LinearLayout>
+
+
         </LinearLayout>
     </ScrollView>
 

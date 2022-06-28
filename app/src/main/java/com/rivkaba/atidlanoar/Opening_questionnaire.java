@@ -168,8 +168,11 @@ public class Opening_questionnaire extends AppCompatActivity {
 
     }
 //part 2
-    public void button2(View view) {
+    public void P2 (View view) {
         scrollView.setVisibility(view.INVISIBLE);
 
+    }
+
+    public void P3(View view) {
     }
 }

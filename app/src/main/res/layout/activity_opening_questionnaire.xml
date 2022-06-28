@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="חניכי וחניכות מנהיגות עסקית צעירה בתוכנית עתיד לנוער שלום רב,"
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="זהו המפגש הראשון בתוכנית, ואנחנו מאחלים לכם בהצלחה! :)"
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textVie1" />
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="בפניכם שאלון קצר הנוגע לתכנים השונים בהם תעסקו במהלך השנה. "
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         android:layout_width="414dp"
         android:layout_height="36dp"
         android:text="אנא קראו את השאלות וענו בהתאם לתחושותיכם."
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
         android:layout_width="390dp"
         android:layout_height="89dp"
         android:text="זכרו, השאלון אנונימי ואין תשובות נכונות ולא נכונות. אתם מתבקשים לענות את התשובה הכי נכונה עבורכם."
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,14 +90,93 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:ignore="OnClick" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:onClick="P4"
+        android:text=" ד'"
+        android:textSize="22sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:ignore="OnClick" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/button22"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="2dp"
+        android:onClick="P3"
+        android:text="ג'"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/imageVi"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <ImageView
+        android:id="@+id/imageVie"
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/button21"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="2dp"
+        android:onClick="P2"
+        android:text="ב'"
+        android:textSize="22dp"
+        app:layout_constraintStart_toEndOf="@+id/imageVie"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <ImageView
+        android:id="@+id/imageVi"
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="2dp"
+        android:onClick="P1"
+        android:text=" א'"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:ignore="OnClick" />
+
     <ScrollView
         android:id="@+id/ScrollViewQuestionnaire"
         android:layout_width="266dp"
         android:layout_height="462dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="76dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16">
 
@@ -105,13 +184,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="171dp"
-                android:layout_height="wrap_content"
-                android:onClick="button2"
-                android:text="חלק ב'" />
 
             <TextView
                 android:id="@+id/textView23"
@@ -197,39 +269,39 @@
                     android:textSize="22sp" />
             </RadioGroup>
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName2"
-                    android:layout_width="198dp"
-                    android:layout_height="60dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="198dp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="22sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:max="20"
+                    android:min="12" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="גיל"
                     android:textSize="22sp" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <SeekBar
-                        android:id="@+id/seekBar"
-                        android:layout_width="190dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:max="20"
-                        android:min="12" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="24dp"
-                        android:text="גיל"
-                        android:textSize="22sp" />
-                </LinearLayout>
+            </LinearLayout>
 
 
             <LinearLayout
@@ -244,7 +316,7 @@
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="60dp"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="24dp"
@@ -253,9 +325,9 @@
             </LinearLayout>
 
             <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <Spinner
                     android:id="@+id/team_spinner2"
@@ -273,12 +345,11 @@
                     android:layout_height="wrap_content"
                     android:text=" נא סמנ/י את הקבוצה אליה אתה שייכ/ת *"
                     android:textSize="22dp" />
-                </LinearLayout>
+            </LinearLayout>
 
 
         </LinearLayout>
     </ScrollView>
-
 
 
     <!--                    <LinearLayout-->

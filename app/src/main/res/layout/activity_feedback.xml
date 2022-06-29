@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Feedback"
-    android:background="@drawable/pi">
+    android:background="@drawable/pi"
+    >
 
     <TextView
         android:id="@+id/textView4"
@@ -26,7 +27,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="right">
 
 
             <TextView

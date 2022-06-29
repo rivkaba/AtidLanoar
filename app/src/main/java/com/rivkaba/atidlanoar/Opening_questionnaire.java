@@ -37,6 +37,7 @@ public class Opening_questionnaire extends AppCompatActivity {
     private  TextView textView5;
     private  Button questionnaire;
     private   ScrollView scrollView1;
+    private   ScrollView scrollView2;
     private  Button p1;
     private  Button p2;
     private  Button p3;
@@ -163,6 +164,7 @@ public class Opening_questionnaire extends AppCompatActivity {
          textView5=(TextView) findViewById(R.id.textView5);
          questionnaire=(Button) findViewById(R.id.questionnaire);
          scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
+        scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
          p1=(Button) findViewById(R.id.p1);
                  p2=(Button) findViewById(R.id.p2);
                  p3=(Button) findViewById(R.id.p3);
@@ -186,10 +188,12 @@ p1.setVisibility(view.VISIBLE);
     //part 1
     public void P1(View view) {
         scrollView1.setVisibility(view.VISIBLE);
+        scrollView2.setVisibility(view.INVISIBLE);
     }
 //part 2
     public void P2 (View view) {
         scrollView1.setVisibility(view.INVISIBLE);
+        scrollView2.setVisibility(view.VISIBLE);
 
     }
     //part 3

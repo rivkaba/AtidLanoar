@@ -91,85 +91,91 @@
         tools:ignore="OnClick" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/p4"
         android:layout_width="65dp"
         android:layout_height="50dp"
         android:onClick="P4"
         android:text=" ד'"
         android:textSize="22sp"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
         tools:ignore="OnClick" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/image1"
         android:layout_width="44dp"
         android:layout_height="29dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/button22"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/p2"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
         app:srcCompat="?attr/homeAsUpIndicator" />
 
     <Button
-        android:id="@+id/button21"
+        android:id="@+id/p3"
         android:layout_width="65dp"
         android:layout_height="50dp"
         android:layout_marginStart="2dp"
         android:onClick="P3"
         android:text="ג'"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/imageVi"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/image3"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <ImageView
-        android:id="@+id/imageVie"
+        android:id="@+id/image2"
         android:layout_width="44dp"
         android:layout_height="29dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/button21"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/p3"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
         app:srcCompat="?attr/homeAsUpIndicator" />
 
     <Button
-        android:id="@+id/button22"
+        android:id="@+id/p2"
         android:layout_width="65dp"
         android:layout_height="50dp"
         android:layout_marginStart="2dp"
         android:onClick="P2"
         android:text="ב'"
         android:textSize="22dp"
-        app:layout_constraintStart_toEndOf="@+id/imageVie"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/image2"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <ImageView
-        android:id="@+id/imageVi"
+        android:id="@+id/image3"
         android:layout_width="44dp"
         android:layout_height="29dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/p4"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
         app:srcCompat="?attr/homeAsUpIndicator" />
 
     <Button
-        android:id="@+id/button23"
+        android:id="@+id/p1"
         android:layout_width="65dp"
         android:layout_height="50dp"
         android:layout_marginStart="2dp"
         android:onClick="P1"
         android:text=" א'"
         android:textSize="22sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/image1"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
         tools:ignore="OnClick" />
 
     <ScrollView
-        android:id="@+id/ScrollViewQuestionnaire"
+        android:id="@+id/ScrollViewQuestionnaire1"
         android:layout_width="266dp"
         android:layout_height="462dp"
         android:layout_marginStart="60dp"

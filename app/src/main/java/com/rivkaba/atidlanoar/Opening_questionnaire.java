@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ProgressBar;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -36,8 +36,14 @@ public class Opening_questionnaire extends AppCompatActivity {
     private TextView textView4;
     private  TextView textView5;
     private  Button questionnaire;
-    private   ScrollView scrollView;
-
+    private   ScrollView scrollView1;
+    private  Button p1;
+    private  Button p2;
+    private  Button p3;
+    private  Button p4;
+    private ImageView image1;
+    private ImageView image2;
+    private ImageView image3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -156,23 +162,41 @@ public class Opening_questionnaire extends AppCompatActivity {
          textView4=(TextView) findViewById(R.id.textView4);
          textView5=(TextView) findViewById(R.id.textView5);
          questionnaire=(Button) findViewById(R.id.questionnaire);
-         scrollView=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire);
-
+         scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
+         p1=(Button) findViewById(R.id.p1);
+                 p2=(Button) findViewById(R.id.p2);
+                 p3=(Button) findViewById(R.id.p3);
+                 p4=(Button) findViewById(R.id.p4);
+                 image1=(ImageView) findViewById(R.id.image1);
+        image2=(ImageView) findViewById(R.id.image2);
+        image3=(ImageView) findViewById(R.id.image3);
+p1.setVisibility(view.VISIBLE);
+        p2.setVisibility(view.VISIBLE);
+        p3.setVisibility(view.VISIBLE);
+                p4.setVisibility(view.VISIBLE);
         textView1.setVisibility(view.INVISIBLE);
         textView2.setVisibility(view.INVISIBLE);
         textView3.setVisibility(view.INVISIBLE);
         textView4.setVisibility(view.INVISIBLE);
         textView5.setVisibility(view.INVISIBLE);
         questionnaire.setVisibility(view.INVISIBLE);
-        scrollView.setVisibility(view.VISIBLE);
+        scrollView1.setVisibility(view.VISIBLE);
 
+    }
+    //part 1
+    public void P1(View view) {
+        scrollView1.setVisibility(view.VISIBLE);
     }
 //part 2
     public void P2 (View view) {
-        scrollView.setVisibility(view.INVISIBLE);
+        scrollView1.setVisibility(view.INVISIBLE);
 
     }
-
+    //part 3
     public void P3(View view) {
     }
+    //part 4
+    public void P4(View view) {
+    }
+
 }

@@ -38,6 +38,8 @@ public class Opening_questionnaire extends AppCompatActivity {
     private  Button questionnaire;
     private   ScrollView scrollView1;
     private   ScrollView scrollView2;
+    private   ScrollView scrollView3;
+    private   ScrollView scrollView4;
     private  Button p1;
     private  Button p2;
     private  Button p3;
@@ -165,6 +167,8 @@ public class Opening_questionnaire extends AppCompatActivity {
          questionnaire=(Button) findViewById(R.id.questionnaire);
          scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
         scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
+        scrollView3=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire3);
+      //  scrollView4=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire4);
          p1=(Button) findViewById(R.id.p1);
                  p2=(Button) findViewById(R.id.p2);
                  p3=(Button) findViewById(R.id.p3);
@@ -198,6 +202,10 @@ p1.setVisibility(view.VISIBLE);
     }
     //part 3
     public void P3(View view) {
+        scrollView1.setVisibility(view.INVISIBLE);
+        scrollView2.setVisibility(view.INVISIBLE);
+        scrollView3.setVisibility(view.VISIBLE);
+
     }
     //part 4
     public void P4(View view) {

@@ -1100,5 +1100,77 @@
 
     </LinearLayout>
     </ScrollView>
+    //part 1
+    <ScrollView
+        android:id="@+id/ScrollViewQuestionnaire4"
+        android:layout_width="397dp"
+        android:layout_height="440dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical">
+
+    <TextView
+
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="חלק ד'"
+        android:textSize="25sp"></TextView>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="מה את/ה מצפה ללמוד בתוכנית?"
+        android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="התשובה שלך"
+            android:inputType="textPersonName"
+            android:textSize="22sp"
+      />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="מה את/ה מרגיש/ה שאת/ה צריך/ה ללמוד בתוכנית כדי להצליח להשתלב בעבודה שאת/ה רוצה ?"
+            android:textSize="25sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="התשובה שלך"
+            android:textSize="22sp"
+            android:inputType="textPersonName"
+            />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="תודה ובהצלחה!!"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="שליחה"
+            android:textSize="25sp"/>
+    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

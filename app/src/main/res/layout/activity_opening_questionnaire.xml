@@ -1100,7 +1100,7 @@
 
     </LinearLayout>
     </ScrollView>
-    //part 1
+    //part 4
     <ScrollView
         android:id="@+id/ScrollViewQuestionnaire4"
         android:layout_width="397dp"

@@ -12,361 +12,296 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="אלון סיכום שנה - תוכנית &quot;עתיד לנוער&quot; 20-21"
-        android:textSize="20sp"
+        android:text="אלון סיכום שנה - תוכנית &quot;עתיד לנוער&quot; "
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="380dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal"
+    <ScrollView
+        android:id="@+id/ScrollViewQuestionnaire"
+        android:layout_width="411dp"
+        android:layout_height="503dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView27">
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
+            android:gravity="right"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="חניכות וחניכי מנהיגות עסקית צעירה תוכנית עתיד לנוער שלום רב,
+שנת הפעילות הסתיימה ולנו חשוב להבין ממכם מהם הנקודות לשימור והנקודות לשיפור.
+בפניכם שאלון קצר הנוגע לתכנים השונים בהם עסקתם בתוכנית.
+אנא קראו את השאלות וענו בהתאם לתחושותיכם.
+זכרו, השאלון אנונימי ואין תשובות נכונות ולא נכונות. אתם מתבקשים לענות את התשובה הכי נכונה עבורכם. "
+                android:textSize="25sp" />
 
-        <Button
-            android:id="@+id/button18"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="415dp"
-        android:layout_height="364dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+            <Button
+                android:id="@+id/questionnair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:onClick="questionnair"
+                android:text="לשאלון"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="OnClick" />
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/p4"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:onClick="P4"
+        android:text=" ד'"
+        android:textSize="22sp"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        tools:ignore="OnClick" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/p2"
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <Button
+        android:id="@+id/p3"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="2dp"
+        android:onClick="P3"
+        android:text="ג'"
+        android:textSize="22sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/image3"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/p3"
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <Button
+        android:id="@+id/p2"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="2dp"
+        android:onClick="P2"
+        android:text="ב'"
+        android:textSize="22dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/p4"
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <Button
+        android:id="@+id/p1"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="2dp"
+        android:onClick="P1"
+        android:text=" א'"
+        android:textSize="22sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toEndOf="@+id/image1"
+        app:layout_constraintTop_toBottomOf="@+id/textView27"
+        tools:ignore="OnClick" />
+
+    //part 1
+    <ScrollView
+        android:id="@+id/ScrollViewQuestionnaire1"
+        android:layout_width="397dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="right"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="חלק א'"
+                android:textSize="25sp"></TextView>
 
             <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView18"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="
-יש לי מיומנויות שיעזרו לי להשתלב בשוק העבודה (עמידה בזמנים, יכולת הצגה עצמית, התמדה)."
-                android:textSize="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                android:text="מגדר"
+                android:textSize="25sp" />
 
             <RadioGroup
-                android:layout_width="wrap_content"
+                android:layout_width="248dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+                android:gravity="right"
+
+                >
 
                 <RadioButton
-                    android:id="@+id/radioButton0"
-                    android:layout_width="match_parent"
+                    android:id="@+id/radioButton6"
+                    android:layout_width="122dp"
                     android:layout_height="wrap_content"
-                    android:text="במידה מועטה מאוד"
-                    android:textSize="22dp" />
+                    android:text="זכר"
+                    android:textSize="22sp"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
-                    android:id="@+id/radioButton20"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה מועטה"
-                    android:textSize="22dp" />
+                    android:id="@+id/radioButton7"
+                    android:layout_width="122dp"
+                    android:layout_height="match_parent"
+                    android:text="נקבה"
+                    android:textSize="22sp" />
+
 
                 <RadioButton
-                    android:id="@+id/radioButton30"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה בינונית"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton40"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton50"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה מאוד"
-                    android:textSize="22dp" />
+                    android:id="@+id/radioButton8"
+                    android:layout_width="122dp"
+                    android:layout_height="40dp"
+                    android:text="אחר"
+                    android:textSize="22sp" />
             </RadioGroup>
-
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="באיזה מידה המפגש היום חידש לך / למדת דברים חדשים?"
-                android:textSize="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה מועטה מאוד"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה מועטה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה בינונית"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה מאוד"
-                    android:textSize="22dp" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="באיזה מידה אתה מרגיש שהמפגש יעזור לך בעתיד? "
-                android:textSize="25dp" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                <RadioButton
-                    android:id="@+id/radioButton1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה מועטה מאוד"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton22"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה מועטה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton33"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה בינונית"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton44"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton55"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה מאוד"
-                    android:textSize="22dp" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="באיזה מידה נושא המפגש היה רלוונטי עבורך?"
-                android:textSize="25dp" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5">
-
-                <RadioButton
-                    android:id="@+id/radioButton112"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה מועטה מאוד"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2223"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה מועטה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton333"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה בינונית"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton4445"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton5556"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה מאוד"
-                    android:textSize="22dp" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="באיזה מידה לקחת חלק פעיל במפגש היום?"
-                android:textSize="25dp" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                <RadioButton
-                    android:id="@+id/radioButton111"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה מועטה מאוד"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2222"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה מועטה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton3333"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה בינונית"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton4444"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:id="@+id/radioButton5555"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="במידה רבה מאוד"
-                    android:textSize="22dp" />
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=" מה את/ה לוקח/ת מהמפגש היום?"
-                android:textSize="25dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="198dp"
+                android:layout_height="40dp"
                 android:ems="10"
-                android:hint="התשובה שלך"
                 android:inputType="textPersonName"
-                android:textSize="22dp" />
-
-            <Button
-                android:id="@+id/button11"
+                android:textSize="22sp" />
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="דווח נוכחות ושלח משוב"
-                android:textSize="22dp" />
+                android:layout_height="50dp" />
 
-            <Button
-                android:id="@+id/button12"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="חזרה לתפריט"
-                android:textSize="22dp" />
+                android:layout_height="30dp"
+                android:gravity="right"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button13"
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="300dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:max="20"
+                    android:min="12" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="גיל"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="התנתק"
-                android:textSize="22dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="24dp"
+                    android:text="10"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/team_spinner2"
+                    android:layout_width="40dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="24dp"
+                    android:textSize="100dp"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text=" נא סמנ/י את הקבוצה אליה אתה שייכ/ת *"
+                    android:textSize="22dp" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+
         </LinearLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -113,7 +113,7 @@ public class Summary_questionnaire extends AppCompatActivity {
             questionnair=(Button) findViewById(R.id.questionnair);
         scrollView=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire);
             scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
-           // scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
+            scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
            // scrollView3=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire3);
            // scrollView4=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire4);
             p1=(Button) findViewById(R.id.p1);
@@ -136,10 +136,18 @@ public class Summary_questionnaire extends AppCompatActivity {
 
 
     }
+    //part 1
     public void P1(View view) {
-    }
 
+            scrollView1.setVisibility(view.VISIBLE);
+            scrollView2.setVisibility(view.INVISIBLE);
+       //     scrollView3.setVisibility(view.INVISIBLE);
+       //     scrollView4.setVisibility(view.INVISIBLE);
+    }
+    //part 2
     public void P2(View view) {
+        scrollView1.setVisibility(view.INVISIBLE);
+        scrollView2.setVisibility(view.VISIBLE);
     }
 
     public void P3(View view) {

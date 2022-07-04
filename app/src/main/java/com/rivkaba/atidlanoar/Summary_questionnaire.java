@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -35,10 +36,12 @@ public class Summary_questionnaire extends AppCompatActivity {
     private   ScrollView scrollView2;
     private   ScrollView scrollView3;
     private   ScrollView scrollView4;
+    private LinearLayout LinearLayout5;
     private  Button p1;
     private  Button p2;
     private  Button p3;
     private  Button p4;
+    private Button sending;
     private ImageView image1;
     private ImageView image2;
     private ImageView image3;
@@ -115,11 +118,13 @@ public class Summary_questionnaire extends AppCompatActivity {
             scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
             scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
             scrollView3=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire3);
-           // scrollView4=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire4);
+            scrollView4=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire4);
+        LinearLayout5=(LinearLayout) findViewById(R.id.LinearLayout5);
             p1=(Button) findViewById(R.id.p1);
             p2=(Button) findViewById(R.id.p2);
             p3=(Button) findViewById(R.id.p3);
             p4=(Button) findViewById(R.id.p4);
+            sending=(Button) findViewById(R.id.sending);
             image1=(ImageView) findViewById(R.id.image1);
             image2=(ImageView) findViewById(R.id.image2);
             image3=(ImageView) findViewById(R.id.image3);
@@ -142,21 +147,50 @@ public class Summary_questionnaire extends AppCompatActivity {
             scrollView1.setVisibility(view.VISIBLE);
             scrollView2.setVisibility(view.INVISIBLE);
             scrollView3.setVisibility(view.INVISIBLE);
-       //     scrollView4.setVisibility(view.INVISIBLE);
+            scrollView4.setVisibility(view.INVISIBLE);
+        LinearLayout5.setVisibility(view.INVISIBLE);
+
     }
     //part 2
     public void P2(View view) {
         scrollView1.setVisibility(view.INVISIBLE);
         scrollView2.setVisibility(view.VISIBLE);
         scrollView3.setVisibility(view.INVISIBLE);
+        scrollView4.setVisibility(view.INVISIBLE);
+        LinearLayout5.setVisibility(view.INVISIBLE);
+
     }
     //part 3
     public void P3(View view) {
         scrollView1.setVisibility(view.INVISIBLE);
         scrollView2.setVisibility(view.INVISIBLE);
         scrollView3.setVisibility(view.VISIBLE);
+        scrollView4.setVisibility(view.INVISIBLE);
+        LinearLayout5.setVisibility(view.INVISIBLE);
+
     }
 
     public void P4(View view) {
+        scrollView1.setVisibility(view.INVISIBLE);
+        scrollView2.setVisibility(view.INVISIBLE);
+        scrollView3.setVisibility(view.INVISIBLE);
+        scrollView4.setVisibility(view.VISIBLE);
+        LinearLayout5.setVisibility(view.INVISIBLE);
+
+    }
+
+    public void sending(View view) {
+        p1.setVisibility(view.INVISIBLE);
+        p2.setVisibility(view.INVISIBLE);
+        p3.setVisibility(view.INVISIBLE);
+        p4.setVisibility(view.INVISIBLE);
+        image1.setVisibility(view.INVISIBLE);
+        image2.setVisibility(view.INVISIBLE);
+        image3.setVisibility(view.INVISIBLE);
+        scrollView1.setVisibility(view.INVISIBLE);
+        scrollView2.setVisibility(view.INVISIBLE);
+        scrollView3.setVisibility(view.INVISIBLE);
+        scrollView4.setVisibility(view.INVISIBLE);
+        LinearLayout5.setVisibility(view.VISIBLE);
     }
 }

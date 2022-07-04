@@ -66,40 +66,7 @@ public class SignUp extends AppCompatActivity {
                     }
                 });
         //@@@@@@@@@@@@@@@@@@@@@@
-        // *********************************************
-//        db.collection("Teams").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//            public String[] ArrayTeamm;
-//            @Override
-//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                //   Map<String, Object> team = new HashMap<>();
-//
-//
-//                ArrayList<String> team = new ArrayList<String>();
-//                    for (DocumentSnapshot doc : task.getResult()) {
-//                            if ((doc.getBoolean("old")) != true) {
-//                                team.add(doc.getString("name"));
-//
-//                            }
-//                        }
-//
-//
-//
-//                ArrayTeamm = new String[team.size()];
-//               team.toArray(ArrayTeamm);
-//               int i;
-//                for (i=0;i<team.size();i++) {
-//                    Toast.makeText(SignUp.this, ArrayTeamm[i], Toast.LENGTH_LONG).show();
-//
-//                }
-//
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Toast.makeText(SignUp.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-        //***********************************
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, team);
         //     adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
@@ -186,8 +153,7 @@ public class SignUp extends AppCompatActivity {
                         }
                     }
                 });
-//        EditText email=findViewById(R.id.editTextEmail);
-//        EditText password =findViewById(R.id.editPhone);
+
     }
 
 

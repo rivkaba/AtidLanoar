@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Student extends AppCompatActivity {
 
     @Override
@@ -20,5 +22,10 @@ public class Student extends AppCompatActivity {
 
     public void profile(View view) {
         startActivity(new Intent(Student.this,Profile.class));
+    }
+
+    public void signout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(Student.this,MainActivity.class));
     }
 }

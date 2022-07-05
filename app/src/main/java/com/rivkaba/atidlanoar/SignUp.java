@@ -57,8 +57,7 @@ public class SignUp extends AppCompatActivity {
                                //  Toast.makeText(SignUp.this, doc.getString("name"), Toast.LENGTH_SHORT).show();
                                    }
                             }
-                            //   ArrayTeamm = new String[team.size()];
-                            //    team.toArray(ArrayTeamm);
+
                         } else {
                             Toast.makeText(SignUp.this, "Error", Toast.LENGTH_LONG).show();
                             //   Log.d(TAG, "Error getting documents: ", task.getException());
@@ -133,8 +132,8 @@ public class SignUp extends AppCompatActivity {
                                         public void onSuccess(DocumentReference documentReference) {
                                             Toast.makeText(SignUp.this, "נרשמת בהצלחה ", Toast.LENGTH_LONG).show();
                                             //Opening questionnaire
-                                            Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
-//                                          startActivity(intent);
+                                          //  Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
+                                    Intent intent = new Intent(SignUp.this, Student.class);
                                             startActivity(intent);
                                         }
 //                                         Intent intent = new Intent(SignUp.this, Student.class);

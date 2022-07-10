@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -56,4 +57,9 @@ public class Profile extends AppCompatActivity {
         return true;
     }
     //end Menu
+    public void back(View view) {
+        startActivity(new Intent(Profile.this,Student.class));
+
+    }
+
 }

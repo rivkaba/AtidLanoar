@@ -156,4 +156,13 @@ public class SignUp extends AppCompatActivity {
     }
 
 
+    public void login(View view) {
+        startActivity(new Intent(SignUp.this,Login.class));
+
+    }
+
+    public void back(View view) {
+        startActivity(new Intent(SignUp.this,MainActivity.class));
+
+    }
 }

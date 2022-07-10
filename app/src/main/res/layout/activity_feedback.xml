@@ -289,7 +289,6 @@
                 android:id="@+id/button11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="דווח נוכחות ושלח משוב"
                 android:textSize="22dp" />
 
@@ -297,7 +296,7 @@
                 android:id="@+id/button12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:onClick="back"
                 android:text="חזרה לתפריט"
                 android:textSize="22dp" />
 
@@ -306,7 +305,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="logout"
-                android:gravity="center"
                 android:text="התנתק"
                 android:textSize="22dp" />
         </LinearLayout>

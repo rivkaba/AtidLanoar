@@ -66,8 +66,12 @@ public class Feedback extends AppCompatActivity {
         });
         return true;
     }
-
     // end Menu
+    public void back(View view) {
+        startActivity(new Intent(Feedback.this,Student.class));
+    }
+
+
 
 //    @Override
 //    public boolean onCreateOptionsMenu(final Menu menu) {

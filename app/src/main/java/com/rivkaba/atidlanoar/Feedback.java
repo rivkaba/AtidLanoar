@@ -82,7 +82,22 @@ public class Feedback extends AppCompatActivity  {
     public void back(View view) {
         startActivity(new Intent(Feedback.this,Student.class));
     }
-
+//**********
+//form
+//        canUpdate
+//false
+//    feedback
+//"אני התערבתי עם אנשים אאף פעם לא ראיתי אותם זה יעזור לי להתמדד בעתיד אם אנשים. "
+//    feeedbackMeeting
+//            q1
+//"0"
+//    q2
+//"1"
+//    q3
+//"2"
+//    q4
+//"3"
+    //**********
     public void send(View view) {
         editTextDate =findViewById(R.id.editTextDate);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -95,8 +110,15 @@ public class Feedback extends AppCompatActivity  {
 //////////
         Map<String, Object> docData = new HashMap<>();
         docData.put("approved", true);
-        docData.put("form", "form");
         docData.put("date", date1);
+
+
+        Map<String, Object> form = new HashMap<>();
+        form.put("a", 5);
+        form.put("b", true);
+
+        docData.put("from", form);
+
         db.collection("students").document(uid).collection("comes").document(date1).set(docData)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

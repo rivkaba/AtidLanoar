@@ -81,35 +81,35 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/radio10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה מאוד"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radio11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/radio12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה בינונית"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/radio13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton5"
+                    android:id="@+id/radio14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
@@ -132,35 +132,35 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <RadioButton
-                    android:id="@+id/radioButton1"
+                    android:id="@+id/radio20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה מאוד"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton22"
+                    android:id="@+id/radio21"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton33"
+                    android:id="@+id/radio22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה בינונית"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton44"
+                    android:id="@+id/radio23"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton55"
+                    android:id="@+id/radio24"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
@@ -183,35 +183,35 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <RadioButton
-                    android:id="@+id/radioButton11"
+                    android:id="@+id/radio30"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה מאוד"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton222"
+                    android:id="@+id/radio31"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton333"
+                    android:id="@+id/radio32"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה בינונית"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton444"
+                    android:id="@+id/radio33"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton555"
+                    android:id="@+id/radio34"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
@@ -234,35 +234,35 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <RadioButton
-                    android:id="@+id/radioButton111"
+                    android:id="@+id/radio40"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה מאוד"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2222"
+                    android:id="@+id/radio41"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3333"
+                    android:id="@+id/radio42"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה בינונית"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4444"
+                    android:id="@+id/radio43"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
                     android:textSize="22dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton5555"
+                    android:id="@+id/radio44"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"

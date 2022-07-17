@@ -15,11 +15,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Profile extends AppCompatActivity {
     String uid;
-    EditText Fname ;
-    EditText Lname ;
-    EditText Phone ;
-    EditText Password1 ;
-    EditText Password2 ;
+    EditText Fname1 ;
+    EditText Lname1;
+    EditText Phone1 ;
+    EditText Password11 ;
+    EditText Password21 ;
     public FirebaseFirestore db;
 
     @Override
@@ -75,39 +75,25 @@ public class Profile extends AppCompatActivity {
 
 
     public void update(View view) {
-        Fname = findViewById(R.id.fName);
-        Lname = findViewById(R.id.lName);
-         Phone = findViewById(R.id.phone);
-         Password1 = findViewById(R.id.password1);
-         Password2 = findViewById(R.id.password2);
+        Fname1 = findViewById(R.id.fName);
+        Lname1 = findViewById(R.id.lName);
+         Phone1 = findViewById(R.id.phone);
+         Password11 = findViewById(R.id.password1);
+         Password21 = findViewById(R.id.password2);
+        String Fname = Fname1.getText().toString();
+        String Lname = Lname1.getText().toString();
+        String Phone = Phone1.getText().toString();
+        String Password1 = Password11.getText().toString();
+        String Password2 = Password21.getText().toString();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             //  boolean emailVerified = user.isEmailVerified();
             uid = user.getUid();
-//            Map<String, Object> city = new HashMap<>();
-//            city.put("name", "Los Angeles");
-//            city.put("state", "CA");
-//            city.put("country", "USA");
-//
-//            db.collection("students").document(uid)
-//                    .set(city)
-//                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-//                        @Override
-//                        public void onSuccess(Void aVoid) {
-//                            Log.d(TAG, "DocumentSnapshot successfully written!");
-//                        }
-//                    })
-//                    .addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            Log.w(TAG, "Error writing document", e);
-//                        }
-//                    });
-            ///////////////////
             db.collection("students").document(uid)
                     .update(
-                            "fname", "רבקה",
-                            "lname", "ישראל"
+                            "fname", Fname,
+                            "lname", Lname,
+                            "phone",Phone
 
                     );
 

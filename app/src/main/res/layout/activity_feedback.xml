@@ -84,6 +84,7 @@
                     android:id="@+id/radio10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="במידה מועטה מאוד"
                     android:textSize="22dp" />
 
@@ -91,6 +92,7 @@
                     android:id="@+id/radio11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="במידה מועטה"
                     android:textSize="22dp" />
 
@@ -98,6 +100,7 @@
                     android:id="@+id/radio12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="במידה בינונית"
                     android:textSize="22dp" />
 
@@ -105,6 +108,7 @@
                     android:id="@+id/radio13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="במידה רבה"
                     android:textSize="22dp" />
 
@@ -112,6 +116,7 @@
                     android:id="@+id/radio14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="במידה רבה מאוד"
                     android:textSize="22dp" />
             </RadioGroup>
@@ -135,6 +140,7 @@
                     android:id="@+id/radio20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="במידה מועטה מאוד"
                     android:textSize="22dp" />
 
@@ -142,6 +148,7 @@
                     android:id="@+id/radio21"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="במידה מועטה"
                     android:textSize="22dp" />
 
@@ -149,6 +156,7 @@
                     android:id="@+id/radio22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="במידה בינונית"
                     android:textSize="22dp" />
 
@@ -156,6 +164,7 @@
                     android:id="@+id/radio23"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="במידה רבה"
                     android:textSize="22dp" />
 
@@ -163,6 +172,7 @@
                     android:id="@+id/radio24"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="במידה רבה מאוד"
                     android:textSize="22dp" />
             </RadioGroup>
@@ -186,6 +196,7 @@
                     android:id="@+id/radio30"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="במידה מועטה מאוד"
                     android:textSize="22dp" />
 
@@ -193,6 +204,7 @@
                     android:id="@+id/radio31"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="במידה מועטה"
                     android:textSize="22dp" />
 
@@ -200,6 +212,7 @@
                     android:id="@+id/radio32"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="במידה בינונית"
                     android:textSize="22dp" />
 
@@ -207,6 +220,7 @@
                     android:id="@+id/radio33"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="במידה רבה"
                     android:textSize="22dp" />
 
@@ -214,6 +228,7 @@
                     android:id="@+id/radio34"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="במידה רבה מאוד"
                     android:textSize="22dp" />
             </RadioGroup>
@@ -237,6 +252,7 @@
                     android:id="@+id/radio40"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="במידה מועטה מאוד"
                     android:textSize="22dp" />
 
@@ -244,6 +260,7 @@
                     android:id="@+id/radio41"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="במידה מועטה"
                     android:textSize="22dp" />
 
@@ -251,6 +268,7 @@
                     android:id="@+id/radio42"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="במידה בינונית"
                     android:textSize="22dp" />
 
@@ -258,6 +276,7 @@
                     android:id="@+id/radio43"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="במידה רבה"
                     android:textSize="22dp" />
 
@@ -265,6 +284,7 @@
                     android:id="@+id/radio44"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="במידה רבה מאוד"
                     android:textSize="22dp" />
             </RadioGroup>
@@ -277,7 +297,7 @@
                 android:textSize="25dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/feedback"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

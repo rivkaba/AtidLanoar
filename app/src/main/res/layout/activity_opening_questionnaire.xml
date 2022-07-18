@@ -334,6 +334,7 @@
         </LinearLayout>
     </ScrollView>
 //end part1
+    //part2
     <ScrollView
         android:id="@+id/ScrollViewQuestionnaire2"
         android:layout_width="397dp"

@@ -1,19 +1,28 @@
 package com.rivkaba.atidlanoar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Profile extends AppCompatActivity {
+    public FirebaseAuth mAuth;
     String uid;
     EditText Fname1 ;
     EditText Lname1;
@@ -27,6 +36,7 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         db = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
     }
     // Menu
 
@@ -85,8 +95,53 @@ public class Profile extends AppCompatActivity {
         String Phone = Phone1.getText().toString();
         String Password1 = Password11.getText().toString();
         String Password2 = Password21.getText().toString();
+        //______________
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        user.updatePassword(Password1)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(Profile.this, "  הפרופיל השתנה בהצלחה", Toast.LENGTH_LONG).show();
+
+                        }
+
+                    }
+                });
+
+        //___________
+       // mAuth.getCurrentUser().updatePassword(Password1);
+
         if (user != null) {
+            ////////////
+//            final String email = user.getEmail();
+//            String oldpass = user.getp();
+//
+//
+//            AuthCredential credential = EmailAuthProvider.getCredential(email,oldpass);
+//
+//            user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                @Override
+//                public void onComplete(@NonNull Task<Void> task) {
+//                    if(task.isSuccessful()){
+//                        user.updatePassword(Password1).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<Void> task) {
+//                                if(!task.isSuccessful()){
+//
+//                                }else {
+//
+//                                }
+//                            }
+//                        });
+//                    }else {
+//
+//                    }
+//                }
+//            });
+//        }
+        /////////////////////
             //  boolean emailVerified = user.isEmailVerified();
             uid = user.getUid();
             db.collection("students").document(uid)

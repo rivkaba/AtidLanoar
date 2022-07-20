@@ -19,77 +19,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    //opening
 
-    <TextView
-        android:id="@+id/textVie1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="חניכי וחניכות מנהיגות עסקית צעירה בתוכנית עתיד לנוער שלום רב,"
-        android:textSize="20sp"
-        android:visibility="visible"
+    <ScrollView
+        android:id="@+id/ScrollViewQuestionnaire"
+        android:layout_width="401dp"
+        android:layout_height="479dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="זהו המפגש הראשון בתוכנית, ואנחנו מאחלים לכם בהצלחה! :)"
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textVie1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="בפניכם שאלון קצר הנוגע לתכנים השונים בהם תעסקו במהלך השנה. "
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="חניכי וחניכות מנהיגות עסקית צעירה בתוכנית עתיד לנוער שלום רב,
+זהו המפגש הראשון בתוכנית, ואנחנו מאחלים לכם בהצלחה! :)
+בפניכם שאלון קצר הנוגע לתכנים השונים בהם תעסקו במהלך השנה.
+אנא קראו את השאלות וענו בהתאם לתחושותיכם.
+זכרו, השאלון אנונימי ואין תשובות נכונות ולא נכונות. אתם מתבקשים לענות את התשובה הכי נכונה עבורכם. "
+                android:textSize="25sp" />
+            <Button
+                android:id="@+id/questionnaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:onClick="questionnair"
+                android:text="לשאלון"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="OnClick" />
 
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="414dp"
-        android:layout_height="40dp"
-        android:text="אנא קראו את השאלות וענו בהתאם לתחושותיכם."
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="390dp"
-        android:layout_height="150dp"
-        android:text="זכרו, השאלון אנונימי ואין תשובות נכונות ולא נכונות. אתם מתבקשים לענות את התשובה הכי נכונה עבורכם."
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Button
-        android:id="@+id/questionnaire"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:onClick="questionnair"
-        android:text="לשאלון"
-        android:textSize="22sp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:ignore="OnClick" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/p4"

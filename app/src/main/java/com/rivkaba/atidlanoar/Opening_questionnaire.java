@@ -24,6 +24,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Opening_questionnaire extends AppCompatActivity {
     public FirebaseFirestore db;
@@ -31,12 +32,8 @@ public class Opening_questionnaire extends AppCompatActivity {
     private TextView textView;
     private SeekBar seekBar;
 
-    private  TextView textView1;
-    private TextView textView2;
-    private TextView textView3;
-    private TextView textView4;
-    private  TextView textView5;
     private  Button questionnaire;
+    private   ScrollView ScrollViewQuestionnaire;
     private   ScrollView scrollView1;
     private   ScrollView scrollView2;
     private  Button p1;
@@ -50,6 +47,18 @@ public class Opening_questionnaire extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire);
+        ScrollViewQuestionnaire=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire);
+        scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
+        scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
+        Intent intent = getIntent();
+        String part = intent.getStringExtra("part");
+        if(Objects.equals(part, "P1"))
+            part1();
+        else {
+            if (Objects.equals(part, "P2"))
+                part2();
+        }
+
         db = FirebaseFirestore.getInstance();
         Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner2);
         db.collection("Teams")
@@ -117,11 +126,6 @@ public class Opening_questionnaire extends AppCompatActivity {
 
 
     public void questionnair(View view) {
-        textView1=(TextView) findViewById(R.id.textVie1);
-         textView2=(TextView) findViewById(R.id.textView2);
-         textView3=(TextView) findViewById(R.id.textView3);
-         textView4=(TextView) findViewById(R.id.textView4);
-         textView5=(TextView) findViewById(R.id.textView5);
          questionnaire=(Button) findViewById(R.id.questionnaire);
          scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
         scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
@@ -139,31 +143,37 @@ p1.setVisibility(view.VISIBLE);
                 image1.setVisibility(view.VISIBLE);
         image2.setVisibility(view.VISIBLE);
         image3.setVisibility(view.VISIBLE);
-
-        textView1.setVisibility(view.INVISIBLE);
-        textView2.setVisibility(view.INVISIBLE);
-        textView3.setVisibility(view.INVISIBLE);
-        textView4.setVisibility(view.INVISIBLE);
-        textView5.setVisibility(view.INVISIBLE);
-        questionnaire.setVisibility(view.INVISIBLE);
+     ScrollViewQuestionnaire.setVisibility(view.INVISIBLE);
         scrollView1.setVisibility(view.VISIBLE);
 
     }
     //part 1
     public void P1(View view) {
+        ScrollViewQuestionnaire.setVisibility(view.INVISIBLE);
         scrollView1.setVisibility(view.VISIBLE);
         scrollView2.setVisibility(view.INVISIBLE);
     }
+    private void part1() {
+        ScrollViewQuestionnaire.setVisibility(View.INVISIBLE);
+        scrollView1.setVisibility(View.VISIBLE);
+        scrollView2.setVisibility(View.INVISIBLE);
+
+
+    }
 //part 2
     public void P2 (View view) {
+        ScrollViewQuestionnaire.setVisibility(view.INVISIBLE);
         scrollView1.setVisibility(view.INVISIBLE);
         scrollView2.setVisibility(view.VISIBLE);
     }
+    private void part2() {
+        ScrollViewQuestionnaire.setVisibility(View.INVISIBLE);
+        scrollView1.setVisibility(View.INVISIBLE);
+        scrollView2.setVisibility(View.VISIBLE);
+
+    }
     //part 3
     public void P3(View view) {
-//        Intent intent = new Intent(getApplicationContext(), Opening_questionnaire_2.class);
-//        intent.putExtra("part", "P3");
-//        startActivity(intent);
        startActivity(new Intent(Opening_questionnaire.this,Opening_questionnaire_2 .class));
     }
     //part 4
@@ -171,10 +181,11 @@ p1.setVisibility(view.VISIBLE);
         Intent intent = new Intent(Opening_questionnaire.this, Opening_questionnaire_2.class);
         intent.putExtra("part", "P4");
         startActivity(intent);
-     //   startActivity(new Intent(Opening_questionnaire.this,Opening_questionnaire_2 .class));
 
 
     }
+
+
 
 
 }

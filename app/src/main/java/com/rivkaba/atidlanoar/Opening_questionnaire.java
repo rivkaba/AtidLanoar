@@ -161,13 +161,20 @@ p1.setVisibility(view.VISIBLE);
     }
     //part 3
     public void P3(View view) {
-        startActivity(new Intent(Opening_questionnaire.this,Opening_questionnaire_2 .class));
+//        Intent intent = new Intent(getApplicationContext(), Opening_questionnaire_2.class);
+//        intent.putExtra("part", "P3");
+//        startActivity(intent);
+       startActivity(new Intent(Opening_questionnaire.this,Opening_questionnaire_2 .class));
     }
     //part 4
     public void P4(View view) {
-        startActivity(new Intent(Opening_questionnaire.this,Opening_questionnaire_2 .class));
+        Intent intent = new Intent(Opening_questionnaire.this, Opening_questionnaire_2.class);
+        intent.putExtra("part", "P4");
+        startActivity(intent);
+     //   startActivity(new Intent(Opening_questionnaire.this,Opening_questionnaire_2 .class));
 
 
     }
+
 
 }

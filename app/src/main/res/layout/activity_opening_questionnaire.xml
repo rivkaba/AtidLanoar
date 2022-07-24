@@ -64,90 +64,84 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/p4"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:onClick="P4"
-        android:text=" ד'"
-        android:textSize="22sp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        tools:ignore="OnClick" />
-
-    <ImageView
-        android:id="@+id/image1"
-        android:layout_width="44dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="16dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/p2"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:srcCompat="?attr/homeAsUpIndicator" />
-
-    <Button
-        android:id="@+id/p3"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:onClick="P3"
-        android:text="ג'"
-        android:textSize="22sp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/image3"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <ImageView
-        android:id="@+id/image2"
-        android:layout_width="44dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="16dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/p3"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:srcCompat="?attr/homeAsUpIndicator" />
-
-    <Button
-        android:id="@+id/p2"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:onClick="P2"
-        android:text="ב'"
-        android:textSize="22dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/image2"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-    <ImageView
-        android:id="@+id/image3"
-        android:layout_width="44dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="16dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/p4"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:srcCompat="?attr/homeAsUpIndicator" />
-
-    <Button
-        android:id="@+id/p1"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:onClick="P1"
-        android:text=" א'"
-        android:textSize="22sp"
+    <LinearLayout
+        android:id="@+id/linearButtons"
+        android:layout_width="411dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toEndOf="@+id/image1"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        tools:ignore="OnClick" />
-//part 1
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+        <Button
+            android:id="@+id/p4"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P4"
+            android:text=" ד'"
+            android:textSize="22sp"
+            tools:ignore="OnClick" />
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p3"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P3"
+            android:text="ג'"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p2"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P2"
+            android:text="ב'"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p1"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P1"
+            android:text=" א'"
+            android:textSize="22sp"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+    //part 1
     <ScrollView
         android:id="@+id/ScrollViewQuestionnaire1"
         android:layout_width="397dp"

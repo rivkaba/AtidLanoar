@@ -135,9 +135,11 @@
                 android:textSize="25sp" />
 
             <RatingBar
+                android:id="@+id/q31"
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
+                android:onClick="q31"
                 android:stepSize="1"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -149,9 +151,11 @@
                 android:textSize="25sp" />
 
             <RatingBar
+                android:id="@+id/q32"
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
+                android:onClick="q32"
                 android:stepSize="1"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -163,9 +167,11 @@
                 android:textSize="25sp" />
 
             <RatingBar
+                android:id="@+id/q33"
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
+                android:onClick="q33"
                 android:stepSize="1"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -177,9 +183,11 @@
                 android:textSize="25sp" />
 
             <RatingBar
+                android:id="@+id/q34"
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
+                android:onClick="q34"
                 android:stepSize="1" />
 
         </LinearLayout>
@@ -221,7 +229,7 @@
                 android:textSize="25sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+               android:id="@+id/q41"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -237,6 +245,7 @@
                 android:textSize="25sp" />
 
             <EditText
+                android:id="@+id/q42"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -255,6 +264,7 @@
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="send"
                 android:text="שליחה"
                 android:textSize="25sp" />
 

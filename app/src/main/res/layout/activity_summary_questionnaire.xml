@@ -62,102 +62,95 @@
                 tools:ignore="OnClick" />
         </LinearLayout>
     </ScrollView>
-    <Button
-        android:id="@+id/p4"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:onClick="P4"
-        android:text=" ד'"
-        android:textSize="22sp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        tools:ignore="OnClick" />
-
-    <ImageView
-        android:id="@+id/image1"
-        android:layout_width="44dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="16dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/p2"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        app:srcCompat="?attr/homeAsUpIndicator" />
-
-    <Button
-        android:id="@+id/p3"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:onClick="P3"
-        android:text="ג'"
-        android:textSize="22sp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/image3"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
-
-    <ImageView
-        android:id="@+id/image2"
-        android:layout_width="44dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="16dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/p3"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        app:srcCompat="?attr/homeAsUpIndicator" />
-
-    <Button
-        android:id="@+id/p2"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:onClick="P2"
-        android:text="ב'"
-        android:textSize="22dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/image2"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
-
-    <ImageView
-        android:id="@+id/image3"
-        android:layout_width="44dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="16dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/p4"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        app:srcCompat="?attr/homeAsUpIndicator" />
-
-    <Button
-        android:id="@+id/p1"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:onClick="P1"
-        android:text=" א'"
-        android:textSize="22sp"
+    <LinearLayout
+        android:id="@+id/linearButtons"
+        android:layout_width="411dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toEndOf="@+id/image1"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        tools:ignore="OnClick" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27">
+
+        <Button
+            android:id="@+id/p4"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P4"
+            android:text=" ד'"
+            android:textSize="22sp"
+            tools:ignore="OnClick" />
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p3"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P3"
+            android:text="ג'"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p2"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P2"
+            android:text="ב'"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p1"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P1"
+            android:text=" א'"
+            android:textSize="22sp"
+            tools:ignore="OnClick" />
+    </LinearLayout>
 
     //part 1
     <ScrollView
         android:id="@+id/ScrollViewQuestionnaire1"
         android:layout_width="397dp"
         android:layout_height="380dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p1">
+        app:layout_constraintTop_toBottomOf="@+id/linearButtons">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -309,13 +302,13 @@
         android:id="@+id/ScrollViewQuestionnaire2"
         android:layout_width="397dp"
         android:layout_height="380dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p1">
+        app:layout_constraintTop_toBottomOf="@+id/linearButtons">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -990,455 +983,5 @@
 
         </LinearLayout>
     </ScrollView>
-    //part 3
-    <ScrollView
-        android:id="@+id/ScrollViewQuestionnaire3"
-        android:layout_width="397dp"
-        android:layout_height="380dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:text="חלק ג'"
-                android:textSize="25sp"></TextView>
-
-            <TextView
-
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:text="עד כמה את/ה מרגיש/ה שאת/ה יודעת על כל אחד מהנושאים הבאים? "
-                android:textSize="25sp" />
-            <TextView
-
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="קורות חיים "
-                android:textSize="25sp" />
-
-            <RatingBar
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:stepSize="1"/>
-            <TextView
-
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="ראיון עבודה "
-                android:textSize="25sp" />
-
-            <RatingBar
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:numStars="2"
-                android:stepSize="1"/>
-            <TextView
-
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="כתיבת תוכנית עסקית "
-                android:textSize="25sp" />
-
-            <RatingBar
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:numStars="2"
-                android:stepSize="1"/>
-            <TextView
-
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="תכנון גאנט עבודה "
-                android:textSize="25sp" />
-
-            <RatingBar
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:stepSize="1"/>
-
-        </LinearLayout>
-    </ScrollView>
-    //part 4
-
-    <ScrollView
-        android:id="@+id/ScrollViewQuestionnaire4"
-        android:layout_width="379dp"
-        android:layout_height="367dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="16dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/p1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:text="חלק ד'"
-                android:textSize="25sp"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="לפניכם שאלות על תכנים שלמדתם במהלך השנה,  אנא סמן/י עד כמה למדת מכל אחד מהאירועים הבאים?
-"
-                android:textSize="25sp" />
-            //q1
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="ימי שיא"
-                android:textSize="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="לא הגעתי לפעילות זו"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="לא למדתי בכלל	"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי מעט מאוד"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי מספיק"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="	למדתי הרבה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי הרבה מאוד"
-                    android:textSize="22dp" />
-            </RadioGroup>
-            //q2
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="ועדת היגוי"
-                android:textSize="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="לא הגעתי לפעילות זו"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="לא למדתי בכלל	"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי מעט מאוד"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי מספיק"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="	למדתי הרבה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי הרבה מאוד"
-                    android:textSize="22dp" />
-            </RadioGroup>
-            //q3
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="הפקת מיזם חברתי"
-                android:textSize="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="לא הגעתי לפעילות זו"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="לא למדתי בכלל	"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי מעט מאוד"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי מספיק"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="	למדתי הרבה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי הרבה מאוד"
-                    android:textSize="22dp" />
-            </RadioGroup>
-            //q4
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="הכשרה מקצועית"
-                android:textSize="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="לא הגעתי לפעילות זו"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="לא למדתי בכלל	"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי מעט מאוד"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי מספיק"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="	למדתי הרבה"
-                    android:textSize="22dp" />
-
-                <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="למדתי הרבה מאוד"
-                    android:textSize="22dp" />
-            </RadioGroup>
-
-            <TextView
-
-                android:layout_width="400dp"
-                android:layout_height="120dp"
-                android:text="        עד כמה הרגשת שאת/ה למדת על עולם התעסוקה והעסקים מהדמויות הבאות?"
-                android:textSize="25sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:gravity="right"
-                android:orientation="horizontal">
-
-                <SeekBar
-                    android:id="@+id/seekBar2"
-                    style="@style/Widget.AppCompat.SeekBar.Discrete"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:max="5" />
-
-                <TextView
-
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="מדריכ/ת הקבוצה "
-                    android:textSize="22sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:gravity="right"
-                android:orientation="horizontal">
-
-                <SeekBar
-                    style="@style/Widget.AppCompat.SeekBar.Discrete"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:max="5" />
-
-                <TextView
-
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="מנחה עסקי/ת"
-                    android:textSize="22sp" />
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="מה הייתה החוויה הכי משמעותית עבורך בתוכנית?"
-                android:textSize="25sp" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:textSize="22sp" />
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="מה את/ה לוקח/ת איתך מהתוכנית להמשך הדרך?"
-                android:textSize="25sp" />
-            <EditText
-                android:id="@+id/editTextTextPersonName3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:textSize="22sp" />
-
-            <Button
-                android:id="@+id/sending"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="sending"
-                android:text="שליחה"
-                android:textSize="22sp" />
-        </LinearLayout>
-    </ScrollView>
-
-
-    <LinearLayout
-        android:id="@+id/LinearLayout5"
-        android:layout_width="352dp"
-        android:layout_height="366dp"
-        android:layout_marginTop="100dp"
-        android:gravity="right"
-        android:orientation="vertical"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/p1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27">
-
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="תודה ובהצלחה !
-    צוות מנהיגות עסקית צעירה,
-    תוכנית 'עתיד לנוער'.  "
-            android:textSize="40sp" />
-    </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

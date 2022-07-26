@@ -3,6 +3,7 @@ package com.rivkaba.atidlanoar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,6 +25,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Summary_questionnaire extends AppCompatActivity {
     public FirebaseFirestore db;
@@ -34,22 +36,21 @@ public class Summary_questionnaire extends AppCompatActivity {
     private ScrollView scrollView;
     private ScrollView scrollView1;
     private   ScrollView scrollView2;
-    private   ScrollView scrollView3;
-    private   ScrollView scrollView4;
-    private LinearLayout LinearLayout5;
-    private  Button p1;
-    private  Button p2;
-    private  Button p3;
-    private  Button p4;
-    private Button sending;
-    private ImageView image1;
-    private ImageView image2;
-    private ImageView image3;
+    private LinearLayout linearButtons;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary_questionnaire);
+        Intent intent = getIntent();
+        String part = intent.getStringExtra("part");
+        if(Objects.equals(part, "P1"))
+            part1();
+        else {
+            if (Objects.equals(part, "P2"))
+                part2();
+        }
         //Spinner teams
         db = FirebaseFirestore.getInstance();
         Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner2);
@@ -112,85 +113,58 @@ public class Summary_questionnaire extends AppCompatActivity {
     }
 
     public void questionnair(View view) {
-
             questionnair=(Button) findViewById(R.id.questionnair);
         scrollView=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire);
             scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
             scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
-            scrollView3=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire3);
-            scrollView4=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire4);
-        LinearLayout5=(LinearLayout) findViewById(R.id.LinearLayout5);
-            p1=(Button) findViewById(R.id.p1);
-            p2=(Button) findViewById(R.id.p2);
-            p3=(Button) findViewById(R.id.p3);
-            p4=(Button) findViewById(R.id.p4);
-            sending=(Button) findViewById(R.id.sending);
-            image1=(ImageView) findViewById(R.id.image1);
-            image2=(ImageView) findViewById(R.id.image2);
-            image3=(ImageView) findViewById(R.id.image3);
-            p1.setVisibility(view.VISIBLE);
-            p2.setVisibility(view.VISIBLE);
-            p3.setVisibility(view.VISIBLE);
-            p4.setVisibility(view.VISIBLE);
-            image1.setVisibility(view.VISIBLE);
-            image2.setVisibility(view.VISIBLE);
-            image3.setVisibility(view.VISIBLE);
+        linearButtons =(LinearLayout) findViewById(R.id.linearButtons);
         scrollView.setVisibility(view.INVISIBLE);
         questionnair.setVisibility(view.INVISIBLE);
-            scrollView1.setVisibility(view.VISIBLE);
+        scrollView1.setVisibility(view.VISIBLE);
+        linearButtons.setVisibility(view.VISIBLE);
 
 
     }
     //part 1
     public void P1(View view) {
-
+        linearButtons.setVisibility(view.VISIBLE);
             scrollView1.setVisibility(view.VISIBLE);
             scrollView2.setVisibility(view.INVISIBLE);
-            scrollView3.setVisibility(view.INVISIBLE);
-            scrollView4.setVisibility(view.INVISIBLE);
-        LinearLayout5.setVisibility(view.INVISIBLE);
+
+    }
+    private void part1() {
+        linearButtons.setVisibility(View.VISIBLE);
+        scrollView.setVisibility(View.INVISIBLE);
+        scrollView1.setVisibility(View.VISIBLE);
+        scrollView2.setVisibility(View.INVISIBLE);
+
 
     }
     //part 2
     public void P2(View view) {
+        linearButtons.setVisibility(view.VISIBLE);
         scrollView1.setVisibility(view.INVISIBLE);
         scrollView2.setVisibility(view.VISIBLE);
-        scrollView3.setVisibility(view.INVISIBLE);
-        scrollView4.setVisibility(view.INVISIBLE);
-        LinearLayout5.setVisibility(view.INVISIBLE);
+
+    }
+    private void part2() {
+        linearButtons.setVisibility(View.VISIBLE);
+        scrollView.setVisibility(View.INVISIBLE);
+        scrollView1.setVisibility(View.INVISIBLE);
+        scrollView2.setVisibility(View.VISIBLE);
 
     }
     //part 3
     public void P3(View view) {
-        scrollView1.setVisibility(view.INVISIBLE);
-        scrollView2.setVisibility(view.INVISIBLE);
-        scrollView3.setVisibility(view.VISIBLE);
-        scrollView4.setVisibility(view.INVISIBLE);
-        LinearLayout5.setVisibility(view.INVISIBLE);
+        startActivity(new Intent(Summary_questionnaire.this,Summary_questionnaire_2 .class));
 
     }
 
     public void P4(View view) {
-        scrollView1.setVisibility(view.INVISIBLE);
-        scrollView2.setVisibility(view.INVISIBLE);
-        scrollView3.setVisibility(view.INVISIBLE);
-        scrollView4.setVisibility(view.VISIBLE);
-        LinearLayout5.setVisibility(view.INVISIBLE);
+        Intent intent = new Intent(Summary_questionnaire.this, Summary_questionnaire_2.class);
+        intent.putExtra("part", "P4");
+        startActivity(intent);
 
     }
 
-    public void sending(View view) {
-        p1.setVisibility(view.INVISIBLE);
-        p2.setVisibility(view.INVISIBLE);
-        p3.setVisibility(view.INVISIBLE);
-        p4.setVisibility(view.INVISIBLE);
-        image1.setVisibility(view.INVISIBLE);
-        image2.setVisibility(view.INVISIBLE);
-        image3.setVisibility(view.INVISIBLE);
-        scrollView1.setVisibility(view.INVISIBLE);
-        scrollView2.setVisibility(view.INVISIBLE);
-        scrollView3.setVisibility(view.INVISIBLE);
-        scrollView4.setVisibility(view.INVISIBLE);
-        LinearLayout5.setVisibility(view.VISIBLE);
-    }
 }

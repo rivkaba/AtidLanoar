@@ -139,7 +139,6 @@
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
-                android:onClick="q31"
                 android:stepSize="1"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -155,7 +154,6 @@
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
-                android:onClick="q32"
                 android:stepSize="1"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -171,7 +169,6 @@
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
-                android:onClick="q33"
                 android:stepSize="1"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -187,7 +184,6 @@
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
-                android:onClick="q34"
                 android:stepSize="1" />
 
         </LinearLayout>

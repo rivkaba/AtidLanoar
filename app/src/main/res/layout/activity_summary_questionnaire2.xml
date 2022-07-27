@@ -130,6 +130,7 @@
                 android:textSize="25sp" />
 
             <RatingBar
+                android:id="@+id/q31"
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
@@ -142,9 +143,10 @@
                 android:textSize="25sp" />
 
             <RatingBar
+                android:id="@+id/q32"
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
-                android:numStars="2"
+                android:numStars="5"
                 android:stepSize="1"/>
             <TextView
 
@@ -154,9 +156,10 @@
                 android:textSize="25sp" />
 
             <RatingBar
+                android:id="@+id/q33"
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
-                android:numStars="2"
+                android:numStars="5"
                 android:stepSize="1"/>
             <TextView
 
@@ -166,6 +169,7 @@
                 android:textSize="25sp" />
 
             <RatingBar
+                android:id="@+id/q34"
                 android:layout_width="245dp"
                 android:layout_height="wrap_content"
                 android:numStars="5"
@@ -226,36 +230,42 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <RadioButton
+                    android:id="@+id/q410"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="לא הגעתי לפעילות זו"
                     android:textSize="22dp" />
 
                 <RadioButton
+                  android:id="@+id/q411"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="לא למדתי בכלל	"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q412"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי מעט מאוד"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q413"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי מספיק"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q414"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="	למדתי הרבה"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q415"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי הרבה מאוד"
@@ -282,36 +292,43 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <RadioButton
+                    android:id="@+id/q420"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="לא הגעתי לפעילות זו"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q421"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="לא למדתי בכלל	"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q422"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי מעט מאוד"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q423"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי מספיק"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q424"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="	למדתי הרבה"
                     android:textSize="22dp" />
 
+
                 <RadioButton
+                    android:id="@+id/q425"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי הרבה מאוד"
@@ -338,36 +355,42 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <RadioButton
+                    android:id="@+id/q430"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="לא הגעתי לפעילות זו"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q431"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="לא למדתי בכלל	"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q432"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי מעט מאוד"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q433"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי מספיק"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q434"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="	למדתי הרבה"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q435"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי הרבה מאוד"
@@ -394,36 +417,42 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <RadioButton
+                    android:id="@+id/q440"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="לא הגעתי לפעילות זו"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q441"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="לא למדתי בכלל	"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q442"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי מעט מאוד"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q443"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי מספיק"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q444"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="	למדתי הרבה"
                     android:textSize="22dp" />
 
                 <RadioButton
+                    android:id="@+id/q445"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="למדתי הרבה מאוד"
@@ -434,7 +463,7 @@
 
                 android:layout_width="400dp"
                 android:layout_height="120dp"
-                android:text="        עד כמה הרגשת שאת/ה למדת על עולם התעסוקה והעסקים מהדמויות הבאות?"
+                android:text=" עד כמה הרגשת שאת/ה למדת על עולם התעסוקה והעסקים מהדמויות הבאות?"
                 android:textSize="25sp" />
 
             <LinearLayout
@@ -444,7 +473,7 @@
                 android:orientation="horizontal">
 
                 <SeekBar
-                    android:id="@+id/seekBar2"
+                    android:id="@+id/q45"
                     style="@style/Widget.AppCompat.SeekBar.Discrete"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -465,6 +494,7 @@
                 android:orientation="horizontal">
 
                 <SeekBar
+                    android:id="@+id/q46"
                     style="@style/Widget.AppCompat.SeekBar.Discrete"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -487,7 +517,7 @@
                 android:textSize="25sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName7"
+                android:id="@+id/q47"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -501,7 +531,7 @@
                 android:text="מה את/ה לוקח/ת איתך מהתוכנית להמשך הדרך?"
                 android:textSize="25sp" />
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/q48"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

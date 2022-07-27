@@ -233,6 +233,7 @@
                     android:id="@+id/q410"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="לא הגעתי לפעילות זו"
                     android:textSize="22dp" />
 
@@ -240,6 +241,7 @@
                   android:id="@+id/q411"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="לא למדתי בכלל	"
                     android:textSize="22dp" />
 
@@ -247,6 +249,7 @@
                     android:id="@+id/q412"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="למדתי מעט מאוד"
                     android:textSize="22dp" />
 
@@ -254,6 +257,7 @@
                     android:id="@+id/q413"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="למדתי מספיק"
                     android:textSize="22dp" />
 
@@ -261,6 +265,7 @@
                     android:id="@+id/q414"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="	למדתי הרבה"
                     android:textSize="22dp" />
 
@@ -268,6 +273,7 @@
                     android:id="@+id/q415"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="למדתי הרבה מאוד"
                     android:textSize="22dp" />
             </RadioGroup>
@@ -295,6 +301,7 @@
                     android:id="@+id/q420"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="לא הגעתי לפעילות זו"
                     android:textSize="22dp" />
 
@@ -302,6 +309,7 @@
                     android:id="@+id/q421"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="לא למדתי בכלל	"
                     android:textSize="22dp" />
 
@@ -309,6 +317,7 @@
                     android:id="@+id/q422"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="למדתי מעט מאוד"
                     android:textSize="22dp" />
 
@@ -316,6 +325,7 @@
                     android:id="@+id/q423"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="למדתי מספיק"
                     android:textSize="22dp" />
 
@@ -323,6 +333,7 @@
                     android:id="@+id/q424"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="	למדתי הרבה"
                     android:textSize="22dp" />
 
@@ -331,6 +342,7 @@
                     android:id="@+id/q425"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
                     android:text="למדתי הרבה מאוד"
                     android:textSize="22dp" />
             </RadioGroup>
@@ -358,6 +370,7 @@
                     android:id="@+id/q430"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="לא הגעתי לפעילות זו"
                     android:textSize="22dp" />
 
@@ -365,6 +378,7 @@
                     android:id="@+id/q431"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="לא למדתי בכלל	"
                     android:textSize="22dp" />
 
@@ -372,6 +386,7 @@
                     android:id="@+id/q432"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="למדתי מעט מאוד"
                     android:textSize="22dp" />
 
@@ -379,6 +394,7 @@
                     android:id="@+id/q433"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="למדתי מספיק"
                     android:textSize="22dp" />
 
@@ -386,6 +402,7 @@
                     android:id="@+id/q434"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="	למדתי הרבה"
                     android:textSize="22dp" />
 
@@ -393,6 +410,7 @@
                     android:id="@+id/q435"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
                     android:text="למדתי הרבה מאוד"
                     android:textSize="22dp" />
             </RadioGroup>
@@ -420,6 +438,7 @@
                     android:id="@+id/q440"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="לא הגעתי לפעילות זו"
                     android:textSize="22dp" />
 
@@ -427,6 +446,7 @@
                     android:id="@+id/q441"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="לא למדתי בכלל	"
                     android:textSize="22dp" />
 
@@ -434,6 +454,7 @@
                     android:id="@+id/q442"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="למדתי מעט מאוד"
                     android:textSize="22dp" />
 
@@ -441,6 +462,7 @@
                     android:id="@+id/q443"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="למדתי מספיק"
                     android:textSize="22dp" />
 
@@ -448,6 +470,7 @@
                     android:id="@+id/q444"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="	למדתי הרבה"
                     android:textSize="22dp" />
 
@@ -455,6 +478,7 @@
                     android:id="@+id/q445"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
                     android:text="למדתי הרבה מאוד"
                     android:textSize="22dp" />
             </RadioGroup>

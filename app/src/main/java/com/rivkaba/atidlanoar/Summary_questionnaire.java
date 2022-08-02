@@ -92,8 +92,8 @@ public class Summary_questionnaire extends AppCompatActivity {
             }
         });
         // seekBar age
-        textView = (TextView) findViewById(R.id.textView);
-        seekBar = (SeekBar) findViewById(R.id.seekBar);
+        textView = (TextView) findViewById(R.id.age);
+        seekBar = (SeekBar) findViewById(R.id.q11);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -114,10 +114,10 @@ public class Summary_questionnaire extends AppCompatActivity {
 
     public void questionnair(View view) {
             questionnair=(Button) findViewById(R.id.questionnair);
-        scrollView=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire);
-            scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
-            scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
-        linearButtons =(LinearLayout) findViewById(R.id.linearButtons);
+        scrollView=(ScrollView) findViewById(R.id.Scroll_view_questionnaire);
+            scrollView1=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_1);
+            scrollView2=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_2);
+        linearButtons =(LinearLayout) findViewById(R.id.linear_buttons);
         scrollView.setVisibility(view.INVISIBLE);
         questionnair.setVisibility(view.INVISIBLE);
         scrollView1.setVisibility(view.VISIBLE);

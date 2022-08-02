@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -60,7 +61,7 @@ public class SignUp extends AppCompatActivity {
 
                         } else {
                             Toast.makeText(SignUp.this, "Error", Toast.LENGTH_LONG).show();
-                            //   Log.d(TAG, "Error getting documents: ", task.getException());
+                              // Log.d(TAG, "Error getting documents: ", task.getException());
                         }
                     }
                 });
@@ -89,11 +90,11 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void register(View view) {
-        EditText ID = findViewById(R.id.editTexID);
-        EditText Email = findViewById(R.id.editTextEmail);
-        EditText Fname = findViewById(R.id.editTextName);
-        EditText Lname = findViewById(R.id.editTextLName);
-        EditText Phone = findViewById(R.id.editPhone);
+        EditText ID = findViewById(R.id.ID);
+        EditText Email = findViewById(R.id.email);
+        EditText Fname = findViewById(R.id.f_name);
+        EditText Lname = findViewById(R.id.l_name);
+        EditText Phone = findViewById(R.id.Phone);
         mAuth.createUserWithEmailAndPassword(Email.getText().toString(), Phone.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -103,7 +104,7 @@ public class SignUp extends AppCompatActivity {
                             // Sign in success, upda
                             // te UI with the signed-in user's information
                             //register in waitforapproval
-                            String Team = findViewById(R.id.editPhone).toString();//*************************
+                            String Team = findViewById(R.id.Phone).toString();//*************************
 
                             String id = ID.getText().toString();
                             String email = Email.getText().toString();

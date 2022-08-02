@@ -43,8 +43,8 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire2);
         db = FirebaseFirestore.getInstance();
-        scrollView3=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire3);
-        scrollView4=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire4);
+        scrollView3=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_3);
+        scrollView4=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_4);
         q31=(RatingBar)findViewById(R.id.q31);
         q32=(RatingBar)findViewById(R.id.q32);
         q33=(RatingBar)findViewById(R.id.q33);

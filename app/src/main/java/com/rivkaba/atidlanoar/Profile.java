@@ -85,8 +85,8 @@ public class Profile extends AppCompatActivity {
 
 
     public void update(View view) {
-        Fname1 = findViewById(R.id.fName);
-        Lname1 = findViewById(R.id.lName);
+        Fname1 = findViewById(R.id.f_name);
+        Lname1 = findViewById(R.id.l_name);
          Phone1 = findViewById(R.id.phone);
          Password11 = findViewById(R.id.password1);
          Password21 = findViewById(R.id.password2);

@@ -31,7 +31,7 @@ public class Opening_questionnaire extends AppCompatActivity {
     public FirebaseFirestore db;
     ArrayList<String> team = new ArrayList<String>();
     private TextView textView;
-    private SeekBar seekBar;
+    private SeekBar q12;
 
     private  Button questionnaire;
     private   ScrollView ScrollViewQuestionnaire;
@@ -47,10 +47,10 @@ public class Opening_questionnaire extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire);
-        ScrollViewQuestionnaire=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire);
-        scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
-        scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
-        linearButtons=(LinearLayout) findViewById(R.id.linearButtons);
+        ScrollViewQuestionnaire=(ScrollView) findViewById(R.id.Scroll_view_questionnaire);
+        scrollView1=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_1);
+        scrollView2=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_2);
+        linearButtons=(LinearLayout) findViewById(R.id.linear_buttons);
         Intent intent = getIntent();
         String part = intent.getStringExtra("part");
         if(Objects.equals(part, "P1"))
@@ -101,10 +101,10 @@ public class Opening_questionnaire extends AppCompatActivity {
         });
 
 
-        textView = (TextView) findViewById(R.id.textView);
-        seekBar = (SeekBar) findViewById(R.id.seekBar);
+        textView = (TextView) findViewById(R.id.age);
+        q12 = (SeekBar) findViewById(R.id.q12);
 
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        q12.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
@@ -128,8 +128,6 @@ public class Opening_questionnaire extends AppCompatActivity {
 
     public void questionnair(View view) {
          questionnaire=(Button) findViewById(R.id.questionnaire);
-         scrollView1=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire1);
-        scrollView2=(ScrollView) findViewById(R.id.ScrollViewQuestionnaire2);
       linearButtons.setVisibility(view.VISIBLE);
      ScrollViewQuestionnaire.setVisibility(view.INVISIBLE);
         scrollView1.setVisibility(view.VISIBLE);

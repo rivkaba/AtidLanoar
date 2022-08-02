@@ -26,7 +26,7 @@ import java.util.Map;
 public class Feedback extends AppCompatActivity  {
 
     String uid;
-    EditText editTextDate;
+    EditText Date;
     EditText feedback1;
     String q1;
     String q2;
@@ -93,7 +93,7 @@ public class Feedback extends AppCompatActivity  {
     }
 
     public void send(View view) {
-        editTextDate =findViewById(R.id.editTextDate);
+       Date =findViewById(R.id.Date);
         feedback1=findViewById(R.id.feedback);
         String feedback = feedback1.getText().toString();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -102,7 +102,7 @@ public class Feedback extends AppCompatActivity  {
           //  boolean emailVerified = user.isEmailVerified();
              uid = user.getUid();
         }
-        String date1 = editTextDate.getText().toString();
+        String date1 = Date.getText().toString();
        // canUpdate
         Map<String, Object> docData = new HashMap<>();
         docData.put("approved", true);

@@ -11,7 +11,6 @@
     <ScrollView
         android:layout_width="279dp"
         android:layout_height="574dp"
-
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,85 +25,91 @@
 
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/text_view"
                 android:layout_width="217dp"
                 android:layout_height="61dp"
                 android:text="טופס הרשמה"
-                android:textSize="25sp"
+                android:textSize="27sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextName"
-                android:layout_width="173dp"
-                android:layout_height="53dp"
+                android:id="@+id/f_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:ems="10"
                 android:hint="*שם פרטי"
+                android:textSize="22sp"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintTop_toBottomOf="@+id/text_view" />
 
             <EditText
-                android:id="@+id/editTextLName"
+                android:id="@+id/l_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:ems="10"
+                android:textSize="22sp"
                 android:hint="*שם משפחה"
                 android:inputType="textPersonName"
-                app:layout_constraintEnd_toStartOf="@+id/editTextName"
+                app:layout_constraintEnd_toStartOf="@+id/f_name"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintTop_toBottomOf="@+id/text_view" />
 
             <EditText
-                android:id="@+id/editPhone"
+                android:id="@+id/Phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:ems="10"
+                android:textSize="22sp"
+                android:gravity="right"
                 android:hint="*טלפון"
                 android:inputType="phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextLName" />
+                app:layout_constraintTop_toBottomOf="@+id/l_name" />
 
             <Spinner
                 android:id="@+id/team_spinner"
                 android:layout_width="249dp"
                 android:layout_height="51dp"
                 android:layout_marginTop="24dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+                app:layout_constraintTop_toBottomOf="@+id/email"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <EditText
-                android:id="@+id/editTexID"
+                android:id="@+id/ID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:ems="10"
+                android:textSize="22sp"
                 android:hint="תעודת זהות"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.482"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editPhone" />
+                app:layout_constraintTop_toBottomOf="@+id/Phone" />
 
             <EditText
-                android:id="@+id/editTextEmail"
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:ems="10"
+                android:textSize="22sp"
                 android:hint="*מייל"
                 android:inputType="textEmailAddress"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTexID" />
+                app:layout_constraintTop_toBottomOf="@+id/ID" />
 
             <Button
                 android:id="@+id/button"
@@ -120,7 +125,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/team_spinner" />
 
             <Button
-                android:id="@+id/button6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -132,7 +136,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/button" />
 
             <Button
-                android:id="@+id/button7"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -141,7 +145,7 @@
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button6" />
+              />
         </LinearLayout>
     </ScrollView>
 

@@ -57,6 +57,7 @@ public class SignUp extends AppCompatActivity {
                                 team.add(doc.getString("name"));
                                //  Toast.makeText(SignUp.this, doc.getString("name"), Toast.LENGTH_SHORT).show();
                                    }
+
                             }
 
                         } else {
@@ -75,8 +76,10 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
-                Log.v("item", (String) parent.getItemAtPosition(position));
-                Toast.makeText(SignUp.this,(String) parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
+
+               // teamSpinner.
+              //  Log.v("item", (String) parent.getItemAtPosition(position));
+          //      Toast.makeText(SignUp.this,(String) parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
 
                 teamName =(String) parent.getItemAtPosition(position);
 

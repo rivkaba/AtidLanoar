@@ -105,6 +105,7 @@ SeekBar   q46;
         linearButtons.setVisibility(view.INVISIBLE);
         scrollView3.setVisibility(view.INVISIBLE);
         scrollView4.setVisibility(view.INVISIBLE);
+      //  FirebaseFirestore.setLoggingEnabled(true);
         Map<String, Object> answers = new HashMap<>();
         Map<String, Object> part1 = new HashMap<>();
 

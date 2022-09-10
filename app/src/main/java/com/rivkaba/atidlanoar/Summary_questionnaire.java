@@ -167,4 +167,7 @@ public class Summary_questionnaire extends AppCompatActivity {
 
     }
 
+    public void send(View view) {
+
+    }
 }

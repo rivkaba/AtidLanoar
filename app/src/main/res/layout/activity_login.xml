@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -33,7 +33,7 @@
         android:textSize="25sp"/>
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -41,9 +41,9 @@
         android:ems="10"
         android:hint="*סיסמא"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/Email"
-        app:layout_constraintStart_toStartOf="@+id/Email"
-        app:layout_constraintTop_toBottomOf="@+id/Email"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         android:textSize="22sp"/>
 
 
@@ -56,7 +56,7 @@
         android:text="כניסה"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         android:textSize="22sp"
        />
 
@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button16" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -83,15 +83,6 @@
         app:layout_constraintTop_toBottomOf="@+id/button4"
         android:textSize="22sp"/>
 
-    <Spinner
-        android:id="@+id/dynamic_spinner"
-        android:layout_width="395dp"
-        android:layout_height="70dp"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        tools:ignore="SpeakableTextPresentCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

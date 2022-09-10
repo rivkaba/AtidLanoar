@@ -53,11 +53,10 @@ public class SignUp extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             for (QueryDocumentSnapshot doc : task.getResult()) {
-                                    if ((Boolean.TRUE.equals(doc.getBoolean("old"))) != true) {
+                                    if (!(Boolean.TRUE.equals(doc.getBoolean("old")))) {
                                 team.add(doc.getString("name"));
                                //  Toast.makeText(SignUp.this, doc.getString("name"), Toast.LENGTH_SHORT).show();
                                    }
-
                             }
 
                         } else {

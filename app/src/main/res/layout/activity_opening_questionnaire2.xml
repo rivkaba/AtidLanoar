@@ -14,7 +14,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="16dp"
         android:text="שאלון פתיחת שנה - תוכנית עתיד לנוער "
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

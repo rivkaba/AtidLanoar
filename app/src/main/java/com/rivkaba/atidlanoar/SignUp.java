@@ -97,67 +97,86 @@ public class SignUp extends AppCompatActivity {
         EditText Fname = findViewById(R.id.f_name);
         EditText Lname = findViewById(R.id.l_name);
         EditText Phone = findViewById(R.id.Phone);
-        mAuth.createUserWithEmailAndPassword(Email.getText().toString(), Phone.getText().toString())
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(SignUp.this, " בתור התחלה מס' הפלאפון ישמש כסיסמה", Toast.LENGTH_LONG).show();
-                            // Sign in success, upda
-                            // te UI with the signed-in user's information
-                            //register in waitforapproval
-                            String Team = findViewById(R.id.Phone).toString();//*************************
+        if(Fname.getText().toString().equals("")) {
+            Fname.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+        }
+        if(Lname.getText().toString().equals("")) {
+            Lname.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+        }
 
-                            String id = ID.getText().toString();
-                            String email = Email.getText().toString();
-                            String fname = Fname.getText().toString();
-                            String lname = Lname.getText().toString();
-                            String phone = Phone.getText().toString();
-                            String uid = mAuth.getUid();
-                            // Toast.makeText(SignUp.this,uid,Toast.LENGTH_LONG).show();
-                            //  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;
-                            Map<String, Object> waitforapproval = new HashMap<>();
-                            waitforapproval.put("ID", id);
-                            waitforapproval.put("approve", false);
-                            waitforapproval.put("email", email);
-                            waitforapproval.put("fname", fname);
-                            waitforapproval.put("lname", lname);
-                            waitforapproval.put("phone", phone);
-                            waitforapproval.put("team", phone);
-                            waitforapproval.put("teamName", teamName);
-                            waitforapproval.put("type", "students");
-                            waitforapproval.put("uid", uid);
+        if(Phone.getText().toString().equals("")) {
+            Phone.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+        }
+        if(ID.getText().toString().equals("")) {
+            ID.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+        }
+        if(Email.getText().toString().equals("")) {
+            Email.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+        }
+
+        if((!Fname.getText().toString().equals(""))&&(!Lname.getText().toString().equals(""))&&(!Phone.getText().toString().equals(""))&&(!ID.getText().toString().equals(""))&&(!Email.getText().toString().equals("")))
+            {
+                mAuth.createUserWithEmailAndPassword(Email.getText().toString(), Phone.getText().toString())
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(SignUp.this, " בתור התחלה מס' הפלאפון ישמש כסיסמה", Toast.LENGTH_LONG).show();
+                                    // Sign in success, upda
+                                    // te UI with the signed-in user's information
+                                    //register in waitforapproval
+                                    String Team = findViewById(R.id.Phone).toString();//*************************
+
+                                    String id = ID.getText().toString();
+                                    String email = Email.getText().toString();
+                                    String fname = Fname.getText().toString();
+                                    String lname = Lname.getText().toString();
+                                    String phone = Phone.getText().toString();
+                                    String uid = mAuth.getUid();
+                                    // Toast.makeText(SignUp.this,uid,Toast.LENGTH_LONG).show();
+                                    //  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;
+                                    Map<String, Object> waitforapproval = new HashMap<>();
+                                    waitforapproval.put("ID", id);
+                                    waitforapproval.put("approve", false);
+                                    waitforapproval.put("email", email);
+                                    waitforapproval.put("fname", fname);
+                                    waitforapproval.put("lname", lname);
+                                    waitforapproval.put("phone", phone);
+                                    waitforapproval.put("team", phone);
+                                    waitforapproval.put("teamName", teamName);
+                                    waitforapproval.put("type", "students");
+                                    waitforapproval.put("uid", uid);
 // Add a new document with a generated ID
-                            db.collection("waitforapproval")
-                                    .add(waitforapproval)
-                                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                                        @Override
-                                        public void onSuccess(DocumentReference documentReference) {
-                                            Toast.makeText(SignUp.this, "נרשמת בהצלחה ", Toast.LENGTH_LONG).show();
-                                            //Opening questionnaire
-                                          //  Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
-                                    Intent intent = new Intent(SignUp.this, Student.class);
-                                            startActivity(intent);
-                                        }
+                                    db.collection("waitforapproval")
+                                            .add(waitforapproval)
+                                            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                                @Override
+                                                public void onSuccess(DocumentReference documentReference) {
+                                                    Toast.makeText(SignUp.this, "נרשמת בהצלחה ", Toast.LENGTH_LONG).show();
+                                                    //Opening questionnaire
+                                                    //  Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
+                                                    Intent intent = new Intent(SignUp.this, Student.class);
+                                                    startActivity(intent);
+                                                }
 //                                         Intent intent = new Intent(SignUp.this, Student.class);
 //                                          startActivity(intent);
 //                                      startActivity(new Intent(SignUp.this,Student.class));
-                                    })
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(SignUp.this, "הרשמה נכשלה", Toast.LENGTH_LONG).show();
-                                        }
-                                    });
-                        } else {
-                            Toast.makeText(SignUp.this, "ההרשמה נכשלה:)", Toast.LENGTH_LONG).show();
-                            // If sign in fails, display a message to the user.
-                        }
-                    }
-                });
+                                            })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Toast.makeText(SignUp.this, "הרשמה נכשלה", Toast.LENGTH_LONG).show();
+                                                }
+                                            });
+                                } else {
+                                    Toast.makeText(SignUp.this, "ההרשמה נכשלה:)", Toast.LENGTH_LONG).show();
+                                    // If sign in fails, display a message to the user.
+                                }
+                            }
+                        });
 
-    }
-
+            }
+        }
 
     public void login(View view) {
         startActivity(new Intent(SignUp.this,Login.class));

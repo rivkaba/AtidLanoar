@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -23,121 +24,55 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Opening_questionnaire_2 extends AppCompatActivity {
-    private   ScrollView scrollView3;
-    private   ScrollView scrollView4;
-    RatingBar q31;
-    RatingBar q32;
-    RatingBar q33;
-    RatingBar q34;
-    String Q31;
-    String Q32;
-    String Q33;
-    String Q34;
-    EditText q41;
-    EditText q42;
-    String uid;
-    public FirebaseFirestore db;
-
+    private TextView qq21;
+    private TextView qq22;
+    private TextView qq23;
+    private TextView qq24;
+    private TextView qq25;
+    private TextView qq26;
+    private TextView qq27;
+    private TextView qq28;
+    private TextView qq29;
+    private TextView qq210;
+    private TextView qq211;
+    private TextView qq212;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire2);
-        db = FirebaseFirestore.getInstance();
-        scrollView3=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_3);
-        scrollView4=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_4);
-        q31=(RatingBar)findViewById(R.id.q31);
-        q32=(RatingBar)findViewById(R.id.q32);
-        q33=(RatingBar)findViewById(R.id.q33);
-        q34=(RatingBar)findViewById(R.id.q34);
-        q41=findViewById(R.id.q41);
-        q42=findViewById(R.id.q42);
-        Intent intent = getIntent();
-        String part = intent.getStringExtra("part");
-        if(Objects.equals(part, "P4"))
-            part4();
+        qq21 = (TextView) findViewById(R.id.qq21);
+        qq22 = (TextView) findViewById(R.id.qq22);
+        qq23 = (TextView) findViewById(R.id.qq23);
+        qq24 = (TextView) findViewById(R.id.qq24);
+        qq25 = (TextView) findViewById(R.id.qq25);
+        qq26 = (TextView) findViewById(R.id.qq26);
+        qq27 = (TextView) findViewById(R.id.qq27);
+        qq28 = (TextView) findViewById(R.id.qq28);
+        qq29 = (TextView) findViewById(R.id.qq29);
+        qq210 = (TextView) findViewById(R.id.qq210);
+        qq211 = (TextView) findViewById(R.id.qq211);
+        qq212 = (TextView) findViewById(R.id.qq212);
+
 
     }
+    //part1
     public void P1(View view) {
         Intent intent = new Intent(Opening_questionnaire_2.this, Opening_questionnaire.class);
         intent.putExtra("part", "P1");
         startActivity(intent);
-
     }
-    public void P2(View view) {
-        Intent intent = new Intent(Opening_questionnaire_2.this, Opening_questionnaire.class);
-        intent.putExtra("part", "P2");
-        startActivity(intent);
-
-    }
-
+    //part 3
     public void P3(View view) {
-
-        scrollView3.setVisibility(view.VISIBLE);
-        scrollView4.setVisibility(view.INVISIBLE);
+        startActivity(new Intent(Opening_questionnaire_2.this, Opening_questionnaire_3.class));
     }
+
     //part 4
     public void P4(View view) {
-
-        scrollView3.setVisibility(view.INVISIBLE);
-        scrollView4.setVisibility(view.VISIBLE);
-
-
-    }
-    private void part4() {
-            scrollView4.setVisibility(View.VISIBLE);
-            scrollView3.setVisibility(View.INVISIBLE);
-
-        }
-
-/////////
-    public void send(View view) {
-
-        Map<String, Object> answers = new HashMap<>();
-        Map<String, Object> part1 = new HashMap<>();
-
-        Map<String, Object> part2 = new HashMap<>();
+        Intent intent = new Intent(Opening_questionnaire_2.this, Opening_questionnaire_3.class);
+        intent.putExtra("part", "P4");
+        startActivity(intent);
 
 
-        Map<String, Object> part3 = new HashMap<>();
-        Q31=String.valueOf(q31.getRating());
-        Q32=String.valueOf(q32.getRating());
-        Q33=String.valueOf(q33.getRating());
-        Q34=String.valueOf(q34.getRating());
-
-        part3.put("q31", Q31);
-        part3.put("q32", Q32);
-        part3.put("q33", Q33);
-        part3.put("q34", Q34);
-
-        Map<String, Object> part4 = new HashMap<>();
-        String Q41 = q41.getText().toString();
-        String Q42 = q42.getText().toString();
-        part4.put("q41", Q41);
-        part4.put("q42", Q42);
-
-        answers.put("part1", part1);
-        answers.put("part2", part2);
-        answers.put("part3", part3);
-        answers.put("part4", part4);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            uid = user.getUid();
-        }
-  db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").set(answers)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-        @Override
-        public void onSuccess(Void aVoid) {
-            Toast.makeText(Opening_questionnaire_2.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
-
-        }
-    })
-            .addOnFailureListener(new OnFailureListener() {
-        @Override
-        public void onFailure(@NonNull Exception e) {
-            Toast.makeText(Opening_questionnaire_2.this, "השליחה נכשלה", Toast.LENGTH_LONG).show();
-
-        }
-    });
     }
 
 }

@@ -7,19 +7,17 @@
     tools:context=".Opening_questionnaire_2"
     android:background="@drawable/pi"
     >
-
     <TextView
-        android:id="@+id/text_view"
+        android:id="@+id/text_View"
         android:layout_width="371dp"
         android:layout_height="80dp"
         android:layout_marginTop="16dp"
         android:text="שאלון פתיחת שנה - תוכנית עתיד לנוער "
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:id="@+id/linear_buttons"
         android:layout_width="411dp"
@@ -28,7 +26,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view">
+        app:layout_constraintTop_toBottomOf="@+id/text_View">
 
         <Button
             android:id="@+id/p4"
@@ -72,7 +70,7 @@
             android:layout_marginTop="16dp"
             android:onClick="P2"
             android:text="ב'"
-            android:textSize="22dp" />
+            android:textSize="22sp" />
 
         <ImageView
             android:layout_width="44dp"
@@ -92,166 +90,776 @@
             android:textSize="22sp"
             tools:ignore="OnClick" />
     </LinearLayout>
-    //part 3
-    <ScrollView
-        android:id="@+id/Scroll_view_questionnaire_3"
-        android:layout_width="391dp"
-        android:layout_height="391dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear_buttons">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:text="חלק ג'"
-                android:textSize="25sp"></TextView>
-
-            <TextView
-                android:layout_width="400dp"
-                android:layout_height="wrap_content"
-                android:text="עד כמה את/ה מרגיש/ה שאת/ה יודעת על כל אחד מהנושאים הבאים? "
-                android:textSize="25sp" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="קורות חיים "
-                android:textSize="25sp" />
-
-            <RatingBar
-                android:id="@+id/q31"
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:stepSize="1"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-            <TextView
-
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="ראיון עבודה "
-                android:textSize="25sp" />
-
-            <RatingBar
-                android:id="@+id/q32"
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:stepSize="1"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="כתיבת תוכנית עסקית "
-                android:textSize="25sp" />
-
-            <RatingBar
-                android:id="@+id/q33"
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:stepSize="1"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="תכנון גאנט עבודה "
-                android:textSize="25sp" />
-
-            <RatingBar
-                android:id="@+id/q34"
-                android:layout_width="245dp"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:stepSize="1" />
-
-        </LinearLayout>
-    </ScrollView>
-
-
-    //part 4
 
     <ScrollView
-        android:id="@+id/Scroll_view_questionnaire_4"
-        android:layout_width="384dp"
-        android:layout_height="380dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/Scroll_view_questionnaire_2"
+        android:layout_width="397dp"
+        android:layout_height="440dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="16dp"
-        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear_buttons">
+        app:layout_constraintTop_toBottomOf="@+id/text_View">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
             android:orientation="vertical">
-
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:text="חלק ד'"
+                android:text="חלק ב'"
                 android:textSize="25sp"></TextView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="מה את/ה מצפה ללמוד בתוכנית?"
+                android:text="אנא סמן/י באיזו מידה את/ה מסכים/ה עם הנאמר בכל אחד מהמשפטים הבאים?
+"
                 android:textSize="25sp" />
-
-            <EditText
-               android:id="@+id/q41"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="התשובה שלך"
-                android:inputType="textPersonName"
-                android:textSize="22sp" />
-
+            <!--   q1-->
             <TextView
+                android:id="@+id/qq21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="מה את/ה מרגיש/ה שאת/ה צריך/ה ללמוד בתוכנית כדי להצליח להשתלב בעבודה שאת/ה רוצה ?"
-                android:textSize="25sp" />
+                android:layout_marginTop="32dp"
+                android:text="יש לי מיומנויות שיעזרו לי להשתלב בשוק העבודה (עמידה בזמנים, יכולת הצגה עצמית, התמדה)."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="25sp"/>
 
-            <EditText
-                android:id="@+id/q42"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="התשובה שלך"
-                android:inputType="textPersonName"
-                android:textSize="22sp" />
-
-            <TextView
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="תודה ובהצלחה!!"
-                android:textSize="25sp" />
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
 
+                <RadioButton
+                    android:id="@+id/radio210"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                   android:text="בכלל לא"
+                   android:textSize="22sp"/>
+                <!--    android:onClick="onRadioButtonClicked21"-->
+                <RadioButton
+                    android:id="@+id/radio211"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                <!--    android:onClick="onRadioButtonClicked21"-->
+                <RadioButton
+                    android:id="@+id/radio212"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked21"
+                <RadioButton
+                    android:id="@+id/radio213"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked21"
+                <RadioButton
+                    android:id="@+id/radio214"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                //android:onClick="onRadioButtonClicked21"
+            </RadioGroup>
+            //q2
+            <TextView
+                android:id="@+id/qq22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="אני מרגיש/ה ביטחון לעמוד ולהציג מול קהל"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio220"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked22"
+                <RadioButton
+                    android:id="@+id/radio221"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked22"
+                <RadioButton
+                    android:id="@+id/radio222"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked22"
+
+                <RadioButton
+                    android:id="@+id/radio223"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked22"
+
+                <RadioButton
+                    android:id="@+id/radio224"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked22"
+
+            </RadioGroup>
+            //q3
+            <TextView
+                android:id="@+id/qq23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="אני מרגיש/ה בטוח להתמודד עם ראיון עבודה"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio230"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked23"
+                <RadioButton
+                    android:id="@+id/radio231"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked23"
+
+                <RadioButton
+                    android:id="@+id/radio232"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked23"
+
+                <RadioButton
+                    android:id="@+id/radio233"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked23"
+
+                <RadioButton
+                    android:id="@+id/radio234"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked23"
+
+            </RadioGroup>
+            //q4
+            <TextView
+                android:id="@+id/qq24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="אני יודע/ת כיצד לכתוב קורות חיים באופן עצמאי"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio240"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked24"
+                <RadioButton
+                    android:id="@+id/radio241"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked24"
+
+
+                <RadioButton
+                    android:id="@+id/radio242"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked24"
+
+                <RadioButton
+                    android:id="@+id/radio243"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked24"
+
+                <RadioButton
+                    android:id="@+id/radio244"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked24"
+
+            </RadioGroup>
+            //q5
+            <TextView
+                android:id="@+id/qq25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="אני מאמין/ה שאצליח להשיג את העבודה שאני רוצה בעתיד"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio250"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked25"
+
+                <RadioButton
+                    android:id="@+id/radio251"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked25"
+
+                <RadioButton
+                    android:id="@+id/radio252"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked25"
+
+                <RadioButton
+                    android:id="@+id/radio253"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked25"
+
+                <RadioButton
+                    android:id="@+id/radio254"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked25"
+
+            </RadioGroup>
+            //q6
+            <TextView
+                android:id="@+id/qq26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="אני מאוד רוצה להשתלב בשוק העבודה בעתיד"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio260"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked26"
+
+                <RadioButton
+                    android:id="@+id/radio261"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked26"
+
+                <RadioButton
+                    android:id="@+id/radio262"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked26"
+
+                <RadioButton
+                    android:id="@+id/radio263"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked26"
+
+                <RadioButton
+                    android:id="@+id/radio264"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked26"
+
+            </RadioGroup>
+            //q7
+            <TextView
+                android:id="@+id/qq27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="אני מוכנ/ה להתאמץ כדי להשתלב בעבודה שתתאים לי"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio270"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked27"
+
+                <RadioButton
+                    android:id="@+id/radio271"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked27"
+
+                <RadioButton
+                    android:id="@+id/radio272"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked27"
+
+                <RadioButton
+                    android:id="@+id/radio273"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked27"
+
+                <RadioButton
+                    android:id="@+id/radio274"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked27"
+
+            </RadioGroup>
+            //q8
+            <TextView
+                android:id="@+id/qq28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="בעתיד, כשאמצע עבודה, יהיה לי חשוב להצליח בה ולהישאר בה לאורך זמן"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio280"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked28"
+
+                <RadioButton
+                    android:id="@+id/radio281"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked28"
+
+                <RadioButton
+                    android:id="@+id/radio282"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked28"
+
+                <RadioButton
+                    android:id="@+id/radio283"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked28"
+
+                <RadioButton
+                    android:id="@+id/radio284"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked28"
+
+            </RadioGroup>
+
+            //q9
+            <TextView
+                android:id="@+id/qq29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="בעתיד, כשאמצע עבודה, יהיה לי חשוב להצליח בה ולהישאר בה לאורך זמן"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio290"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked29"
+
+                <RadioButton
+                    android:id="@+id/radio291"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked29"
+
+                <RadioButton
+                    android:id="@+id/radio292"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked29"
+
+                <RadioButton
+                    android:id="@+id/radio293"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked29"
+
+                <RadioButton
+                    android:id="@+id/radio294"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                // android:onClick="onRadioButtonClicked29"
+
+            </RadioGroup>
+            //q10
+            <TextView
+                android:id="@+id/qq210"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="אני משקיע/ה מחשבה לגבי העתיד המקצועי שלי "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="25sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio2100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked210"
+
+                <RadioButton
+                    android:id="@+id/radio2101"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked210"
+
+                <RadioButton
+                    android:id="@+id/radio2102"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked210"
+
+                <RadioButton
+                    android:id="@+id/radio2103"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked210"
+
+                <RadioButton
+                    android:id="@+id/radio2104"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked210"
+
+            </RadioGroup>
+            //q11
+            <TextView
+                android:id="@+id/qq211"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="האם את/ה מתכוונ/ת להתגייס לצבא/ שירות לאומי?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio2110"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+                    android:textSize="22sp"/>
+                //  android:onClick="onRadioButtonClicked211"
+
+
+                <RadioButton
+                    android:id="@+id/radio2111"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                android:onClick="onRadioButtonClicked211"
+
+                <RadioButton
+                    android:id="@+id/radio2112"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                android:onClick="onRadioButtonClicked211"
+
+                <RadioButton
+                    android:id="@+id/radio2113"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                android:onClick="onRadioButtonClicked211"
+
+                <RadioButton
+                    android:id="@+id/radio2114"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                android:onClick="onRadioButtonClicked211"
+
+            </RadioGroup>
+            //q12
+            <TextView
+                android:id="@+id/qq212"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="אני מאמינ/ה שאצליח להשיג כל מטרה בחיים"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+                android:textSize="22sp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <RadioButton
+                    android:id="@+id/radio2120"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="בכלל לא"
+                    android:textSize="22sp"/>
+                //   android:onClick="onRadioButtonClicked212"
+
+
+                <RadioButton
+                    android:id="@+id/radio2121"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה מועטה"
+                    android:textSize="22sp"/>
+                //    android:onClick="onRadioButtonClicked212"
+
+                <RadioButton
+                    android:id="@+id/radio2122"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה סבירה"
+                    android:textSize="22sp"/>
+                //    android:onClick="onRadioButtonClicked212"
+
+                <RadioButton
+                    android:id="@+id/radio2123"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה"
+                    android:textSize="22sp"/>
+                //    android:onClick="onRadioButtonClicked212"
+
+                <RadioButton
+                    android:id="@+id/radio2124"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="במידה רבה מאוד"
+                    android:textSize="22sp"/>
+                //    android:onClick="onRadioButtonClicked212"
+
+            </RadioGroup>
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="send"
-                android:text="שליחה"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:onClick="send1"
+                android:text="שמירה"
                 android:textSize="25sp" />
-
         </LinearLayout>
     </ScrollView>
 

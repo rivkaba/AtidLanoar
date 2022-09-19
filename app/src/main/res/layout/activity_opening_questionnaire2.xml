@@ -143,44 +143,44 @@
                     android:id="@+id/radio210"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:onClick="onRadioButtonClicked21"
                    android:text="בכלל לא"
                    android:textSize="22sp"/>
-                <!--    android:onClick="onRadioButtonClicked21"-->
+
                 <RadioButton
                     android:id="@+id/radio211"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:onClick="onRadioButtonClicked21"
                     android:text="במידה מועטה"
                     android:textSize="22sp"/>
-                <!--    android:onClick="onRadioButtonClicked21"-->
+
                 <RadioButton
                     android:id="@+id/radio212"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:onClick="onRadioButtonClicked21"
                     android:text="במידה סבירה"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked21"
+
                 <RadioButton
                     android:id="@+id/radio213"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:onClick="onRadioButtonClicked21"
                     android:text="במידה רבה"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked21"
+
                 <RadioButton
                     android:id="@+id/radio214"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:onClick="onRadioButtonClicked21"
                     android:text="במידה רבה מאוד"
                     android:textSize="22sp"/>
-                //android:onClick="onRadioButtonClicked21"
+
             </RadioGroup>
-            //q2
+            <!--   q2-->
             <TextView
                 android:id="@+id/qq22"
                 android:layout_width="wrap_content"
@@ -205,43 +205,46 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
-
+                    android:onClick="onRadioButtonClicked22"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked22"
+
                 <RadioButton
                     android:id="@+id/radio221"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
-
+                    android:onClick="onRadioButtonClicked22"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked22"
+
                 <RadioButton
                     android:id="@+id/radio222"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked22"
                     android:text="במידה סבירה"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked22"
+
 
                 <RadioButton
                     android:id="@+id/radio223"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked22"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked22"
+
 
                 <RadioButton
                     android:id="@+id/radio224"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked22"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked22"
+
 
             </RadioGroup>
-            //q3
+            <!--   q3-->
             <TextView
                 android:id="@+id/qq23"
                 android:layout_width="wrap_content"
@@ -266,43 +269,46 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
-
+                    android:onClick="onRadioButtonClicked23"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked23"
+
                 <RadioButton
                     android:id="@+id/radio231"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked23"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked23"
+
 
                 <RadioButton
                     android:id="@+id/radio232"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked23"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked23"
 
                 <RadioButton
                     android:id="@+id/radio233"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked23"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked23"
+
 
                 <RadioButton
                     android:id="@+id/radio234"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked23"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked23"
+
 
             </RadioGroup>
-            //q4
+            <!--   q4-->
             <TextView
                 android:id="@+id/qq24"
                 android:layout_width="wrap_content"
@@ -327,15 +333,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
+                    android:onClick="onRadioButtonClicked24"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked24"
+
                 <RadioButton
                     android:id="@+id/radio241"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked24"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked24"
+
 
 
                 <RadioButton
@@ -343,27 +351,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked24"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked24"
+
 
                 <RadioButton
                     android:id="@+id/radio243"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked24"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked24"
+
+
 
                 <RadioButton
                     android:id="@+id/radio244"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked24"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked24"
+
 
             </RadioGroup>
-            //q5
+            <!--   q5-->
             <TextView
                 android:id="@+id/qq25"
                 android:layout_width="wrap_content"
@@ -388,43 +400,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
+                    android:onClick="onRadioButtonClicked25"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked25"
+
 
                 <RadioButton
                     android:id="@+id/radio251"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked25"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked25"
+
 
                 <RadioButton
                     android:id="@+id/radio252"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked25"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked25"
+
 
                 <RadioButton
                     android:id="@+id/radio253"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked25"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked25"
+
 
                 <RadioButton
                     android:id="@+id/radio254"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked25"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked25"
+
 
             </RadioGroup>
-            //q6
+            <!--   q6-->
             <TextView
                 android:id="@+id/qq26"
                 android:layout_width="wrap_content"
@@ -449,43 +466,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
+                    android:onClick="onRadioButtonClicked26"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked26"
+
 
                 <RadioButton
                     android:id="@+id/radio261"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked26"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked26"
+
 
                 <RadioButton
                     android:id="@+id/radio262"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked26"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked26"
+
 
                 <RadioButton
                     android:id="@+id/radio263"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked26"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked26"
+
 
                 <RadioButton
                     android:id="@+id/radio264"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked26"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked26"
+
 
             </RadioGroup>
-            //q7
+            <!--   q7-->
             <TextView
                 android:id="@+id/qq27"
                 android:layout_width="wrap_content"
@@ -510,43 +532,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
+                    android:onClick="onRadioButtonClicked27"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked27"
+
 
                 <RadioButton
                     android:id="@+id/radio271"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked27"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked27"
+
 
                 <RadioButton
                     android:id="@+id/radio272"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked27"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked27"
+
 
                 <RadioButton
                     android:id="@+id/radio273"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked27"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked27"
+
 
                 <RadioButton
                     android:id="@+id/radio274"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked27"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked27"
+
 
             </RadioGroup>
-            //q8
+            <!--   q8-->
             <TextView
                 android:id="@+id/qq28"
                 android:layout_width="wrap_content"
@@ -571,44 +598,49 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
+                    android:onClick="onRadioButtonClicked28"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked28"
+
 
                 <RadioButton
                     android:id="@+id/radio281"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked28"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked28"
+
 
                 <RadioButton
                     android:id="@+id/radio282"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked28"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked28"
+
 
                 <RadioButton
                     android:id="@+id/radio283"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked28"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked28"
+
 
                 <RadioButton
                     android:id="@+id/radio284"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked28"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked28"
+
 
             </RadioGroup>
 
-            //q9
+            <!--   q9-->
             <TextView
                 android:id="@+id/qq29"
                 android:layout_width="wrap_content"
@@ -633,43 +665,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
+                    android:onClick="onRadioButtonClicked29"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked29"
+
 
                 <RadioButton
                     android:id="@+id/radio291"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked29"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked29"
+
 
                 <RadioButton
                     android:id="@+id/radio292"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked29"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked29"
+
 
                 <RadioButton
                     android:id="@+id/radio293"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked29"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked29"
+
 
                 <RadioButton
                     android:id="@+id/radio294"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked29"
                     android:textSize="22sp"/>
-                // android:onClick="onRadioButtonClicked29"
+
 
             </RadioGroup>
-            //q10
+            <!--   q10-->
             <TextView
                 android:id="@+id/qq210"
                 android:layout_width="wrap_content"
@@ -694,43 +731,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
+                    android:onClick="onRadioButtonClicked210"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked210"
+
 
                 <RadioButton
                     android:id="@+id/radio2101"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked210"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked210"
+
 
                 <RadioButton
                     android:id="@+id/radio2102"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked210"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked210"
+
 
                 <RadioButton
                     android:id="@+id/radio2103"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked210"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked210"
+
 
                 <RadioButton
                     android:id="@+id/radio2104"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked210"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked210"
+
 
             </RadioGroup>
-            //q11
+            <!--   q11-->
             <TextView
                 android:id="@+id/qq211"
                 android:layout_width="wrap_content"
@@ -755,8 +797,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
+                    android:onClick="onRadioButtonClicked211"
                     android:textSize="22sp"/>
-                //  android:onClick="onRadioButtonClicked211"
+
 
 
                 <RadioButton
@@ -764,35 +807,39 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked211"
                     android:textSize="22sp"/>
-                android:onClick="onRadioButtonClicked211"
+
 
                 <RadioButton
                     android:id="@+id/radio2112"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked211"
                     android:textSize="22sp"/>
-                android:onClick="onRadioButtonClicked211"
+
 
                 <RadioButton
                     android:id="@+id/radio2113"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked211"
                     android:textSize="22sp"/>
-                android:onClick="onRadioButtonClicked211"
+
 
                 <RadioButton
                     android:id="@+id/radio2114"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked211"
                     android:textSize="22sp"/>
-                android:onClick="onRadioButtonClicked211"
+
 
             </RadioGroup>
-            //q12
+            <!--   q12-->
             <TextView
                 android:id="@+id/qq212"
                 android:layout_width="wrap_content"
@@ -817,8 +864,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="בכלל לא"
+                    android:onClick="onRadioButtonClicked212"
                     android:textSize="22sp"/>
-                //   android:onClick="onRadioButtonClicked212"
+
 
 
                 <RadioButton
@@ -826,32 +874,36 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה מועטה"
+                    android:onClick="onRadioButtonClicked212"
                     android:textSize="22sp"/>
-                //    android:onClick="onRadioButtonClicked212"
+
 
                 <RadioButton
                     android:id="@+id/radio2122"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה סבירה"
+                    android:onClick="onRadioButtonClicked212"
                     android:textSize="22sp"/>
-                //    android:onClick="onRadioButtonClicked212"
+
 
                 <RadioButton
                     android:id="@+id/radio2123"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה"
+                    android:onClick="onRadioButtonClicked212"
                     android:textSize="22sp"/>
-                //    android:onClick="onRadioButtonClicked212"
+
 
                 <RadioButton
                     android:id="@+id/radio2124"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="במידה רבה מאוד"
+                    android:onClick="onRadioButtonClicked212"
                     android:textSize="22sp"/>
-                //    android:onClick="onRadioButtonClicked212"
+
 
             </RadioGroup>
             <Button

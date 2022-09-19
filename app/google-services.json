@@ -8,35 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:427494885685:android:37521feece3bd1cd52a47c",
-        "android_client_info": {
-          "package_name": "com.rivkaba.atid_lanoar"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "427494885685-hocfop9a4oo03jei443t2kv6c1dscg58.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAH9LeOJ3DBUs2YefXV_iMstFZt-w5sPug"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "427494885685-hocfop9a4oo03jei443t2kv6c1dscg58.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:427494885685:android:ea2a58db317e600152a47c",
         "android_client_info": {
           "package_name": "com.rivkaba.atidlanoar"

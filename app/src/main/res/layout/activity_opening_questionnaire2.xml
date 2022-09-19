@@ -909,7 +909,7 @@
             <Button
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:onClick="send1"
+                android:onClick="send"
                 android:text="שמירה"
                 android:textSize="25sp" />
         </LinearLayout>

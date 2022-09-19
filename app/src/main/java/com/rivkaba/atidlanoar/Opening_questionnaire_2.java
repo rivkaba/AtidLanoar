@@ -25,6 +25,8 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Opening_questionnaire_2 extends AppCompatActivity {
+    public FirebaseFirestore db;
+    String uid;
     private TextView qq21;
     private TextView qq22;
     private TextView qq23;
@@ -113,6 +115,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire2);
+        db = FirebaseFirestore.getInstance();
         qq21 = (TextView) findViewById(R.id.qq21);
         qq22 = (TextView) findViewById(R.id.qq22);
         qq23 = (TextView) findViewById(R.id.qq23);
@@ -567,5 +570,110 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
 
     }
 
+    public void send(View view) {
+        if(send2()==1) {
+            Map<String, Object> answers = new HashMap<>();
+            Map<String, Object> part2 = new HashMap<>();
+            part2.put("q1", q21);
+            part2.put("q2", q22);
+            part2.put("q3", q23);
+            part2.put("q4", q24);
+            part2.put("q5", q25);
+            part2.put("q6", q26);
+            part2.put("q7", q27);
+            part2.put("q8", q28);
+            part2.put("q9", q29);
+            part2.put("q10", q210);
+            part2.put("q11", q211);
+            part2.put("q12", q212);
+            answers.put("part2", part2);
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            if (user != null) {
+                uid = user.getUid();
+            }
+            db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").set(answers)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(Opening_questionnaire_2.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
+
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(Opening_questionnaire_2.this, "השליחה נכשלה", Toast.LENGTH_LONG).show();
+
+                        }
+                    });
+        }
+
+    }
+        public int send2() {
+        if ((!radio210.isChecked()) && (!radio211.isChecked()) && (!radio212.isChecked()) && (!radio213.isChecked()) && (!radio214.isChecked())) {
+            qq21.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio220.isChecked()) && (!radio221.isChecked()) && (!radio222.isChecked()) && (!radio223.isChecked()) && (!radio224.isChecked())) {
+            qq22.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0 ;
+        }
+        if ((!radio230.isChecked()) && (!radio231.isChecked()) && (!radio232.isChecked()) && (!radio233.isChecked()) && (!radio234.isChecked())) {
+            qq23.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio240.isChecked()) && (!radio241.isChecked()) && (!radio242.isChecked()) && (!radio243.isChecked()) && (!radio244.isChecked())) {
+            qq24.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio250.isChecked()) && (!radio251.isChecked()) && (!radio252.isChecked()) && (!radio253.isChecked()) && (!radio254.isChecked())) {
+            qq25.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio260.isChecked()) && (!radio261.isChecked()) && (!radio262.isChecked()) && (!radio263.isChecked()) && (!radio264.isChecked())) {
+            qq26.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio270.isChecked()) && (!radio271.isChecked()) && (!radio272.isChecked()) && (!radio273.isChecked()) && (!radio274.isChecked())) {
+            qq27.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio280.isChecked()) && (!radio281.isChecked()) && (!radio282.isChecked()) && (!radio283.isChecked()) && (!radio284.isChecked())) {
+            qq28.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio290.isChecked()) && (!radio291.isChecked()) && (!radio292.isChecked()) && (!radio293.isChecked()) && (!radio294.isChecked())) {
+            qq29.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio2100.isChecked()) && (!radio2101.isChecked()) && (!radio2102.isChecked()) && (!radio2103.isChecked()) && (!radio2104.isChecked())) {
+            qq210.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio2110.isChecked()) && (!radio2111.isChecked()) && (!radio2112.isChecked()) && (!radio2113.isChecked()) && (!radio2114.isChecked())) {
+            qq211.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio2120.isChecked()) && (!radio2121.isChecked()) && (!radio2122.isChecked()) && (!radio2123.isChecked()) && (!radio2124.isChecked())) {
+            qq212.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        //everything full
+            qq21.setTextColor(getResources().getColor(R.color.black));
+            qq22.setTextColor(getResources().getColor(R.color.black));
+            qq23.setTextColor(getResources().getColor(R.color.black));
+            qq24.setTextColor(getResources().getColor(R.color.black));
+            qq25.setTextColor(getResources().getColor(R.color.black));
+            qq26.setTextColor(getResources().getColor(R.color.black));
+            qq27.setTextColor(getResources().getColor(R.color.black));
+            qq28.setTextColor(getResources().getColor(R.color.black));
+            qq29.setTextColor(getResources().getColor(R.color.black));
+            qq210.setTextColor(getResources().getColor(R.color.black));
+            qq211.setTextColor(getResources().getColor(R.color.black));
+            qq212.setTextColor(getResources().getColor(R.color.black));
+
+        return 1;
+
+    }
 }
 

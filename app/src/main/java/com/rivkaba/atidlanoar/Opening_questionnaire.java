@@ -726,7 +726,7 @@ public class Opening_questionnaire extends AppCompatActivity {
 
    // }
 
-    public void send1(View view) {
+    public void send(View view) {
         //fulling
         if ((!q110.isChecked()) && (!q111.isChecked()) && (!q112.isChecked())) {
             gender.setTextColor(getResources().getColor(R.color.design_default_color_error));
@@ -763,7 +763,7 @@ public class Opening_questionnaire extends AppCompatActivity {
 //                part2.put("q12", qq212);
 
 
-                Map<String, Object> part3 = new HashMap<>();
+            //    Map<String, Object> part3 = new HashMap<>();
 //        Q31=String.valueOf(q31.getRating());
 //        Q32=String.valueOf(q32.getRating());
 //        Q33=String.valueOf(q33.getRating());
@@ -774,7 +774,7 @@ public class Opening_questionnaire extends AppCompatActivity {
 //        part3.put("q33", Q33);
 //        part3.put("q34", Q34);
 
-                Map<String, Object> part4 = new HashMap<>();
+        //        Map<String, Object> part4 = new HashMap<>();
 //        String Q41 = q41.getText().toString();
 //        String Q42 = q42.getText().toString();
 //        part4.put("q41", Q41);
@@ -782,8 +782,8 @@ public class Opening_questionnaire extends AppCompatActivity {
 
                 answers.put("part1", part1);
                 //answers.put("part2", part2);
-                answers.put("part3", part3);
-                answers.put("part4", part4);
+//                answers.put("part3", part3);
+//                answers.put("part4", part4);
                  FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
                     uid = user.getUid();

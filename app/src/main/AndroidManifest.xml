@@ -11,6 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtidLanoar">
         <activity
+            android:name=".Summary_questionnaire_3"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Opening_questionnaire_3"
             android:exported="false">
             <meta-data

@@ -1,296 +1,635 @@
 package com.rivkaba.atidlanoar;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.annotation.NonNull;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RatingBar;
-import android.widget.ScrollView;
-import android.widget.SeekBar;
-import android.widget.Toast;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.widget.RadioButton;
+        import android.widget.RatingBar;
+        import android.widget.ScrollView;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
+        import com.google.android.gms.tasks.OnFailureListener;
+        import com.google.android.gms.tasks.OnSuccessListener;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.auth.FirebaseUser;
+        import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+        import java.util.HashMap;
+        import java.util.Map;
+        import java.util.Objects;
 
 public class Summary_questionnaire_2 extends AppCompatActivity {
-    private ScrollView scrollView3;
-    private   ScrollView scrollView4;
-    private LinearLayout LinearLayout5;
-    private LinearLayout linearButtons;
-    RatingBar q31;
-    RatingBar q32;
-    RatingBar q33;
-    RatingBar q34;
-    String Q31;
-    String Q32;
-    String Q33;
-    String Q34;
-    String Q41;
-    String Q42;
-    String Q43;
-   String Q44;
-SeekBar q45;
-SeekBar   q46;
-    EditText q47;
-            EditText q48;
-
-    String uid;
     public FirebaseFirestore db;
+    String uid;
+    private TextView qq21;
+    private TextView qq22;
+    private TextView qq23;
+    private TextView qq24;
+    private TextView qq25;
+    private TextView qq26;
+    private TextView qq27;
+    private TextView qq28;
+    private TextView qq29;
+    private TextView qq210;
+    private TextView qq211;
+    private String q21;
+    private String q22;
+    private String q23;
+    private String q24;
+    private String q25;
+    private String q26;
+    private String q27;
+    private String q28;
+    private String q29;
+    private String q210;
+    private String q211;
+    private RadioButton radio210;
+    private RadioButton radio211;
+    private RadioButton radio212;
+    private RadioButton radio213;
+    private RadioButton radio214;
+    private RadioButton radio220;
+    private RadioButton radio221;
+    private RadioButton radio222;
+    private RadioButton radio223;
+    private RadioButton radio224;
+    private RadioButton radio230;
+    private RadioButton radio231;
+    private RadioButton radio232;
+    private RadioButton radio233;
+    private RadioButton radio234;
+    private RadioButton radio240;
+    private RadioButton radio241;
+    private RadioButton radio242;
+    private RadioButton radio243;
+    private RadioButton radio244;
+    private RadioButton radio250;
+    private RadioButton radio251;
+    private RadioButton radio252;
+    private RadioButton radio253;
+    private RadioButton radio254;
+    private RadioButton radio260;
+    private RadioButton radio261;
+    private RadioButton radio262;
+    private RadioButton radio263;
+    private RadioButton radio264;
+    private RadioButton radio270;
+    private RadioButton radio271;
+    private RadioButton radio272;
+    private RadioButton radio273;
+    private RadioButton radio274;
+    private RadioButton radio280;
+    private RadioButton radio281;
+    private RadioButton radio282;
+    private RadioButton radio283;
+    private RadioButton radio284;
+    private RadioButton radio290;
+    private RadioButton radio291;
+    private RadioButton radio292;
+    private RadioButton radio293;
+    private RadioButton radio294;
+    private RadioButton radio2100;
+    private RadioButton radio2101;
+    private RadioButton radio2102;
+    private RadioButton radio2103;
+    private RadioButton radio2104;
+    private RadioButton radio2110;
+    private RadioButton radio2111;
+    private RadioButton radio2112;
+    private RadioButton radio2113;
+    private RadioButton radio2114;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary_questionnaire2);
-        scrollView3=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_3);
-        scrollView4=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_4);
-        LinearLayout5=(LinearLayout) findViewById(R.id.Linear_Layout);
-        linearButtons =(LinearLayout) findViewById(R.id.linear_buttons);
-        Intent intent = getIntent();
-        String part = intent.getStringExtra("part");
-        if(Objects.equals(part, "P4"))
-            part4();
-        q31=(RatingBar)findViewById(R.id.q31);
-        q32=(RatingBar)findViewById(R.id.q32);
-        q33=(RatingBar)findViewById(R.id.q33);
-        q34=(RatingBar)findViewById(R.id.q34);
-        q45= (SeekBar) findViewById(R.id.q45);
-        q46=(SeekBar) findViewById(R.id.q46);
-        q47=(EditText) findViewById(R.id.q47);
-        q48=(EditText) findViewById(R.id.q48);
         db = FirebaseFirestore.getInstance();
+        qq21 = (TextView) findViewById(R.id.qq21);
+        qq22 = (TextView) findViewById(R.id.qq22);
+        qq23 = (TextView) findViewById(R.id.qq23);
+        qq24 = (TextView) findViewById(R.id.qq24);
+        qq25 = (TextView) findViewById(R.id.qq25);
+        qq26 = (TextView) findViewById(R.id.qq26);
+        qq27 = (TextView) findViewById(R.id.qq27);
+        qq28 = (TextView) findViewById(R.id.qq28);
+        qq29 = (TextView) findViewById(R.id.qq29);
+        qq210 = (TextView) findViewById(R.id.qq210);
+        qq211 = (TextView) findViewById(R.id.qq211);
+
+        radio210 = (RadioButton) findViewById(R.id.radio210);
+        radio211 = (RadioButton) findViewById(R.id.radio211);
+        radio212 = (RadioButton) findViewById(R.id.radio212);
+        radio213 = (RadioButton) findViewById(R.id.radio213);
+        radio214 = (RadioButton) findViewById(R.id.radio214);
+        radio220 = (RadioButton) findViewById(R.id.radio220);
+        radio221 = (RadioButton) findViewById(R.id.radio221);
+        radio222 = (RadioButton) findViewById(R.id.radio222);
+        radio223 = (RadioButton) findViewById(R.id.radio223);
+        radio224 = (RadioButton) findViewById(R.id.radio224);
+        radio230 = (RadioButton) findViewById(R.id.radio230);
+        radio231 = (RadioButton) findViewById(R.id.radio231);
+        radio232 = (RadioButton) findViewById(R.id.radio232);
+        radio233 = (RadioButton) findViewById(R.id.radio233);
+        radio234 = (RadioButton) findViewById(R.id.radio234);
+        radio240 = (RadioButton) findViewById(R.id.radio240);
+        radio241 = (RadioButton) findViewById(R.id.radio241);
+        radio242 = (RadioButton) findViewById(R.id.radio242);
+        radio243 = (RadioButton) findViewById(R.id.radio243);
+        radio244 = (RadioButton) findViewById(R.id.radio244);
+        radio250 = (RadioButton) findViewById(R.id.radio250);
+        radio251 = (RadioButton) findViewById(R.id.radio251);
+        radio252 = (RadioButton) findViewById(R.id.radio252);
+        radio253 = (RadioButton) findViewById(R.id.radio253);
+        radio254 = (RadioButton) findViewById(R.id.radio254);
+        radio260 = (RadioButton) findViewById(R.id.radio260);
+        radio261 = (RadioButton) findViewById(R.id.radio261);
+        radio262 = (RadioButton) findViewById(R.id.radio262);
+        radio263 = (RadioButton) findViewById(R.id.radio263);
+        radio264 = (RadioButton) findViewById(R.id.radio264);
+        radio270 = (RadioButton) findViewById(R.id.radio270);
+        radio271 = (RadioButton) findViewById(R.id.radio271);
+        radio272 = (RadioButton) findViewById(R.id.radio272);
+        radio273 = (RadioButton) findViewById(R.id.radio273);
+        radio274 = (RadioButton) findViewById(R.id.radio274);
+        radio280 = (RadioButton) findViewById(R.id.radio280);
+        radio281 = (RadioButton) findViewById(R.id.radio281);
+        radio282 = (RadioButton) findViewById(R.id.radio282);
+        radio283 = (RadioButton) findViewById(R.id.radio283);
+        radio284 = (RadioButton) findViewById(R.id.radio284);
+        radio290 = (RadioButton) findViewById(R.id.radio290);
+        radio291 = (RadioButton) findViewById(R.id.radio291);
+        radio292 = (RadioButton) findViewById(R.id.radio292);
+        radio293 = (RadioButton) findViewById(R.id.radio293);
+        radio294 = (RadioButton) findViewById(R.id.radio294);
+        radio2100 = (RadioButton) findViewById(R.id.radio2100);
+        radio2101 = (RadioButton) findViewById(R.id.radio2101);
+        radio2102 = (RadioButton) findViewById(R.id.radio2102);
+        radio2103 = (RadioButton) findViewById(R.id.radio2103);
+        radio2104 = (RadioButton) findViewById(R.id.radio2104);
+        radio2110 = (RadioButton) findViewById(R.id.radio2110);
+        radio2111 = (RadioButton) findViewById(R.id.radio2111);
+        radio2112 = (RadioButton) findViewById(R.id.radio2112);
+        radio2113 = (RadioButton) findViewById(R.id.radio2113);
+        radio2114 = (RadioButton) findViewById(R.id.radio2114);
+
     }
+    //part2
+    //q1
+    public void onRadioButtonClicked21(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio210:
+                if (checked)
+                    q21 = "0";
+                break;
+            case R.id.radio211:
+                if (checked)
+                    q21 = "1";
+                break;
+            case R.id.radio212:
+                if (checked)
+                    q21 = "2";
+                break;
+            case R.id.radio213:
+                if (checked)
+                    q21 = "3";
+                break;
+            case R.id.radio214:
+                if (checked)
+                    q21 = "4";
+                break;
+        }
+    }
+
+    //q2
+    public void onRadioButtonClicked22(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio220:
+                if (checked)
+                    q22 = "0";
+                break;
+            case R.id.radio221:
+                if (checked)
+                    q22 = "1";
+                break;
+            case R.id.radio222:
+                if (checked)
+                    q22 = "2";
+                break;
+            case R.id.radio223:
+                if (checked)
+                    q22 = "3";
+                break;
+            case R.id.radio224:
+                if (checked)
+                    q22 = "4";
+                break;
+        }
+
+    }
+
+    //q3
+    public void onRadioButtonClicked23(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio230:
+                if (checked)
+                    q23 = "0";
+                break;
+            case R.id.radio231:
+                if (checked)
+                    q23 = "1";
+                break;
+            case R.id.radio232:
+                if (checked)
+                    q23 = "2";
+                break;
+            case R.id.radio233:
+                if (checked)
+                    q23 = "3";
+                break;
+            case R.id.radio234:
+                if (checked)
+                    q23 = "4";
+                break;
+        }
+
+    }
+
+    //q4
+    public void onRadioButtonClicked24(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio240:
+                if (checked)
+                    q24 = "0";
+                break;
+            case R.id.radio241:
+                if (checked)
+                    q24 = "1";
+                break;
+            case R.id.radio242:
+                if (checked)
+                    q24 = "2";
+                break;
+            case R.id.radio243:
+                if (checked)
+                    q24 = "3";
+                break;
+            case R.id.radio244:
+                if (checked)
+                    q24 = "4";
+                break;
+        }
+
+    }
+
+    //q5
+    public void onRadioButtonClicked25(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio250:
+                if (checked)
+                    q25 = "0";
+                break;
+            case R.id.radio251:
+                if (checked)
+                    q25 = "1";
+                break;
+            case R.id.radio252:
+                if (checked)
+                    q25 = "2";
+                break;
+            case R.id.radio253:
+                if (checked)
+                    q25 = "3";
+                break;
+            case R.id.radio254:
+                if (checked)
+                    q25 = "4";
+                break;
+        }
+
+    }
+
+    //q6
+    public void onRadioButtonClicked26(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio260:
+                if (checked)
+                    q26 = "0";
+                break;
+            case R.id.radio261:
+                if (checked)
+                    q26 = "1";
+                break;
+            case R.id.radio262:
+                if (checked)
+                    q26 = "2";
+                break;
+            case R.id.radio263:
+                if (checked)
+                    q26 = "3";
+                break;
+            case R.id.radio264:
+                if (checked)
+                    q26 = "4";
+                break;
+        }
+
+    }
+
+    //q7
+    public void onRadioButtonClicked27(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio270:
+                if (checked)
+                    q27 = "0";
+                break;
+            case R.id.radio271:
+                if (checked)
+                    q27 = "1";
+                break;
+            case R.id.radio272:
+                if (checked)
+                    q27 = "2";
+                break;
+            case R.id.radio273:
+                if (checked)
+                    q27 = "3";
+                break;
+            case R.id.radio274:
+                if (checked)
+                    q27 = "4";
+                break;
+        }
+
+    }
+
+    //q8
+    public void onRadioButtonClicked28(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio280:
+                if (checked)
+                    q28 = "0";
+                break;
+            case R.id.radio281:
+                if (checked)
+                    q28 = "1";
+                break;
+            case R.id.radio282:
+                if (checked)
+                    q28 = "2";
+                break;
+            case R.id.radio283:
+                if (checked)
+                    q28 = "3";
+                break;
+            case R.id.radio284:
+                if (checked)
+                    q28 = "4";
+                break;
+        }
+
+    }
+
+    //q9
+    public void onRadioButtonClicked29(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio290:
+                if (checked)
+                    q29 = "0";
+                break;
+            case R.id.radio291:
+                if (checked)
+                    q29 = "1";
+                break;
+            case R.id.radio292:
+                if (checked)
+                    q29 = "2";
+                break;
+            case R.id.radio293:
+                if (checked)
+                    q29 = "3";
+                break;
+            case R.id.radio294:
+                if (checked)
+                    q29 = "4";
+                break;
+        }
+
+    }
+
+    //q10
+    public void onRadioButtonClicked210(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio2100:
+                if (checked)
+                    q210 = "0";
+                break;
+            case R.id.radio2101:
+                if (checked)
+                    q210 = "1";
+                break;
+            case R.id.radio2102:
+                if (checked)
+                    q210 = "2";
+                break;
+            case R.id.radio2103:
+                if (checked)
+                    q210 = "3";
+                break;
+            case R.id.radio2104:
+                if (checked)
+                    q210 = "4";
+                break;
+        }
+
+    }
+
+    //q11
+    public void onRadioButtonClicked211(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.radio2110:
+                if (checked)
+                    q211 = "0";
+                break;
+            case R.id.radio2111:
+                if (checked)
+                    q211 = "1";
+                break;
+            case R.id.radio2112:
+                if (checked)
+                    q211 = "2";
+                break;
+            case R.id.radio2113:
+                if (checked)
+                    q211 = "3";
+                break;
+            case R.id.radio2114:
+                if (checked)
+                    q211 = "4";
+                break;
+        }
+
+
+
+    }
+    //part1
     public void P1(View view) {
         Intent intent = new Intent(Summary_questionnaire_2.this, Summary_questionnaire.class);
         intent.putExtra("part", "P1");
         startActivity(intent);
     }
-    public void P2(View view) {
-        Intent intent = new Intent(Summary_questionnaire_2.this, Summary_questionnaire.class);
-        intent.putExtra("part", "P2");
-        startActivity(intent);
-    }
+    //part 3
     public void P3(View view) {
-        linearButtons.setVisibility(view.VISIBLE);
-        scrollView3.setVisibility(view.VISIBLE);
-        scrollView4.setVisibility(view.INVISIBLE);
+        startActivity(new Intent(Summary_questionnaire_2.this, Summary_questionnaire_3.class));
     }
+
     //part 4
     public void P4(View view) {
-        linearButtons.setVisibility(view.VISIBLE);
-        scrollView3.setVisibility(view.INVISIBLE);
-        scrollView4.setVisibility(view.VISIBLE);
-    }
+        Intent intent = new Intent(Summary_questionnaire_2.this, Summary_questionnaire_3.class);
+        intent.putExtra("part", "P4");
+        startActivity(intent);
 
-    private void part4() {
-        linearButtons.setVisibility(View.VISIBLE);
-        scrollView4.setVisibility(View.VISIBLE);
-        scrollView3.setVisibility(View.INVISIBLE);
 
     }
 
+    public void save(View view) {
+        if(send2()==1) {
+            Map<String, Object> answers = new HashMap<>();
+            Map<String, Object> part2 = new HashMap<>();
+            part2.put("q1", q21);
+            part2.put("q2", q22);
+            part2.put("q3", q23);
+            part2.put("q4", q24);
+            part2.put("q5", q25);
+            part2.put("q6", q26);
+            part2.put("q7", q27);
+            part2.put("q8", q28);
+            part2.put("q9", q29);
+            part2.put("q10", q210);
+            part2.put("q11", q211);
+            answers.put("part2", part2);
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            if (user != null) {
+                uid = user.getUid();
+            }
+            db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").set(answers)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(Summary_questionnaire_2.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
 
-    public void sending(View view) {
-        linearButtons.setVisibility(view.INVISIBLE);
-        scrollView3.setVisibility(view.INVISIBLE);
-        scrollView4.setVisibility(view.INVISIBLE);
-      //  FirebaseFirestore.setLoggingEnabled(true);
-        Map<String, Object> answers = new HashMap<>();
-        Map<String, Object> part1 = new HashMap<>();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(Summary_questionnaire_2.this, "השליחה נכשלה", Toast.LENGTH_LONG).show();
 
-        Map<String, Object> part2 = new HashMap<>();
-
-
-        Map<String, Object> part3 = new HashMap<>();
-        Q31=String.valueOf(q31.getRating());
-        Q32=String.valueOf(q32.getRating());
-        Q33=String.valueOf(q33.getRating());
-        Q34=String.valueOf(q34.getRating());
-
-        part3.put("q31", Q31);
-        part3.put("q32", Q32);
-        part3.put("q33", Q33);
-        part3.put("q34", Q34);
-
-        Map<String, Object> part4 = new HashMap<>();
-
-        part4.put("q41", Q41);
-        part4.put("q42", Q42);
-        part4.put("q43", Q43);
-        part4.put("q44", Q44);
-        int Q45= q45.getProgress();
-        int Q46= q46.getProgress();
-        part4.put("q45", Q45);
-        part4.put("q46", Q46);
-        String Q47 = q47.getText().toString();
-        String Q48 = q48.getText().toString();
-        part4.put("q47", Q47);
-        part4.put("q48", Q48);
-        answers.put("part1", part1);
-        answers.put("part2", part2);
-        answers.put("part3", part3);
-        answers.put("part4", part4);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            uid = user.getUid();
+                        }
+                    });
         }
-        db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").set(answers)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(Summary_questionnaire_2.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
 
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Summary_questionnaire_2.this, "השליחה נכשלה", Toast.LENGTH_LONG).show();
-
-                    }
-                });
-
-
-        LinearLayout5.setVisibility(view.VISIBLE);
     }
-    //q1
-    public void onRadioButtonClicked1(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.q410:
-                if (checked)
-                    Q41="0";
-                break;
-            case R.id.q411:
-                if (checked)
-                    Q41="1";
-                break;
-            case R.id.q412:
-                if (checked)
-                    Q41="2";
-                break;
-            case R.id.q413:
-                if (checked)
-                    Q41="3";
-                break;
-            case R.id.q414:
-                if (checked)
-                    Q41="4";
-                break;
-            case R.id.q415:
-                if (checked)
-                    Q41="5";
-                break;
+    public int send2() {
+        if ((!radio210.isChecked()) && (!radio211.isChecked()) && (!radio212.isChecked()) && (!radio213.isChecked()) && (!radio214.isChecked())) {
+            qq21.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
         }
-    }
-//q2
+        if ((!radio220.isChecked()) && (!radio221.isChecked()) && (!radio222.isChecked()) && (!radio223.isChecked()) && (!radio224.isChecked())) {
+            qq22.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0 ;
+        }
+        if ((!radio230.isChecked()) && (!radio231.isChecked()) && (!radio232.isChecked()) && (!radio233.isChecked()) && (!radio234.isChecked())) {
+            qq23.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio240.isChecked()) && (!radio241.isChecked()) && (!radio242.isChecked()) && (!radio243.isChecked()) && (!radio244.isChecked())) {
+            qq24.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio250.isChecked()) && (!radio251.isChecked()) && (!radio252.isChecked()) && (!radio253.isChecked()) && (!radio254.isChecked())) {
+            qq25.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio260.isChecked()) && (!radio261.isChecked()) && (!radio262.isChecked()) && (!radio263.isChecked()) && (!radio264.isChecked())) {
+            qq26.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio270.isChecked()) && (!radio271.isChecked()) && (!radio272.isChecked()) && (!radio273.isChecked()) && (!radio274.isChecked())) {
+            qq27.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio280.isChecked()) && (!radio281.isChecked()) && (!radio282.isChecked()) && (!radio283.isChecked()) && (!radio284.isChecked())) {
+            qq28.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio290.isChecked()) && (!radio291.isChecked()) && (!radio292.isChecked()) && (!radio293.isChecked()) && (!radio294.isChecked())) {
+            qq29.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio2100.isChecked()) && (!radio2101.isChecked()) && (!radio2102.isChecked()) && (!radio2103.isChecked()) && (!radio2104.isChecked())) {
+            qq210.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
+        }
+        if ((!radio2110.isChecked()) && (!radio2111.isChecked()) && (!radio2112.isChecked()) && (!radio2113.isChecked()) && (!radio2114.isChecked())) {
+            qq211.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            return 0;
 
-    public void onRadioButtonClicked2(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.q420:
-                if (checked)
-                    Q42="0";
-                break;
-            case R.id.q421:
-                if (checked)
-                    Q42="1";
-                break;
-            case R.id.q422:
-                if (checked)
-                    Q42="2";
-                break;
-            case R.id.q423:
-                if (checked)
-                    Q42="3";
-                break;
-            case R.id.q424:
-                if (checked)
-                    Q42="4";
-                break;
-            case R.id.q425:
-                if (checked)
-                    Q42="5";
-                break;
         }
-    }
-    //q3
-    public void onRadioButtonClicked3(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.q430:
-                if (checked)
-                    Q43="0";
-                break;
-            case R.id.q431:
-                if (checked)
-                    Q43="1";
-                break;
-            case R.id.q432:
-                if (checked)
-                    Q43="2";
-                break;
-            case R.id.q433:
-                if (checked)
-                    Q43="3";
-                break;
-            case R.id.q434:
-                if (checked)
-                    Q43="4";
-                break;
-            case R.id.q435:
-                if (checked)
-                    Q43="5";
-                break;
-        }
-    }
-    //q4
-    public void onRadioButtonClicked4(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.q440:
-                if (checked)
-                    Q44="0";
-                break;
-            case R.id.q441:
-                if (checked)
-                    Q44="1";
-                break;
-            case R.id.q442:
-                if (checked)
-                    Q44="2";
-                break;
-            case R.id.q443:
-                if (checked)
-                    Q44="3";
-                break;
-            case R.id.q444:
-                if (checked)
-                    Q44="4";
-                break;
-            case R.id.q445:
-                if (checked)
-                    Q44="5";
-                break;
-        }
+        //everything full
+        qq21.setTextColor(getResources().getColor(R.color.black));
+        qq22.setTextColor(getResources().getColor(R.color.black));
+        qq23.setTextColor(getResources().getColor(R.color.black));
+        qq24.setTextColor(getResources().getColor(R.color.black));
+        qq25.setTextColor(getResources().getColor(R.color.black));
+        qq26.setTextColor(getResources().getColor(R.color.black));
+        qq27.setTextColor(getResources().getColor(R.color.black));
+        qq28.setTextColor(getResources().getColor(R.color.black));
+        qq29.setTextColor(getResources().getColor(R.color.black));
+        qq210.setTextColor(getResources().getColor(R.color.black));
+        qq211.setTextColor(getResources().getColor(R.color.black));
+
+
+        return 1;
+
     }
 }
+

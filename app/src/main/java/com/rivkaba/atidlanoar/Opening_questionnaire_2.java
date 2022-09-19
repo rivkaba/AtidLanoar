@@ -38,7 +38,6 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
     private TextView qq29;
     private TextView qq210;
     private TextView qq211;
-    private TextView qq212;
     private String q21;
         private String q22;
     private String q23;
@@ -50,7 +49,6 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
     private String q29;
     private String q210;
     private String q211;
-    private String q212;
     private RadioButton radio210;
     private RadioButton radio211;
     private RadioButton radio212;
@@ -106,11 +104,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
     private RadioButton radio2112;
     private RadioButton radio2113;
     private RadioButton radio2114;
-    private RadioButton radio2120;
-    private RadioButton radio2121;
-    private RadioButton radio2122;
-    private RadioButton radio2123;
-    private RadioButton radio2124;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,7 +121,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
         qq29 = (TextView) findViewById(R.id.qq29);
         qq210 = (TextView) findViewById(R.id.qq210);
         qq211 = (TextView) findViewById(R.id.qq211);
-        qq212 = (TextView) findViewById(R.id.qq212);
+
         radio210 = (RadioButton) findViewById(R.id.radio210);
         radio211 = (RadioButton) findViewById(R.id.radio211);
         radio212 = (RadioButton) findViewById(R.id.radio212);
@@ -183,12 +177,6 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
         radio2112 = (RadioButton) findViewById(R.id.radio2112);
         radio2113 = (RadioButton) findViewById(R.id.radio2113);
         radio2114 = (RadioButton) findViewById(R.id.radio2114);
-        radio2120 = (RadioButton) findViewById(R.id.radio2120);
-        radio2121 = (RadioButton) findViewById(R.id.radio2121);
-        radio2122 = (RadioButton) findViewById(R.id.radio2122);
-        radio2123 = (RadioButton) findViewById(R.id.radio2123);
-        radio2124 = (RadioButton) findViewById(R.id.radio2124);
-
 
     }
         //part2
@@ -519,35 +507,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
                 break;
         }
 
-    }
 
-    //q12
-    public void onRadioButtonClicked212(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.radio2120:
-                if (checked)
-                    q212 = "0";
-                break;
-            case R.id.radio2121:
-                if (checked)
-                    q212 = "1";
-                break;
-            case R.id.radio2122:
-                if (checked)
-                    q212 = "2";
-                break;
-            case R.id.radio2123:
-                if (checked)
-                    q212 = "3";
-                break;
-            case R.id.radio2124:
-                if (checked)
-                    q212 = "4";
-                break;
-        }
 
      }
     //part1
@@ -585,7 +545,6 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
             part2.put("q9", q29);
             part2.put("q10", q210);
             part2.put("q11", q211);
-            part2.put("q12", q212);
             answers.put("part2", part2);
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
@@ -653,10 +612,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
         if ((!radio2110.isChecked()) && (!radio2111.isChecked()) && (!radio2112.isChecked()) && (!radio2113.isChecked()) && (!radio2114.isChecked())) {
             qq211.setTextColor(getResources().getColor(R.color.design_default_color_error));
             return 0;
-        }
-        if ((!radio2120.isChecked()) && (!radio2121.isChecked()) && (!radio2122.isChecked()) && (!radio2123.isChecked()) && (!radio2124.isChecked())) {
-            qq212.setTextColor(getResources().getColor(R.color.design_default_color_error));
-            return 0;
+
         }
         //everything full
             qq21.setTextColor(getResources().getColor(R.color.black));
@@ -670,7 +626,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
             qq29.setTextColor(getResources().getColor(R.color.black));
             qq210.setTextColor(getResources().getColor(R.color.black));
             qq211.setTextColor(getResources().getColor(R.color.black));
-            qq212.setTextColor(getResources().getColor(R.color.black));
+
 
         return 1;
 

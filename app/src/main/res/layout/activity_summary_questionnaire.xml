@@ -135,7 +135,7 @@
             tools:ignore="OnClick" />
     </LinearLayout>
 
-    //part 1
+<!--q1-->
     <ScrollView
         android:id="@+id/Scroll_view_questionnaire_1"
         android:layout_width="397dp"
@@ -292,7 +292,7 @@
 
         </LinearLayout>
     </ScrollView>
-    //part 2
+    <!--p2-->
     <ScrollView
         android:id="@+id/Scroll_view_questionnaire_2"
         android:layout_width="397dp"

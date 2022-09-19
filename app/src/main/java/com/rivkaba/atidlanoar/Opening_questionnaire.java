@@ -726,7 +726,7 @@ public class Opening_questionnaire extends AppCompatActivity {
 
    // }
 
-    public void send(View view) {
+    public void save(View view) {
         //fulling
         if ((!q110.isChecked()) && (!q111.isChecked()) && (!q112.isChecked())) {
             gender.setTextColor(getResources().getColor(R.color.design_default_color_error));

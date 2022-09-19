@@ -570,7 +570,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
 
     }
 
-    public void send(View view) {
+    public void save(View view) {
         if(send2()==1) {
             Map<String, Object> answers = new HashMap<>();
             Map<String, Object> part2 = new HashMap<>();

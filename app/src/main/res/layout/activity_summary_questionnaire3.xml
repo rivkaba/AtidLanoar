@@ -89,7 +89,7 @@
             android:textSize="22sp"
             tools:ignore="OnClick" />
     </LinearLayout>
-    //part 3
+   <!--p3-->
     <ScrollView
         android:id="@+id/Scroll_view_questionnaire_3"
         android:layout_width="397dp"
@@ -174,7 +174,7 @@
 
         </LinearLayout>
     </ScrollView>
-    //part 4
+    <!--p4-->
 
     <ScrollView
         android:id="@+id/Scroll_view_questionnaire_4"
@@ -206,7 +206,7 @@
                 android:text="לפניכם שאלות על תכנים שלמדתם במהלך השנה,  אנא סמן/י עד כמה למדת מכל אחד מהאירועים הבאים?
 "
                 android:textSize="25sp" />
-            //q1
+            <!--q1-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -273,7 +273,7 @@
                     android:text="למדתי הרבה מאוד"
                     android:textSize="22sp" />
             </RadioGroup>
-            //q2
+            <!--q2-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -342,7 +342,7 @@
                     android:text="למדתי הרבה מאוד"
                     android:textSize="22dp" />
             </RadioGroup>
-            //q3
+            <!--q3-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -410,7 +410,7 @@
                     android:text="למדתי הרבה מאוד"
                     android:textSize="22sp" />
             </RadioGroup>
-            //q4
+            <!--q4-->
 
             <TextView
                 android:layout_width="wrap_content"

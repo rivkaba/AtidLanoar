@@ -511,18 +511,18 @@ public class Summary_questionnaire_2 extends AppCompatActivity {
 
     }
     //part1
-    public void P1(View view) {
+    public void p1(View view) {
         Intent intent = new Intent(Summary_questionnaire_2.this, Summary_questionnaire.class);
         intent.putExtra("part", "P1");
         startActivity(intent);
     }
     //part 3
-    public void P3(View view) {
+    public void p3(View view) {
         startActivity(new Intent(Summary_questionnaire_2.this, Summary_questionnaire_3.class));
     }
 
     //part 4
-    public void P4(View view) {
+    public void p4(View view) {
         Intent intent = new Intent(Summary_questionnaire_2.this, Summary_questionnaire_3.class);
         intent.putExtra("part", "P4");
         startActivity(intent);
@@ -575,7 +575,7 @@ public class Summary_questionnaire_2 extends AppCompatActivity {
         }
         if ((!radio220.isChecked()) && (!radio221.isChecked()) && (!radio222.isChecked()) && (!radio223.isChecked()) && (!radio224.isChecked())) {
             qq22.setTextColor(getResources().getColor(R.color.design_default_color_error));
-            return 0 ;
+            return 0;
         }
         if ((!radio230.isChecked()) && (!radio231.isChecked()) && (!radio232.isChecked()) && (!radio233.isChecked()) && (!radio234.isChecked())) {
             qq23.setTextColor(getResources().getColor(R.color.design_default_color_error));
@@ -631,5 +631,7 @@ public class Summary_questionnaire_2 extends AppCompatActivity {
         return 1;
 
     }
+
+
 }
 

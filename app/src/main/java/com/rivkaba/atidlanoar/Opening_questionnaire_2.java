@@ -27,6 +27,7 @@ import java.util.Objects;
 public class Opening_questionnaire_2 extends AppCompatActivity {
     public FirebaseFirestore db;
     String uid;
+
     private TextView qq21;
     private TextView qq22;
     private TextView qq23;

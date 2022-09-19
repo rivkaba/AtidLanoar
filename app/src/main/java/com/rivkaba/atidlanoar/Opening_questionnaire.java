@@ -155,67 +155,6 @@ public class Opening_questionnaire extends AppCompatActivity {
         String part = intent.getStringExtra("part");
         if(Objects.equals(part, "P1"))
             part1();
-//        radio210 = (RadioButton) findViewById(R.id.radio210);
-//        radio211 = (RadioButton) findViewById(R.id.radio211);
-//        radio212 = (RadioButton) findViewById(R.id.radio212);
-//        radio213 = (RadioButton) findViewById(R.id.radio213);
-//        radio214 = (RadioButton) findViewById(R.id.radio214);
-//        radio220 = (RadioButton) findViewById(R.id.radio220);
-//        radio221 = (RadioButton) findViewById(R.id.radio221);
-//        radio222 = (RadioButton) findViewById(R.id.radio222);
-//        radio223 = (RadioButton) findViewById(R.id.radio223);
-//        radio224 = (RadioButton) findViewById(R.id.radio224);
-//        radio230 = (RadioButton) findViewById(R.id.radio230);
-//        radio231 = (RadioButton) findViewById(R.id.radio231);
-//        radio232 = (RadioButton) findViewById(R.id.radio232);
-//        radio233 = (RadioButton) findViewById(R.id.radio233);
-//        radio234 = (RadioButton) findViewById(R.id.radio234);
-//        radio240 = (RadioButton) findViewById(R.id.radio240);
-//        radio241 = (RadioButton) findViewById(R.id.radio241);
-//        radio242 = (RadioButton) findViewById(R.id.radio242);
-//        radio243 = (RadioButton) findViewById(R.id.radio243);
-//        radio244 = (RadioButton) findViewById(R.id.radio244);
-//        radio250 = (RadioButton) findViewById(R.id.radio250);
-//        radio251 = (RadioButton) findViewById(R.id.radio251);
-//        radio252 = (RadioButton) findViewById(R.id.radio252);
-//        radio253 = (RadioButton) findViewById(R.id.radio253);
-//        radio254 = (RadioButton) findViewById(R.id.radio254);
-//        radio260 = (RadioButton) findViewById(R.id.radio260);
-//        radio261 = (RadioButton) findViewById(R.id.radio261);
-//        radio262 = (RadioButton) findViewById(R.id.radio262);
-//        radio263 = (RadioButton) findViewById(R.id.radio263);
-//        radio264 = (RadioButton) findViewById(R.id.radio264);
-//        radio270 = (RadioButton) findViewById(R.id.radio270);
-//        radio271 = (RadioButton) findViewById(R.id.radio271);
-//        radio272 = (RadioButton) findViewById(R.id.radio272);
-//        radio273 = (RadioButton) findViewById(R.id.radio273);
-//        radio274 = (RadioButton) findViewById(R.id.radio274);
-//        radio280 = (RadioButton) findViewById(R.id.radio280);
-//        radio281 = (RadioButton) findViewById(R.id.radio281);
-//        radio282 = (RadioButton) findViewById(R.id.radio282);
-//        radio283 = (RadioButton) findViewById(R.id.radio283);
-//        radio284 = (RadioButton) findViewById(R.id.radio284);
-//        radio290 = (RadioButton) findViewById(R.id.radio290);
-//        radio291 = (RadioButton) findViewById(R.id.radio291);
-//        radio292 = (RadioButton) findViewById(R.id.radio292);
-//        radio293 = (RadioButton) findViewById(R.id.radio293);
-//        radio294 = (RadioButton) findViewById(R.id.radio294);
-//        radio2100 = (RadioButton) findViewById(R.id.radio2100);
-//        radio2101 = (RadioButton) findViewById(R.id.radio2101);
-//        radio2102 = (RadioButton) findViewById(R.id.radio2102);
-//        radio2103 = (RadioButton) findViewById(R.id.radio2103);
-//        radio2104 = (RadioButton) findViewById(R.id.radio2104);
-//        radio2110 = (RadioButton) findViewById(R.id.radio2110);
-//        radio2111 = (RadioButton) findViewById(R.id.radio2111);
-//        radio2112 = (RadioButton) findViewById(R.id.radio2112);
-//        radio2113 = (RadioButton) findViewById(R.id.radio2113);
-//        radio2114 = (RadioButton) findViewById(R.id.radio2114);
-//        radio2120 = (RadioButton) findViewById(R.id.radio2120);
-//        radio2121 = (RadioButton) findViewById(R.id.radio2121);
-//        radio2122 = (RadioButton) findViewById(R.id.radio2122);
-//        radio2123 = (RadioButton) findViewById(R.id.radio2123);
-//        radio2124 = (RadioButton) findViewById(R.id.radio2124);
-
 
 
 

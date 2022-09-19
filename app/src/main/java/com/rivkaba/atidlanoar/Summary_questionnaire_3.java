@@ -78,9 +78,8 @@ public class Summary_questionnaire_3 extends AppCompatActivity {
         startActivity(intent);
     }
     public void P2(View view) {
-        Intent intent = new Intent(Summary_questionnaire_3.this, Summary_questionnaire_2.class);
-        intent.putExtra("part", "P2");
-        startActivity(intent);
+        startActivity(new Intent(Summary_questionnaire_3.this, Summary_questionnaire_2.class));
+
     }
     public void P3(View view) {
         linearButtons.setVisibility(view.VISIBLE);

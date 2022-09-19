@@ -35,7 +35,6 @@ public class Summary_questionnaire extends AppCompatActivity {
     private Button questionnair;
     private ScrollView scrollView;
     private ScrollView scrollView1;
-    private   ScrollView scrollView2;
     private LinearLayout linearButtons;
 
 
@@ -43,14 +42,15 @@ public class Summary_questionnaire extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary_questionnaire);
+        questionnair=(Button) findViewById(R.id.questionnair);
+        scrollView=(ScrollView) findViewById(R.id.Scroll_view_questionnaire);
+        scrollView1=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_1);
+        linearButtons =(LinearLayout) findViewById(R.id.linear_buttons);
         Intent intent = getIntent();
         String part = intent.getStringExtra("part");
         if(Objects.equals(part, "P1"))
             part1();
-        else {
-            if (Objects.equals(part, "P2"))
-                part2();
-        }
+
         //Spinner teams
         db = FirebaseFirestore.getInstance();
         Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner2);
@@ -113,11 +113,7 @@ public class Summary_questionnaire extends AppCompatActivity {
     }
 
     public void questionnair(View view) {
-            questionnair=(Button) findViewById(R.id.questionnair);
-        scrollView=(ScrollView) findViewById(R.id.Scroll_view_questionnaire);
-            scrollView1=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_1);
-            scrollView2=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_2);
-        linearButtons =(LinearLayout) findViewById(R.id.linear_buttons);
+
         scrollView.setVisibility(view.INVISIBLE);
         questionnair.setVisibility(view.INVISIBLE);
         scrollView1.setVisibility(view.VISIBLE);
@@ -128,40 +124,30 @@ public class Summary_questionnaire extends AppCompatActivity {
     //part 1
     public void P1(View view) {
         linearButtons.setVisibility(view.VISIBLE);
-            scrollView1.setVisibility(view.VISIBLE);
-            scrollView2.setVisibility(view.INVISIBLE);
+        scrollView.setVisibility(view.INVISIBLE);
+        scrollView1.setVisibility(view.VISIBLE);
 
     }
-    private void part1() {
+    public void part1() {
         linearButtons.setVisibility(View.VISIBLE);
         scrollView.setVisibility(View.INVISIBLE);
         scrollView1.setVisibility(View.VISIBLE);
-        scrollView2.setVisibility(View.INVISIBLE);
 
 
     }
     //part 2
     public void P2(View view) {
-        linearButtons.setVisibility(view.VISIBLE);
-        scrollView1.setVisibility(view.INVISIBLE);
-        scrollView2.setVisibility(view.VISIBLE);
 
-    }
-    private void part2() {
-        linearButtons.setVisibility(View.VISIBLE);
-        scrollView.setVisibility(View.INVISIBLE);
-        scrollView1.setVisibility(View.INVISIBLE);
-        scrollView2.setVisibility(View.VISIBLE);
-
+        startActivity(new Intent(Summary_questionnaire.this, Summary_questionnaire_2.class));
     }
     //part 3
     public void P3(View view) {
-        startActivity(new Intent(Summary_questionnaire.this,Summary_questionnaire_2 .class));
+        startActivity(new Intent(Summary_questionnaire.this,Summary_questionnaire_3 .class));
 
     }
 
     public void P4(View view) {
-        Intent intent = new Intent(Summary_questionnaire.this, Summary_questionnaire_2.class);
+        Intent intent = new Intent(Summary_questionnaire.this, Summary_questionnaire_3.class);
         intent.putExtra("part", "P4");
         startActivity(intent);
 

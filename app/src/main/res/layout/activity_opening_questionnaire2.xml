@@ -128,7 +128,6 @@
                 android:text="יש לי מיומנויות שיעזרו לי להשתלב בשוק העבודה (עמידה בזמנים, יכולת הצגה עצמית, התמדה)."
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="25sp"/>
 
             <RadioGroup
@@ -137,7 +136,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+            >
 
                 <RadioButton
                     android:id="@+id/radio210"
@@ -189,7 +188,6 @@
                 android:text="אני מרגיש/ה ביטחון לעמוד ולהציג מול קהל"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="22sp"/>
 
             <RadioGroup
@@ -198,7 +196,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+                >
 
                 <RadioButton
                     android:id="@+id/radio220"
@@ -253,7 +251,6 @@
                 android:text="אני מרגיש/ה בטוח להתמודד עם ראיון עבודה"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="22sp"/>
 
             <RadioGroup
@@ -262,7 +259,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+                >
 
                 <RadioButton
                     android:id="@+id/radio230"
@@ -317,7 +314,6 @@
                 android:text="אני יודע/ת כיצד לכתוב קורות חיים באופן עצמאי"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="22sp"/>
 
             <RadioGroup
@@ -326,7 +322,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+          >
 
                 <RadioButton
                     android:id="@+id/radio240"
@@ -384,7 +380,6 @@
                 android:text="אני מאמין/ה שאצליח להשיג את העבודה שאני רוצה בעתיד"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="22sp"/>
 
             <RadioGroup
@@ -393,7 +388,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+                >
 
                 <RadioButton
                     android:id="@+id/radio250"
@@ -450,7 +445,6 @@
                 android:text="אני מאוד רוצה להשתלב בשוק העבודה בעתיד"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="22sp"/>
 
             <RadioGroup
@@ -459,7 +453,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+          >
 
                 <RadioButton
                     android:id="@+id/radio260"
@@ -516,7 +510,6 @@
                 android:text="אני מוכנ/ה להתאמץ כדי להשתלב בעבודה שתתאים לי"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="22sp"/>
 
             <RadioGroup
@@ -525,7 +518,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+       >
 
                 <RadioButton
                     android:id="@+id/radio270"
@@ -582,7 +575,6 @@
                 android:text="בעתיד, כשאמצע עבודה, יהיה לי חשוב להצליח בה ולהישאר בה לאורך זמן"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="22sp"/>
 
             <RadioGroup
@@ -591,7 +583,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+                >
 
                 <RadioButton
                     android:id="@+id/radio280"
@@ -649,7 +641,6 @@
                 android:text="אני משקיע/ה מחשבה לגבי העתיד המקצועי שלי"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="22sp"/>
 
             <RadioGroup
@@ -658,7 +649,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+          >
 
                 <RadioButton
                     android:id="@+id/radio290"
@@ -715,7 +706,6 @@
                 android:text="האם את/ה מתכוונ/ת להתגייס לצבא/ שירות לאומי?"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="25sp"/>
 
             <RadioGroup
@@ -724,7 +714,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+               >
 
                 <RadioButton
                     android:id="@+id/radio2100"
@@ -781,7 +771,6 @@
                 android:text="אני מאמינ/ה שאצליח להשיג כל מטרה בחיים"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate"
                 android:textSize="22sp"/>
 
             <RadioGroup
@@ -790,7 +779,7 @@
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+                >
 
                 <RadioButton
                     android:id="@+id/radio2110"

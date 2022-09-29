@@ -97,7 +97,7 @@ public class Summary_questionnaire_3 extends AppCompatActivity {
         setContentView(R.layout.activity_summary_questionnaire3);
         scrollView3=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_3);
         scrollView4=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_4);
-        LinearLayout5=(LinearLayout) findViewById(R.id.Linear_Layout);
+        LinearLayout5=(LinearLayout) findViewById(R.id.Linear_layout);
         linearButtons =(LinearLayout) findViewById(R.id.linear_buttons);
         Intent intent = getIntent();
         String part = intent.getStringExtra("part");

@@ -87,15 +87,26 @@ public class Profile extends AppCompatActivity {
     public void update(View view) {
         Fname1 = findViewById(R.id.f_name);
         Lname1 = findViewById(R.id.l_name);
-         Phone1 = findViewById(R.id.phone);
-         Password11 = findViewById(R.id.password1);
-         Password21 = findViewById(R.id.password2);
+        Phone1 = findViewById(R.id.phone);
+        Password11 = findViewById(R.id.password1);
+        Password21 = findViewById(R.id.password2);
         String Fname = Fname1.getText().toString();
         String Lname = Lname1.getText().toString();
         String Phone = Phone1.getText().toString();
         String Password1 = Password11.getText().toString();
         String Password2 = Password21.getText().toString();
-        //______________
+        if (Password1.length()>6)
+        {
+            Password11.setError("הסיסמה חייבת להכיל לפחות 6 תווים");
+            Password11.requestFocus();
+            return;
+        }
+        if (!Password1.equals(Password2)){
+            Password21.setError("הסיסמה אינה תואמת לאימות");
+             Password21.requestFocus();
+        return;
+    }
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         user.updatePassword(Password1)
@@ -114,7 +125,7 @@ public class Profile extends AppCompatActivity {
        // mAuth.getCurrentUser().updatePassword(Password1);
 
         if (user != null) {
-            ////////////
+
 //            final String email = user.getEmail();
 //            String oldpass = user.getp();
 //

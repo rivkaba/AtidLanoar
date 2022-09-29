@@ -13,6 +13,8 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.google.android.gms.common.util.UidVerifier;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -27,6 +29,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 public class SignUp extends AppCompatActivity {
     public FirebaseAuth mAuth;
@@ -132,7 +135,11 @@ public class SignUp extends AppCompatActivity {
                                     String fname = Fname.getText().toString();
                                     String lname = Lname.getText().toString();
                                     String phone = Phone.getText().toString();
-                                    String uid = mAuth.getUid();
+                                    String uid="";
+                                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                    if (user != null) {
+                                         uid = user.getUid();
+                                    }
                                     // Toast.makeText(SignUp.this,uid,Toast.LENGTH_LONG).show();
                                     //  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;
                                     Map<String, Object> waitforapproval = new HashMap<>();
@@ -147,28 +154,26 @@ public class SignUp extends AppCompatActivity {
                                     waitforapproval.put("type", "students");
                                     waitforapproval.put("uid", uid);
 // Add a new document with a generated ID
-                                    db.collection("waitforapproval")
-                                            .add(waitforapproval)
-                                            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                    db.collection("waitforapproval").document(uid).set(waitforapproval)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
-                                                public void onSuccess(DocumentReference documentReference) {
-                                                    Toast.makeText(SignUp.this, "נרשמת בהצלחה ", Toast.LENGTH_LONG).show();
-                                                    //Opening questionnaire
-                                                    //  Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
+                                                public void onSuccess(Void aVoid) {
+                                                    Toast.makeText(SignUp.this, " נרשמת בהצלחה", Toast.LENGTH_LONG).show();
                                                     Intent intent = new Intent(SignUp.this, Student.class);
                                                     startActivity(intent);
                                                 }
-//                                         Intent intent = new Intent(SignUp.this, Student.class);
-//                                          startActivity(intent);
-//                                      startActivity(new Intent(SignUp.this,Student.class));
                                             })
                                             .addOnFailureListener(new OnFailureListener() {
                                                 @Override
                                                 public void onFailure(@NonNull Exception e) {
                                                     Toast.makeText(SignUp.this, "הרשמה נכשלה", Toast.LENGTH_LONG).show();
+
                                                 }
                                             });
-                                } else {
+
+
+
+                            }else {
                                     Toast.makeText(SignUp.this, "ההרשמה נכשלה:)", Toast.LENGTH_LONG).show();
                                     // If sign in fails, display a message to the user.
                                 }

@@ -25,7 +25,7 @@ FirebaseAuth auth;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_password);
         email=(EditText) findViewById(R.id.email);
-        progressBar=(ProgressBar)findViewById(R.id.progressBar);
+        progressBar=(ProgressBar)findViewById(R.id.progress_bar);
         auth=FirebaseAuth.getInstance();
     }
 

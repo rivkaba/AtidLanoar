@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Opening_questionnaire_4" android:background="@drawable/pi"
+    >
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="371dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:text="שאלון פתיחת שנה - תוכנית עתיד לנוער "
+        android:textSize="30dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear_buttons"
+        android:layout_width="411dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view">
+
+        <Button
+            android:id="@+id/p4"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P4"
+            android:text=" ד'"
+            android:textSize="22sp"
+            tools:ignore="OnClick" />
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p3"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P3"
+            android:text="ג'"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p2"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P2"
+            android:text="ב'"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p1"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P1"
+            android:text=" א'"
+            android:textSize="22sp"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+    <!--p4-->
+
+    <ScrollView
+        android:id="@+id/Scroll_view_questionnaire_4"
+        android:layout_width="384dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_buttons">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="חלק ד'"
+                android:textSize="25sp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מה את/ה מצפה ללמוד בתוכנית?"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/q41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="התשובה שלך"
+                android:inputType="textPersonName"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="מה את/ה מרגיש/ה שאת/ה צריך/ה ללמוד בתוכנית כדי להצליח להשתלב בעבודה שאת/ה רוצה ?"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/q42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="התשובה שלך"
+                android:inputType="textPersonName"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="תודה ובהצלחה!!"
+                android:textSize="25sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="save4"
+                android:text="שליחה"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

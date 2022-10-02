@@ -28,19 +28,8 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
     public FirebaseFirestore db;
     String uid;
 
-    private TextView qq21;
-    private TextView qq22;
-    private TextView qq23;
-    private TextView qq24;
-    private TextView qq25;
-    private TextView qq26;
-    private TextView qq27;
-    private TextView qq28;
-    private TextView qq29;
-    private TextView qq210;
-    private TextView qq211;
     private String q21;
-        private String q22;
+    private String q22;
     private String q23;
     private String q24;
     private String q25;
@@ -111,17 +100,6 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire2);
         db = FirebaseFirestore.getInstance();
-        qq21 = (TextView) findViewById(R.id.qq21);
-        qq22 = (TextView) findViewById(R.id.qq22);
-        qq23 = (TextView) findViewById(R.id.qq23);
-        qq24 = (TextView) findViewById(R.id.qq24);
-        qq25 = (TextView) findViewById(R.id.qq25);
-        qq26 = (TextView) findViewById(R.id.qq26);
-        qq27 = (TextView) findViewById(R.id.qq27);
-        qq28 = (TextView) findViewById(R.id.qq28);
-        qq29 = (TextView) findViewById(R.id.qq29);
-        qq210 = (TextView) findViewById(R.id.qq210);
-        qq211 = (TextView) findViewById(R.id.qq211);
 
         radio210 = (RadioButton) findViewById(R.id.radio210);
         radio211 = (RadioButton) findViewById(R.id.radio211);
@@ -180,7 +158,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
         radio2114 = (RadioButton) findViewById(R.id.radio2114);
 
     }
-        //part2
+
     //q1
     public void onRadioButtonClicked21(View view) {
         // Is the button now checked?
@@ -524,9 +502,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
 
     //part 4
     public void P4(View view) {
-        Intent intent = new Intent(Opening_questionnaire_2.this, Opening_questionnaire_3.class);
-        intent.putExtra("part", "P4");
-        startActivity(intent);
+        startActivity(new Intent(Opening_questionnaire_2.this, Opening_questionnaire_4.class));
 
 
     }
@@ -546,12 +522,11 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
             part2.put("q9", q29);
             part2.put("q10", q210);
             part2.put("q11", q211);
-            answers.put("part2", part2);
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
                 uid = user.getUid();
             }
-            db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").set(answers)
+            db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part2").set(part2)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
@@ -571,63 +546,61 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
     }
         public int send2() {
         if ((!radio210.isChecked()) && (!radio211.isChecked()) && (!radio212.isChecked()) && (!radio213.isChecked()) && (!radio214.isChecked())) {
-            qq21.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio210.setError("התשובה שלך");
+            radio210.requestFocus();
             return 0;
         }
         if ((!radio220.isChecked()) && (!radio221.isChecked()) && (!radio222.isChecked()) && (!radio223.isChecked()) && (!radio224.isChecked())) {
-            qq22.setTextColor(getResources().getColor(R.color.design_default_color_error));
-            return 0 ;
+            radio220.setError("התשובה שלך");
+            radio220.requestFocus();
+            return 0;
         }
         if ((!radio230.isChecked()) && (!radio231.isChecked()) && (!radio232.isChecked()) && (!radio233.isChecked()) && (!radio234.isChecked())) {
-            qq23.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio230.setError("התשובה שלך");
+            radio230.requestFocus();
             return 0;
         }
         if ((!radio240.isChecked()) && (!radio241.isChecked()) && (!radio242.isChecked()) && (!radio243.isChecked()) && (!radio244.isChecked())) {
-            qq24.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio240.setError("התשובה שלך");
+            radio240.requestFocus();
             return 0;
         }
         if ((!radio250.isChecked()) && (!radio251.isChecked()) && (!radio252.isChecked()) && (!radio253.isChecked()) && (!radio254.isChecked())) {
-            qq25.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio250.setError("התשובה שלך");
+            radio250.requestFocus();
             return 0;
         }
         if ((!radio260.isChecked()) && (!radio261.isChecked()) && (!radio262.isChecked()) && (!radio263.isChecked()) && (!radio264.isChecked())) {
-            qq26.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio260.setError("התשובה שלך");
+            radio260.requestFocus();
             return 0;
         }
         if ((!radio270.isChecked()) && (!radio271.isChecked()) && (!radio272.isChecked()) && (!radio273.isChecked()) && (!radio274.isChecked())) {
-            qq27.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio270.setError("התשובה שלך");
+            radio270.requestFocus();
             return 0;
         }
         if ((!radio280.isChecked()) && (!radio281.isChecked()) && (!radio282.isChecked()) && (!radio283.isChecked()) && (!radio284.isChecked())) {
-            qq28.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio280.setError("התשובה שלך");
+            radio280.requestFocus();
             return 0;
         }
         if ((!radio290.isChecked()) && (!radio291.isChecked()) && (!radio292.isChecked()) && (!radio293.isChecked()) && (!radio294.isChecked())) {
-            qq29.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio290.setError("התשובה שלך");
+            radio290.requestFocus();
             return 0;
         }
         if ((!radio2100.isChecked()) && (!radio2101.isChecked()) && (!radio2102.isChecked()) && (!radio2103.isChecked()) && (!radio2104.isChecked())) {
-            qq210.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio2100.setError("התשובה שלך");
+            radio2100.requestFocus();
             return 0;
         }
         if ((!radio2110.isChecked()) && (!radio2111.isChecked()) && (!radio2112.isChecked()) && (!radio2113.isChecked()) && (!radio2114.isChecked())) {
-            qq211.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            radio2110.setError("התשובה שלך");
+            radio2110.requestFocus();
             return 0;
-
         }
         //everything full
-            qq21.setTextColor(getResources().getColor(R.color.black));
-            qq22.setTextColor(getResources().getColor(R.color.black));
-            qq23.setTextColor(getResources().getColor(R.color.black));
-            qq24.setTextColor(getResources().getColor(R.color.black));
-            qq25.setTextColor(getResources().getColor(R.color.black));
-            qq26.setTextColor(getResources().getColor(R.color.black));
-            qq27.setTextColor(getResources().getColor(R.color.black));
-            qq28.setTextColor(getResources().getColor(R.color.black));
-            qq29.setTextColor(getResources().getColor(R.color.black));
-            qq210.setTextColor(getResources().getColor(R.color.black));
-            qq211.setTextColor(getResources().getColor(R.color.black));
-
 
         return 1;
 

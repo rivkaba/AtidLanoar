@@ -11,6 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtidLanoar">
         <activity
+            android:name=".Opening_questionnaire_4"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Forget_password"
             android:exported="false">
             <meta-data

@@ -74,24 +74,32 @@ public class SignUp extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, team);
         //     adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         teamSpinner.setAdapter(adapter);
-        teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
+      if(teamSpinner!=null) {
 
-               // teamSpinner.
-              //  Log.v("item", (String) parent.getItemAtPosition(position));
-          //      Toast.makeText(SignUp.this,(String) parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
+          teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+              @Override
+              public void onItemSelected(AdapterView<?> parent, View view,
+                                         int position, long id) {
 
-                teamName =(String) parent.getItemAtPosition(position);
+                  // teamSpinner.
+                  //  Log.v("item", (String) parent.getItemAtPosition(position));
+       //           Toast.makeText(SignUp.this, (String) parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
+                  Toast.makeText(SignUp.this, "aaaaaaaaaaaaaaaaa", Toast.LENGTH_LONG).show();
 
-            }
+                  teamName = (String) parent.getItemAtPosition(position);
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
-            }
-        });
+              }
+
+              @Override
+              public void onNothingSelected(AdapterView<?> parent) {
+                  // TODO Auto-generated method stub
+              }
+          });
+      }
+      else
+          Toast.makeText(SignUp.this, "bbbbbbbbbbbbbbbbbbbbbb", Toast.LENGTH_LONG).show();
+
+
     }
 
     public void register(View view) {
@@ -150,7 +158,7 @@ public class SignUp extends AppCompatActivity {
                                     waitforapproval.put("lname", lname);
                                     waitforapproval.put("phone", phone);
                                     waitforapproval.put("team", phone);
-                                    waitforapproval.put("teamName", teamName);
+                                    waitforapproval.put("teamName", teamName.toString());
                                     waitforapproval.put("type", "students");
                                     waitforapproval.put("uid", uid);
 // Add a new document with a generated ID

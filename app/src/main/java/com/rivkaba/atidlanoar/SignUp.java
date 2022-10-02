@@ -109,21 +109,32 @@ public class SignUp extends AppCompatActivity {
         EditText Lname = findViewById(R.id.l_name);
         EditText Phone = findViewById(R.id.Phone);
         if(Fname.getText().toString().equals("")) {
-            Fname.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+            Fname.setError("דרוש שמך");
+            Fname.requestFocus();
+            return;
         }
         if(Lname.getText().toString().equals("")) {
-            Lname.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+            Lname.setError("דרוש שם משפחתך");
+            Lname.requestFocus();
+            return;
         }
 
         if(Phone.getText().toString().equals("")) {
-            Phone.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+            Phone.setError("דרוש פלאפון");
+            Phone.requestFocus();
+            return;
         }
         if(ID.getText().toString().equals("")) {
-            ID.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+            ID.setError("דרוש תעודת זהות");
+            ID.requestFocus();
+            return;
         }
         if(Email.getText().toString().equals("")) {
-            Email.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+            Email.setError("דרוש מייל");
+            Email.requestFocus();
+            return;
         }
+        //קבוצה
 
         if((!Fname.getText().toString().equals(""))&&(!Lname.getText().toString().equals(""))&&(!Phone.getText().toString().equals(""))&&(!ID.getText().toString().equals(""))&&(!Email.getText().toString().equals("")))
             {
@@ -167,7 +178,7 @@ public class SignUp extends AppCompatActivity {
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
                                                     Toast.makeText(SignUp.this, " נרשמת בהצלחה", Toast.LENGTH_LONG).show();
-                                                    Intent intent = new Intent(SignUp.this, Student.class);
+                                                    Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
                                                     startActivity(intent);
                                                 }
                                             })

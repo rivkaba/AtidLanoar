@@ -27,7 +27,7 @@ import java.util.Objects;
 public class Opening_questionnaire_2 extends AppCompatActivity {
     public FirebaseFirestore db;
     String uid;
-
+    private Button p3;
     private String q21;
     private String q22;
     private String q23;
@@ -95,12 +95,13 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
     private RadioButton radio2113;
     private RadioButton radio2114;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire2);
         db = FirebaseFirestore.getInstance();
-
+        p3=(Button) findViewById(R.id.p3);
         radio210 = (RadioButton) findViewById(R.id.radio210);
         radio211 = (RadioButton) findViewById(R.id.radio211);
         radio212 = (RadioButton) findViewById(R.id.radio212);
@@ -500,12 +501,6 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
         startActivity(new Intent(Opening_questionnaire_2.this, Opening_questionnaire_3.class));
     }
 
-    //part 4
-    public void P4(View view) {
-        startActivity(new Intent(Opening_questionnaire_2.this, Opening_questionnaire_4.class));
-
-
-    }
 
     public void save(View view) {
         if(send2()==1) {
@@ -531,7 +526,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Toast.makeText(Opening_questionnaire_2.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
-
+   p3.setEnabled(true);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.ScrollView;
@@ -23,20 +24,16 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Opening_questionnaire_3 extends AppCompatActivity {
-    private ScrollView scrollView3;
+
     RatingBar q31;
     RatingBar q32;
     RatingBar q33;
     RatingBar q34;
-    String Q31;
-    String Q32;
-    String Q33;
-    String Q34;
     TextView qq31;
     TextView qq32;
     TextView qq33;
     TextView qq34;
-
+Button p4;
     String uid;
     public FirebaseFirestore db;
 
@@ -45,7 +42,7 @@ public class Opening_questionnaire_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire3);
         db = FirebaseFirestore.getInstance();
-        scrollView3 = (ScrollView) findViewById(R.id.Scroll_view_questionnaire_3);
+        p4=(Button) findViewById(R.id.p4);
         q31 = (RatingBar) findViewById(R.id.q31);
         q32 = (RatingBar) findViewById(R.id.q32);
         q33 = (RatingBar) findViewById(R.id.q33);
@@ -81,10 +78,10 @@ public class Opening_questionnaire_3 extends AppCompatActivity {
         if(send2()==1) {
             Map<String, Object> part3 = new HashMap<>();
 
-            part3.put("q31", Q31);
-            part3.put("q32", Q32);
-            part3.put("q33", Q33);
-            part3.put("q34", Q34);
+            part3.put("q31", q31.getRating());
+            part3.put("q32", q32.getRating());
+            part3.put("q33", q33.getRating());
+            part3.put("q34", q34.getRating());
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
                 uid = user.getUid();
@@ -94,7 +91,7 @@ public class Opening_questionnaire_3 extends AppCompatActivity {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Toast.makeText(Opening_questionnaire_3.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
-
+                            p4.setEnabled(true);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -110,28 +107,25 @@ public class Opening_questionnaire_3 extends AppCompatActivity {
 
 
   public int  send2(){
-      Q31=String.valueOf(q31.getRating());
-      Q32=String.valueOf(q32.getRating());
-      Q33=String.valueOf(q33.getRating());
-      Q34=String.valueOf(q34.getRating());
-      if(Objects.equals(Q31, "0.0")) {
+
+      if(Objects.equals(q31.getRating(), "0.0")) {
           qq31.setError("נחוץ קורות חיים");
           qq31.requestFocus();
           return 0;
       }
-      if(Objects.equals(Q32, "0.0")) {
+      if(Objects.equals(q32.getRating(), "0.0")) {
           qq32.setError("נחוץ ראיון עבודה");
           qq32.requestFocus();
           return 0;
       }
-      if(Objects.equals(Q33, "0.0")) {
+      if(Objects.equals(q33.getRating(), "0.0")) {
           qq33.setError("נחוץ כתיבת תוכנית עסקית");
           qq33.requestFocus();
           return 0;
       }
-      if(Objects.equals(Q34, "0.0")) {
-          qq33.setError("נחוץ תכנון גאנט עבודה");
-          qq33.requestFocus();
+      if(Objects.equals(q34.getRating(), "0.0")) {
+          qq34.setError("נחוץ תכנון גאנט עבודה");
+          qq34.requestFocus();
           return 0;
       }
       return 1;

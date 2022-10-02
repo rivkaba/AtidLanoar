@@ -56,17 +56,15 @@ public class Opening_questionnaire extends AppCompatActivity {
     private ScrollView ScrollViewQuestionnaire;
     private ScrollView scrollView1;
     private LinearLayout linearButtons;
-    private Button p1;
     private Button p2;
-    private Button p3;
-    private Button p4;
+
     boolean ch = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_questionnaire);
-
+        p2=(Button) findViewById(R.id.p2);
         q113 = (EditText) findViewById(R.id.q113);
         ScrollViewQuestionnaire = (ScrollView) findViewById(R.id.Scroll_view_questionnaire);
         scrollView1 = (ScrollView) findViewById(R.id.Scroll_view_questionnaire_1);
@@ -172,41 +170,15 @@ public class Opening_questionnaire extends AppCompatActivity {
         linearButtons.setVisibility(View.VISIBLE);
         ScrollViewQuestionnaire.setVisibility(View.INVISIBLE);
         scrollView1.setVisibility(View.VISIBLE);
-       // scrollView2.setVisibility(View.INVISIBLE);
-
-
     }
 
     //part 2
     public void P2(View view) {
-//        linearButtons.setVisibility(view.VISIBLE);
-//        ScrollViewQuestionnaire.setVisibility(view.INVISIBLE);
-//        scrollView1.setVisibility(view.INVISIBLE);
-//        scrollView2.setVisibility(view.VISIBLE);
+
         startActivity(new Intent(Opening_questionnaire.this, Opening_questionnaire_2.class));
     }
 
-//    private void part2() {
-//        linearButtons.setVisibility(View.VISIBLE);
-//        ScrollViewQuestionnaire.setVisibility(View.INVISIBLE);
-//        scrollView1.setVisibility(View.INVISIBLE);
-//        scrollView2.setVisibility(View.VISIBLE);
-//
-//    }
 
-    //part 3
-    public void P3(View view) {
-        startActivity(new Intent(Opening_questionnaire.this, Opening_questionnaire_3.class));
-    }
-
-    //part 4
-    public void P4(View view) {
-        Intent intent = new Intent(Opening_questionnaire.this, Opening_questionnaire_3.class);
-        intent.putExtra("part", "P4");
-        startActivity(intent);
-
-
-    }
 
     //q1 gender
     public void onRadioButtonClicked1(View view) {
@@ -269,7 +241,7 @@ public class Opening_questionnaire extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(Opening_questionnaire.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
-
+                                p2.setEnabled(true);
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {

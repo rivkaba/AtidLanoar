@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Summary_questionnaire_4"
+    android:background="@drawable/pi" >
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="שאלון סיכום שנה - תוכנית &quot;עתיד לנוער&quot; "
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/linear_buttons"
+        android:layout_width="411dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view">
+
+        <Button
+            android:id="@+id/p4"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P4"
+            android:text=" ד'"
+            android:textSize="22sp"
+            tools:ignore="OnClick" />
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p3"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P3"
+            android:text="ג'"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p2"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P2"
+            android:text="ב'"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <Button
+            android:id="@+id/p1"
+            android:layout_width="65dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="16dp"
+            android:onClick="P1"
+            android:text=" א'"
+            android:textSize="22sp"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/Scroll_view_questionnaire_4"
+        android:layout_width="379dp"
+        android:layout_height="367dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_buttons">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="חלק ד'"
+                android:textSize="25sp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="לפניכם שאלות על תכנים שלמדתם במהלך השנה,  אנא סמן/י עד כמה למדת מכל אחד מהאירועים הבאים?
+"
+                android:textSize="25sp" />
+            <!--q1-->
+
+            <TextView
+                android:id="@+id/qq41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="ימי שיא"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <RadioButton
+                    android:id="@+id/q410"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
+                    android:text="לא הגעתי לפעילות זו"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q411"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
+                    android:text="לא למדתי בכלל	"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q412"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
+                    android:text="למדתי מעט מאוד"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q413"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
+                    android:text="למדתי מספיק"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q414"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
+                    android:text="	למדתי הרבה"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q415"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
+                    android:text="למדתי הרבה מאוד"
+                    android:textSize="22sp" />
+            </RadioGroup>
+            <!--q2-->
+
+            <TextView
+                android:id="@+id/qq42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="ועדת היגוי"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+                <RadioButton
+                    android:id="@+id/q420"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
+                    android:text="לא הגעתי לפעילות זו"
+                    android:textSize="22dp" />
+
+                <RadioButton
+                    android:id="@+id/q421"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
+                    android:text="לא למדתי בכלל	"
+                    android:textSize="22dp" />
+
+                <RadioButton
+                    android:id="@+id/q422"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
+                    android:text="למדתי מעט מאוד"
+                    android:textSize="22dp" />
+
+                <RadioButton
+                    android:id="@+id/q423"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
+                    android:text="למדתי מספיק"
+                    android:textSize="22dp" />
+
+                <RadioButton
+                    android:id="@+id/q424"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
+                    android:text="	למדתי הרבה"
+                    android:textSize="22dp" />
+
+
+                <RadioButton
+                    android:id="@+id/q425"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked2"
+                    android:text="למדתי הרבה מאוד"
+                    android:textSize="22dp" />
+            </RadioGroup>
+            <!--q3-->
+
+            <TextView
+                android:id="@+id/qq43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="הפקת מיזם חברתי"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <RadioButton
+                    android:id="@+id/q430"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
+                    android:text="לא הגעתי לפעילות זו"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q431"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
+                    android:text="לא למדתי בכלל	"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q432"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
+                    android:text="למדתי מעט מאוד"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q433"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
+                    android:text="למדתי מספיק"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q434"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
+                    android:text="	למדתי הרבה"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q435"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked3"
+                    android:text="למדתי הרבה מאוד"
+                    android:textSize="22sp" />
+            </RadioGroup>
+            <!--q4-->
+
+            <TextView
+                android:id="@+id/qq44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="הכשרה מקצועית"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <RadioButton
+                    android:id="@+id/q440"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
+                    android:text="לא הגעתי לפעילות זו"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q441"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
+                    android:text="לא למדתי בכלל	"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q442"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
+                    android:text="למדתי מעט מאוד"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q443"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
+                    android:text="למדתי מספיק"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q444"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
+                    android:text="	למדתי הרבה"
+                    android:textSize="22sp" />
+
+                <RadioButton
+                    android:id="@+id/q445"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked4"
+                    android:text="למדתי הרבה מאוד"
+                    android:textSize="22sp" />
+            </RadioGroup>
+
+            <TextView
+
+                android:layout_width="400dp"
+                android:layout_height="120dp"
+                android:text=" עד כמה הרגשת שאת/ה למדת על עולם התעסוקה והעסקים מהדמויות הבאות?"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/q45"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:max="5" />
+
+                <TextView
+                    android:id="@+id/qq45"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="מדריכ/ת הקבוצה "
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/q46"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:max="5" />
+
+                <TextView
+                    android:id="@+id/qq46"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="מנחה עסקי/ת"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="מה הייתה החוויה הכי משמעותית עבורך בתוכנית?"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/q47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="מה את/ה לוקח/ת איתך מהתוכנית להמשך הדרך?"
+                android:textSize="25sp" />
+            <EditText
+                android:id="@+id/q48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="sending"
+                android:text="שליחה"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/Linear_layout"
+        android:layout_width="352dp"
+        android:layout_height="366dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="תודה ובהצלחה !
+    צוות מנהיגות עסקית צעירה,
+    תוכנית 'עתיד לנוער'.  "
+            android:textSize="40sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

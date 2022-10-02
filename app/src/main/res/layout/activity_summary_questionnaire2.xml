@@ -32,10 +32,9 @@
             android:layout_width="65dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
-            android:onClick="p4"
             android:text=" ד'"
-            android:textSize="22sp"
-            tools:ignore="OnClick" />
+            android:enabled="false"
+            android:textSize="22sp" />
 
         <ImageView
             android:layout_width="44dp"
@@ -51,6 +50,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
             android:onClick="p3"
+            android:enabled="false"
             android:text="ג'"
             android:textSize="22sp" />
 

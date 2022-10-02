@@ -41,6 +41,7 @@ public class Summary_questionnaire extends AppCompatActivity {
     String q1;
     ArrayList<String> team = new ArrayList<String>();
     private TextView age;
+    private Button p2;
     private SeekBar seekBar;
     private TextView gender;
     private TextView agee;
@@ -59,19 +60,20 @@ public class Summary_questionnaire extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary_questionnaire);
-        questionnair=(Button) findViewById(R.id.questionnair);
-        scrollView=(ScrollView) findViewById(R.id.Scroll_view_questionnaire);
-        scrollView1=(ScrollView) findViewById(R.id.Scroll_view_questionnaire_1);
-        linearButtons =(LinearLayout) findViewById(R.id.linear_buttons);
-        gender=(TextView) findViewById(R.id.gender);
-        agee=(TextView) findViewById(R.id.agee);
-        q110=(RadioButton) findViewById(R.id.q110);
+        questionnair = (Button) findViewById(R.id.questionnair);
+        scrollView = (ScrollView) findViewById(R.id.Scroll_view_questionnaire);
+        scrollView1 = (ScrollView) findViewById(R.id.Scroll_view_questionnaire_1);
+        linearButtons = (LinearLayout) findViewById(R.id.linear_buttons);
+        gender = (TextView) findViewById(R.id.gender);
+        agee = (TextView) findViewById(R.id.agee);
+        q110 = (RadioButton) findViewById(R.id.q110);
         q111 = (RadioButton) findViewById(R.id.q111);
         q112 = (RadioButton) findViewById(R.id.q112);
         q113 = (EditText) findViewById(R.id.q113);
+        p2 = (Button) findViewById(R.id.p2);
         Intent intent = getIntent();
         String part = intent.getStringExtra("part");
-        if(Objects.equals(part, "P1"))
+        if (Objects.equals(part, "P1"))
             part1();
 
         //Spinner teams
@@ -122,8 +124,9 @@ public class Summary_questionnaire extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
                 agee.setText(String.valueOf(progress));
-                ch=true;
+                ch = true;
             }
+
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
 
@@ -145,6 +148,7 @@ public class Summary_questionnaire extends AppCompatActivity {
 
 
     }
+
     //part 1
     public void P1(View view) {
         linearButtons.setVisibility(view.VISIBLE);
@@ -152,6 +156,7 @@ public class Summary_questionnaire extends AppCompatActivity {
         scrollView1.setVisibility(view.VISIBLE);
 
     }
+
     public void part1() {
         linearButtons.setVisibility(View.VISIBLE);
         scrollView.setVisibility(View.INVISIBLE);
@@ -159,21 +164,12 @@ public class Summary_questionnaire extends AppCompatActivity {
 
 
     }
+
     //part 2
     public void P2(View view) {
 
         startActivity(new Intent(Summary_questionnaire.this, Summary_questionnaire_2.class));
-    }
-    //part 3
-    public void P3(View view) {
-        startActivity(new Intent(Summary_questionnaire.this,Summary_questionnaire_3 .class));
 
-    }
-
-    public void P4(View view) {
-        Intent intent = new Intent(Summary_questionnaire.this, Summary_questionnaire_3.class);
-        intent.putExtra("part", "P4");
-        startActivity(intent);
 
     }
 
@@ -195,89 +191,55 @@ public class Summary_questionnaire extends AppCompatActivity {
             case R.id.q112://אחר
                 if (checked)
                     q113.setVisibility(view.VISIBLE);
-                q1 = q113.getText().toString();
+                //   q1 = q113.getText().toString();
                 break;
 
         }
-        }
+    }
 
     public void save(View view) {
         //fulling
         if ((!q110.isChecked()) && (!q111.isChecked()) && (!q112.isChecked())) {
-            gender.setTextColor(getResources().getColor(R.color.design_default_color_error));
+            gender.setError("דרוש מגדר");
+            gender.requestFocus();
+        } else {//"אחר"
+            if (q112.isChecked()) {
+                q1 = q113.getText().toString();
+            }
         }
-        if (!ch) {
-            age.setTextColor(getResources().getColor(R.color.design_default_color_error));
-        }
+            if (!ch) {
+                age.setError("דרוש גיל");
+                age.requestFocus();
+            }
 //                if (teamm.getText().toString().equals("")) {
 //                    teamm.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
 //                }
 
-//&&(send2()==1)
-        if (((q110.isChecked()) || (q111.isChecked()) || (q112.isChecked())) && (ch)) {
+            if (((q110.isChecked()) || (q111.isChecked()) || (q112.isChecked())) && (ch)) {
+                Map<String, Object> part1 = new HashMap<>();
+                part1.put("gender", q1);
+                part1.put("age", agee.getText().toString());
 
-            gender.setTextColor(getResources().getColor(R.color.black));
-            agee.setTextColor(getResources().getColor(R.color.black));
-            Map<String, Object> answers = new HashMap<>();
-            Map<String, Object> part1 = new HashMap<>();
-            part1.put("gender", q1);
-            part1.put("age", age.getText().toString());
-//                //  part1.put("teamName", teamName);
-//                Map<String, Object> part2 = new HashMap<>();
-//                part2.put("q1", qq21);
-//                part2.put("q2", qq22);
-//                part2.put("q3", qq23);
-//                part2.put("q4", qq24);
-//                part2.put("q5", qq25);
-//                part2.put("q6", qq26);
-//                part2.put("q7", qq27);
-//                part2.put("q8", qq28);
-//                part2.put("q9", qq29);
-//                part2.put("q10", qq210);
-//                part2.put("q11", qq211);
-//                part2.put("q12", qq212);
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    uid = user.getUid();
+                }
+                db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part1").set(part1)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(Summary_questionnaire.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
+                                p2.setEnabled(true);
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Summary_questionnaire.this, "השליחה נכשלה", Toast.LENGTH_LONG).show();
 
-
-            //    Map<String, Object> part3 = new HashMap<>();
-//        Q31=String.valueOf(q31.getRating());
-//        Q32=String.valueOf(q32.getRating());
-//        Q33=String.valueOf(q33.getRating());
-//        Q34=String.valueOf(q34.getRating());
-//
-//        part3.put("q31", Q31);
-//        part3.put("q32", Q32);
-//        part3.put("q33", Q33);
-//        part3.put("q34", Q34);
-
-            //        Map<String, Object> part4 = new HashMap<>();
-//        String Q41 = q41.getText().toString();
-//        String Q42 = q42.getText().toString();
-//        part4.put("q41", Q41);
-//        part4.put("q42", Q42);
-
-            answers.put("part1", part1);
-            //answers.put("part2", part2);
-//                answers.put("part3", part3);
-//                answers.put("part4", part4);
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            if (user != null) {
-                uid = user.getUid();
+                            }
+                        });
             }
-            db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").set(answers)
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Toast.makeText(Summary_questionnaire.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
-
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(Summary_questionnaire.this, "השליחה נכשלה", Toast.LENGTH_LONG).show();
-
-                        }
-                    });
         }
     }
-    }
+

@@ -24,6 +24,7 @@ import java.util.Map;
 
 public class Summary_questionnaire_4 extends AppCompatActivity {
     private LinearLayout LinearLayout5;
+    private LinearLayout linear_buttons;
     private RadioButton q440;
     private RadioButton q441;
     private RadioButton q442;
@@ -96,6 +97,7 @@ public class Summary_questionnaire_4 extends AppCompatActivity {
         q47 = (EditText) findViewById(R.id.q47);
         q48 = (EditText) findViewById(R.id.q48);
         LinearLayout5 = (LinearLayout) findViewById(R.id.Linear_layout);
+        linear_buttons = (LinearLayout) findViewById(R.id.linear_buttons);
         db = FirebaseFirestore.getInstance();
     }
     public void P1(View view) {
@@ -312,7 +314,9 @@ public class Summary_questionnaire_4 extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(Summary_questionnaire_4.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
+                                linear_buttons.setVisibility(View.INVISIBLE);
                                 LinearLayout5.setVisibility(View.VISIBLE);
+
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {

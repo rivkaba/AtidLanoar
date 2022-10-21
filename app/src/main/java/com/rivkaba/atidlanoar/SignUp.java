@@ -1,6 +1,8 @@
 package com.rivkaba.atidlanoar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -35,72 +37,38 @@ public class SignUp extends AppCompatActivity {
     public FirebaseAuth mAuth;
     public FirebaseFirestore db;
     ArrayList<String> team = new ArrayList<String>();
+    ArrayAdapter<String> adapter;
     String teamName;
-
+    private QuerySnapshot teams;
+private ProgressDialog progressDialog;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
-        Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner);
+        progressDialog= new ProgressDialog(SignUp.this);
+        progressDialog.setTitle("loading");
+        progressDialog.setMessage("please wait");
+         Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner);
 
-
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        db.collection("Teams")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    //  public String[] ArrayTeamm;
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-
-                            for (QueryDocumentSnapshot doc : task.getResult()) {
-                                    if (!(Boolean.TRUE.equals(doc.getBoolean("old")))) {
-                                team.add(doc.getString("name"));
-                               //  Toast.makeText(SignUp.this, doc.getString("name"), Toast.LENGTH_SHORT).show();
-                                   }
-                            }
-
-                        } else {
-                            Toast.makeText(SignUp.this, "Error", Toast.LENGTH_LONG).show();
-                              // Log.d(TAG, "Error getting documents: ", task.getException());
-                        }
-                    }
-                });
-        //@@@@@@@@@@@@@@@@@@@@@@
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, team);
-        //     adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        adapter= new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,team);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         teamSpinner.setAdapter(adapter);
-      if(teamSpinner!=null) {
+        teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                  @Override
+                                                  public void onItemSelected(AdapterView<?> adapterView, View view,
+                                                                             int i, long l) {
+                                                      teamName=adapter.getItem(i);
+                                                      Toast.makeText(getApplicationContext(), adapter.getItem(i), Toast.LENGTH_SHORT).show();
 
-          teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-              @Override
-              public void onItemSelected(AdapterView<?> parent, View view,
-                                         int position, long id) {
+                                                  }
 
-                  // teamSpinner.
-                  //  Log.v("item", (String) parent.getItemAtPosition(position));
-       //           Toast.makeText(SignUp.this, (String) parent.getItemAtPosition(position), Toast.LENGTH_LONG).show();
-                  Toast.makeText(SignUp.this, "aaaaaaaaaaaaaaaaa", Toast.LENGTH_LONG).show();
-
-                  teamName = (String) parent.getItemAtPosition(position);
-
-              }
-
-              @Override
-              public void onNothingSelected(AdapterView<?> parent) {
-                  // TODO Auto-generated method stub
-              }
-          });
-      }
-      else
-          Toast.makeText(SignUp.this, "bbbbbbbbbbbbbbbbbbbbbb", Toast.LENGTH_LONG).show();
-
-
-    }
+                                                  public void onNothingSelected(AdapterView<?> adapterView) {
+                                                  }
+                                              });
+        getData();
+  }
 
     public void register(View view) {
         EditText ID = findViewById(R.id.ID);
@@ -134,7 +102,7 @@ public class SignUp extends AppCompatActivity {
             Email.requestFocus();
             return;
         }
-        //קבוצה
+
 
         if((!Fname.getText().toString().equals(""))&&(!Lname.getText().toString().equals(""))&&(!Phone.getText().toString().equals(""))&&(!ID.getText().toString().equals(""))&&(!Email.getText().toString().equals("")))
             {
@@ -169,7 +137,7 @@ public class SignUp extends AppCompatActivity {
                                     waitforapproval.put("lname", lname);
                                     waitforapproval.put("phone", phone);
                                     waitforapproval.put("team", phone);
-                                    waitforapproval.put("teamName", teamName.toString());
+                                    waitforapproval.put("teamName", teamName);
                                     waitforapproval.put("type", "students");
                                     waitforapproval.put("uid", uid);
 // Add a new document with a generated ID
@@ -210,5 +178,30 @@ public class SignUp extends AppCompatActivity {
     public void back(View view) {
         startActivity(new Intent(SignUp.this,MainActivity.class));
 
+    }
+    private void getData(){
+        progressDialog.show();
+        db.collection("Teams").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                progressDialog.hide();
+                teams = queryDocumentSnapshots;
+                if (queryDocumentSnapshots.size() > 0) {
+                    team.clear();
+                    for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                        if (!(Boolean.TRUE.equals(doc.getBoolean("old")))) {
+                            team.add(doc.getString("name"));
+                        }
+                    }
+                    adapter.notifyDataSetChanged();
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 }

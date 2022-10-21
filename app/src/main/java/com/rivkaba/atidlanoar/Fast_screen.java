@@ -12,12 +12,12 @@ public class Fast_screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fast_screen);
-        /****** Create Thread that will sleep for 4 seconds****/
+        /****** Create Thread that will sleep for 2.5 seconds****/
         Thread background = new Thread() {
             public void run() {
                 try {
                     // Thread will sleep for 4 seconds
-                    SystemClock.sleep(4000);
+                    SystemClock.sleep(2500);
 
                     // After 5 seconds redirect to another intent
                     Intent i=new Intent(Fast_screen.this,Login.class);

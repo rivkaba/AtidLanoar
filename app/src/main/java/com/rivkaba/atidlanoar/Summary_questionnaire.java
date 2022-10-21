@@ -219,7 +219,6 @@ public class Summary_questionnaire extends AppCompatActivity {
                 Map<String, Object> part1 = new HashMap<>();
                 part1.put("gender", q1);
                 part1.put("age", agee.getText().toString());
-
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
                     uid = user.getUid();

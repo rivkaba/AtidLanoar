@@ -38,16 +38,12 @@ import java.util.Objects;
 public class Opening_questionnaire extends AppCompatActivity {
     public FirebaseFirestore db;
     String uid;
-    ArrayList<String> team = new ArrayList<String>();
     private TextView age;
     private SeekBar q12;
     String q1;
     private EditText q113;
-    String teamName;
     private TextView gender;
     private TextView agee;
-    private TextView teamm;
-
     private RadioButton q110;
     private RadioButton q111;
     private RadioButton q112;
@@ -68,11 +64,10 @@ public class Opening_questionnaire extends AppCompatActivity {
         q113 = (EditText) findViewById(R.id.q113);
         ScrollViewQuestionnaire = (ScrollView) findViewById(R.id.Scroll_view_questionnaire);
         scrollView1 = (ScrollView) findViewById(R.id.Scroll_view_questionnaire_1);
-       // scrollView2 = (ScrollView) findViewById(R.id.Scroll_view_questionnaire_2);
+        db = FirebaseFirestore.getInstance();
         linearButtons = (LinearLayout) findViewById(R.id.linear_buttons);
         gender = (TextView) findViewById(R.id.gender);
         agee = (TextView) findViewById(R.id.agee);
-        teamm = (TextView) findViewById(R.id.team);
         q110 = (RadioButton) findViewById(R.id.q110);
         q111 = (RadioButton) findViewById(R.id.q111);
         q112 = (RadioButton) findViewById(R.id.q112);
@@ -83,45 +78,9 @@ public class Opening_questionnaire extends AppCompatActivity {
 
 
 
-        db = FirebaseFirestore.getInstance();
-        Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner2);
-        db.collection("Teams")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
 
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
 
-                            for (QueryDocumentSnapshot doc : task.getResult()) {
-                                if ((Boolean.TRUE.equals(doc.getBoolean("old"))) != true) {
-                                    team.add(doc.getString("name"));
 
-                                }
-                            }
-                        } else {
-                            Toast.makeText(Opening_questionnaire.this, "Error", Toast.LENGTH_LONG).show();
-                            //   Log.d(TAG, "Error getting documents: ", task.getException());
-                        }
-                    }
-                });
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, team);
-        teamSpinner.setAdapter(adapter);
-        teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-                Log.v("item", (String) parent.getItemAtPosition(position));
-                teamName = (String) parent.getItemAtPosition(position);
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
-            }
-        });
 
 
         age = (TextView) findViewById(R.id.age);

@@ -268,32 +268,6 @@
                     android:textSize="22sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right"
-                android:orientation="horizontal">
-
-                <Spinner
-                    android:id="@+id/team_spinner2"
-                    android:layout_width="40dp"
-                    android:layout_height="49dp"
-                    android:layout_marginTop="24dp"
-                    android:textSize="100sp"
-
-
-                    />
-
-                <TextView
-                    android:id="@+id/team"
-                    android:layout_width="330dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:text=" נא סמנ/י את הקבוצה אליה אתה שייכ/ת *"
-                    android:textSize="22sp" />
-
-            </LinearLayout>
-
             <Button
                 android:layout_width="150dp"
                 android:layout_height="50dp"

@@ -54,10 +54,7 @@
                 android:ems="10"
                 android:textSize="22sp"
                 android:hint="*שם משפחה"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toStartOf="@+id/f_name"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_view" />
+                android:inputType="textPersonName"></EditText>
 
             <EditText
                 android:id="@+id/Phone"
@@ -67,11 +64,17 @@
                 android:ems="10"
                 android:textSize="22sp"
                 android:gravity="right"
-                android:hint="*טלפון"
+                android:hint="פלאפון*"
                 android:inputType="phone"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/l_name" />
+                app:layout_constraintStart_toStartOf="parent"></EditText>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="259dp"
+                android:layout_height="44dp"
+                android:text="*בחירת קבוצה"
+                android:textSize="22sp" />
 
             <Spinner
                 android:id="@+id/team_spinner"

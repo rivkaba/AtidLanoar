@@ -33,13 +33,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Objects;
+
 public class SignUp extends AppCompatActivity {
     public FirebaseAuth mAuth;
     public FirebaseFirestore db;
     ArrayList<String> team = new ArrayList<String>();
     ArrayAdapter<String> adapter;
     String teamName;
-    private QuerySnapshot teams;
+    String teamId="";
+    private QuerySnapshot Teams;
 private ProgressDialog progressDialog;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,13 +63,14 @@ private ProgressDialog progressDialog;
                                                   public void onItemSelected(AdapterView<?> adapterView, View view,
                                                                              int i, long l) {
                                                       teamName=adapter.getItem(i);
-                                                      Toast.makeText(getApplicationContext(), adapter.getItem(i), Toast.LENGTH_SHORT).show();
-
+                                                    //  Toast.makeText(getApplicationContext(), adapter.getItem(i), Toast.LENGTH_SHORT).show();
+                                               //       teamId=Teams.getDocuments().get(i).getId();
                                                   }
 
                                                   public void onNothingSelected(AdapterView<?> adapterView) {
                                                   }
                                               });
+
         getData();
   }
 
@@ -115,8 +119,6 @@ private ProgressDialog progressDialog;
                                     // Sign in success, upda
                                     // te UI with the signed-in user's information
                                     //register in waitforapproval
-                                    String Team = findViewById(R.id.Phone).toString();//*************************
-
                                     String id = ID.getText().toString();
                                     String email = Email.getText().toString();
                                     String fname = Fname.getText().toString();
@@ -127,6 +129,46 @@ private ProgressDialog progressDialog;
                                     if (user != null) {
                                          uid = user.getUid();
                                     }
+                                    /////////////////
+//                                    db.collection("Teams")
+//                                            .whereEqualTo("name", teamName)
+//                                            .get()
+//                                            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+//                                                @Override
+//                                                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+//                                                    if (task.isSuccessful()) {
+//                                                        for (QueryDocumentSnapshot document : task.getResult()) {
+//                                                            teamId=document.getId();
+//                                                         //   Log.d(TAG, document.getId() + " => " + document.getData());
+//                                                        }
+//                                                    } else {
+//                                                          Toast.makeText(getApplicationContext(), "אנא בחר שוב קבוצה", Toast.LENGTH_SHORT).show();
+//                                                    }
+//                                                }
+//                                            });
+                                    /////////////////////
+                                    /////////////
+//                                    db.collection("Teams").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//                                        @Override
+//                                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                                            if (queryDocumentSnapshots.size() > 0) {
+//
+//                                                for (DocumentSnapshot doc : queryDocumentSnapshots) {
+//                                                    if (Objects.equals(doc.getString("name"), teamName)) {
+//                                                        teamId= doc.getId();
+//                                                    }
+//                                                }
+//
+//                                            }
+//                                        }
+//                                    }).addOnFailureListener(new OnFailureListener() {
+//                                        @Override
+//                                        public void onFailure(@NonNull Exception e) {
+//                                            Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+//
+//                                        }
+//                                    });
+                                    ///////////////////
                                     // Toast.makeText(SignUp.this,uid,Toast.LENGTH_LONG).show();
                                     //  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;
                                     Map<String, Object> waitforapproval = new HashMap<>();
@@ -136,7 +178,7 @@ private ProgressDialog progressDialog;
                                     waitforapproval.put("fname", fname);
                                     waitforapproval.put("lname", lname);
                                     waitforapproval.put("phone", phone);
-                                    waitforapproval.put("team", phone);
+                                    waitforapproval.put("team", teamId);
                                     waitforapproval.put("teamName", teamName);
                                     waitforapproval.put("type", "students");
                                     waitforapproval.put("uid", uid);
@@ -146,7 +188,7 @@ private ProgressDialog progressDialog;
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
                                                     Toast.makeText(SignUp.this, " נרשמת בהצלחה", Toast.LENGTH_LONG).show();
-                                                    Intent intent = new Intent(SignUp.this, Opening_questionnaire.class);
+                                                    Intent intent = new Intent(SignUp.this, Login.class);
                                                     startActivity(intent);
                                                 }
                                             })
@@ -185,7 +227,7 @@ private ProgressDialog progressDialog;
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 progressDialog.hide();
-                teams = queryDocumentSnapshots;
+                Teams = queryDocumentSnapshots;
                 if (queryDocumentSnapshots.size() > 0) {
                     team.clear();
                     for (DocumentSnapshot doc : queryDocumentSnapshots) {

@@ -36,8 +36,10 @@ public class Student extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu)
     {
         super.onCreateOptionsMenu(menu);
-        MenuItem menuItem1 = menu.add("שאלות סיום");
-        MenuItem menuItem2 = menu.add("יציאה");
+        MenuItem menuItem1 = menu.add("שאלון סיום");
+        MenuItem menuItem2 = menu.add("שאלון פתיחה");
+        MenuItem menuItem3 = menu.add("עדכון פרופיל");
+        MenuItem menuItem4 = menu.add("יציאה");
 
 
         menuItem1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
@@ -50,6 +52,26 @@ public class Student extends AppCompatActivity {
             }
         });
         menuItem2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
+        {
+            @Override
+            public boolean onMenuItemClick(MenuItem item)
+            {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Student.this,Opening_questionnaire.class));
+                return true;
+            }
+        });
+        menuItem3.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
+        {
+            @Override
+            public boolean onMenuItemClick(MenuItem item)
+            {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(Student.this,Profile.class));
+                return true;
+            }
+        });
+        menuItem4.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
         {
             @Override
             public boolean onMenuItemClick(MenuItem item)

@@ -39,7 +39,6 @@ public class Summary_questionnaire extends AppCompatActivity {
     public FirebaseFirestore db;
     String uid;
     String q1;
-    ArrayList<String> team = new ArrayList<String>();
     private TextView age;
     private Button p2;
     private SeekBar seekBar;
@@ -76,46 +75,7 @@ public class Summary_questionnaire extends AppCompatActivity {
         if (Objects.equals(part, "P1"))
             part1();
 
-        //Spinner teams
         db = FirebaseFirestore.getInstance();
-        Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner2);
-        db.collection("Teams")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-
-                            for (QueryDocumentSnapshot doc : task.getResult()) {
-                                if ((Boolean.TRUE.equals(doc.getBoolean("old"))) != true) {
-                                    team.add(doc.getString("name"));
-
-                                }
-                            }
-                        } else {
-                            Toast.makeText(Summary_questionnaire.this, "Error", Toast.LENGTH_LONG).show();
-                            //   Log.d(TAG, "Error getting documents: ", task.getException());
-                        }
-                    }
-                });
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, team);
-        teamSpinner.setAdapter(adapter);
-        teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-                Log.v("item", (String) parent.getItemAtPosition(position));
-
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
-            }
-        });
         // seekBar age
         age = (TextView) findViewById(R.id.age);
         seekBar = (SeekBar) findViewById(R.id.q11);

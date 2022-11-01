@@ -41,7 +41,7 @@ public class SignUp extends AppCompatActivity {
     ArrayList<String> team = new ArrayList<String>();
     ArrayAdapter<String> adapter;
     String teamName;
-    String teamId="";
+    Object teamId;
     private QuerySnapshot Teams;
 private ProgressDialog progressDialog;
 
@@ -96,11 +96,6 @@ private ProgressDialog progressDialog;
             Phone.requestFocus();
             return;
         }
-        if(ID.getText().toString().equals("")) {
-            ID.setError("דרוש תעודת זהות");
-            ID.requestFocus();
-            return;
-        }
         if(Email.getText().toString().equals("")) {
             Email.setError("דרוש מייל");
             Email.requestFocus();
@@ -108,7 +103,7 @@ private ProgressDialog progressDialog;
         }
 
 
-        if((!Fname.getText().toString().equals(""))&&(!Lname.getText().toString().equals(""))&&(!Phone.getText().toString().equals(""))&&(!ID.getText().toString().equals(""))&&(!Email.getText().toString().equals("")))
+        if((!Fname.getText().toString().equals(""))&&(!Lname.getText().toString().equals(""))&&(!Phone.getText().toString().equals(""))&&(!Email.getText().toString().equals("")))
             {
                 mAuth.createUserWithEmailAndPassword(Email.getText().toString(), Phone.getText().toString())
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -148,26 +143,26 @@ private ProgressDialog progressDialog;
 //                                            });
                                     /////////////////////
                                     /////////////
-//                                    db.collection("Teams").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//                                        @Override
-//                                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                                            if (queryDocumentSnapshots.size() > 0) {
-//
-//                                                for (DocumentSnapshot doc : queryDocumentSnapshots) {
-//                                                    if (Objects.equals(doc.getString("name"), teamName)) {
-//                                                        teamId= doc.getId();
-//                                                    }
-//                                                }
-//
-//                                            }
-//                                        }
-//                                    }).addOnFailureListener(new OnFailureListener() {
-//                                        @Override
-//                                        public void onFailure(@NonNull Exception e) {
-//                                            Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-//
-//                                        }
-//                                    });
+                                    db.collection("Teams").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                        @Override
+                                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                            if (queryDocumentSnapshots.size() > 0) {
+
+                                                for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                                                    if (Objects.equals(doc.getString("name"), teamName)) {
+                                                        teamId= doc.getId();
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+
+                                        }
+                                    });
                                     ///////////////////
                                     // Toast.makeText(SignUp.this,uid,Toast.LENGTH_LONG).show();
                                     //  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;
@@ -188,7 +183,7 @@ private ProgressDialog progressDialog;
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
                                                     Toast.makeText(SignUp.this, " נרשמת בהצלחה", Toast.LENGTH_LONG).show();
-                                                    Intent intent = new Intent(SignUp.this, Login.class);
+                                                    Intent intent = new Intent(SignUp.this, MainActivity.class);
                                                     startActivity(intent);
                                                 }
                                             })

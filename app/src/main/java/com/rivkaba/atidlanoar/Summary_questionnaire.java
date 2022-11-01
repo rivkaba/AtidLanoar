@@ -187,14 +187,16 @@ public class Summary_questionnaire extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(Summary_questionnaire.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
+                                Toast.makeText(Summary_questionnaire.this, " תודה, הטופס נשמר בהצלחה", Toast.LENGTH_LONG).show();
                                 p2.setEnabled(true);
+                                startActivity(new Intent(Summary_questionnaire.this, Summary_questionnaire_2.class));
+
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(Summary_questionnaire.this, "השליחה נכשלה", Toast.LENGTH_LONG).show();
+                                Toast.makeText(Summary_questionnaire.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
 
                             }
                         });

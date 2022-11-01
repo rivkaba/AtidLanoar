@@ -527,14 +527,16 @@ public class Summary_questionnaire_2 extends AppCompatActivity {
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(Summary_questionnaire_2.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Summary_questionnaire_2.this, " תודה, הטופס נשמר בהצלחה", Toast.LENGTH_LONG).show();
                              p3.setEnabled(true);
+                            startActivity(new Intent(Summary_questionnaire_2.this, Summary_questionnaire_3.class));
+
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(Summary_questionnaire_2.this, "השליחה נכשלה", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Summary_questionnaire_2.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
 
                         }
                     });

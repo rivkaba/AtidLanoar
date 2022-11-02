@@ -86,7 +86,8 @@ Button p4;
             if (user != null) {
                 uid = user.getUid();
             }
-            db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part3").set(part3)
+           // db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part3").set(part3)
+            db.collection("students").document(uid).collection("Opening questionnaire").document("part3").set(part3)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {

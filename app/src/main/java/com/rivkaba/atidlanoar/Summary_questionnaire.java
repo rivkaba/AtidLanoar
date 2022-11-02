@@ -26,6 +26,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -37,7 +39,7 @@ import java.util.Objects;
 
 public class Summary_questionnaire extends AppCompatActivity {
     public FirebaseFirestore db;
-    String uid;
+    String uid = "";
     String q1;
     private TextView age;
     private Button p2;
@@ -159,48 +161,73 @@ public class Summary_questionnaire extends AppCompatActivity {
 
     public void save(View view) {
         //fulling
-        if ((!q110.isChecked()) && (!q111.isChecked()) && (!q112.isChecked())) {
-            gender.setError("דרוש מגדר");
-            gender.requestFocus();
-        } else {//"אחר"
-            if (q112.isChecked()) {
-                q1 = q113.getText().toString();
-            }
-        }
-            if (!ch) {
-                age.setError("דרוש גיל");
-                age.requestFocus();
-            }
-//                if (teamm.getText().toString().equals("")) {
-//                    teamm.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
+        /////
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            uid = user.getUid();
+            DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("part1");
+            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
+                    if (task1.isSuccessful()) {
+                        DocumentSnapshot document = task1.getResult();
+                        if (document.exists()) {
+                            Toast.makeText(Summary_questionnaire.this, " כבר מילאת שאלון סיום", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(Summary_questionnaire.this, Student.class));
+
+                        } else {
+                            //////
+                            if ((!q110.isChecked()) && (!q111.isChecked()) && (!q112.isChecked())) {
+                                gender.setError("דרוש מגדר");
+                                gender.requestFocus();
+                            } else {//"אחר"
+                                if (q112.isChecked()) {
+                                    q1 = q113.getText().toString();
+                                }
+                            }
+                            if (!ch) {
+                                age.setError("דרוש גיל");
+                                age.requestFocus();
+                            }
+
+                            if (((q110.isChecked()) || (q111.isChecked()) || (q112.isChecked())) && (ch)) {
+                                Map<String, Object> part1 = new HashMap<>();
+                                part1.put("gender", q1);
+                                part1.put("age", agee.getText().toString());
+//                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//                if (user != null) {
+//                    uid = user.getUid();
 //                }
+                                //   db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part1").set(part1)
+                                db.collection("students").document(uid).collection("Summary questionnaire").document("part1").set(part1)
 
-            if (((q110.isChecked()) || (q111.isChecked()) || (q112.isChecked())) && (ch)) {
-                Map<String, Object> part1 = new HashMap<>();
-                part1.put("gender", q1);
-                part1.put("age", agee.getText().toString());
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                if (user != null) {
-                    uid = user.getUid();
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+                                                Toast.makeText(Summary_questionnaire.this, " תודה, הטופס נשמר בהצלחה", Toast.LENGTH_LONG).show();
+                                                p2.setEnabled(true);
+                                                startActivity(new Intent(Summary_questionnaire.this, Summary_questionnaire_2.class));
+
+                                            }
+                                        })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(Summary_questionnaire.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
+
+                                            }
+                                        });
+                            }
+                            ////
+                        }
+                    } else {
+                        Toast.makeText(Summary_questionnaire.this, "הכניסה לשאלון נכשלה", Toast.LENGTH_LONG).show();
+                    }
                 }
-                db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part1").set(part1)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(Summary_questionnaire.this, " תודה, הטופס נשמר בהצלחה", Toast.LENGTH_LONG).show();
-                                p2.setEnabled(true);
-                                startActivity(new Intent(Summary_questionnaire.this, Summary_questionnaire_2.class));
+            });
 
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(Summary_questionnaire.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
+        }
 
-                            }
-                        });
-            }
         }
     }
 

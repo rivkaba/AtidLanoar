@@ -56,7 +56,8 @@ public class Opening_questionnaire_4 extends AppCompatActivity {
         if (user != null) {
             uid = user.getUid();
         }
-        db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part4").set(part4)
+       // db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part4").set(part4)
+        db.collection("students").document(uid).collection("Opening questionnaire").document("part4").set(part4)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

@@ -92,11 +92,12 @@
     </LinearLayout>
 
     <ScrollView
-        android:id="@+id/Scroll_view_questionnaire_4"
+        android:id="@+id/scroll_view_questionnaire_4"
         android:layout_width="379dp"
         android:layout_height="367dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"

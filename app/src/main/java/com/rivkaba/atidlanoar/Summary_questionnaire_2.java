@@ -523,7 +523,9 @@ public class Summary_questionnaire_2 extends AppCompatActivity {
             if (user != null) {
                 uid = user.getUid();
             }
-            db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part2").set(part2)
+        //    db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part2").set(part2)
+            db.collection("students").document(uid).collection("Summary questionnaire").document("part2").set(part2)
+
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {

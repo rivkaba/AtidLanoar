@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +26,7 @@ import java.util.Map;
 public class Summary_questionnaire_4 extends AppCompatActivity {
     private LinearLayout LinearLayout5;
     private LinearLayout linear_buttons;
+    private ScrollView scroll_view_questionnaire_4;
     private RadioButton q440;
     private RadioButton q441;
     private RadioButton q442;
@@ -96,6 +98,7 @@ public class Summary_questionnaire_4 extends AppCompatActivity {
         q46 = (SeekBar) findViewById(R.id.q46);
         q47 = (EditText) findViewById(R.id.q47);
         q48 = (EditText) findViewById(R.id.q48);
+        scroll_view_questionnaire_4 =(ScrollView) findViewById(R.id.scroll_view_questionnaire_4);
         LinearLayout5 = (LinearLayout) findViewById(R.id.Linear_layout);
         linear_buttons = (LinearLayout) findViewById(R.id.linear_buttons);
         db = FirebaseFirestore.getInstance();
@@ -309,13 +312,16 @@ public class Summary_questionnaire_4 extends AppCompatActivity {
                 if (user != null) {
                     uid = user.getUid();
                 }
-                db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part4").set(part4)
+               // db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part4").set(part4)
+                db.collection("students").document(uid).collection("Summary questionnaire").document("part4").set(part4)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(Summary_questionnaire_4.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
                                 linear_buttons.setVisibility(View.INVISIBLE);
+                                scroll_view_questionnaire_4.setVisibility(View.INVISIBLE);
                                 LinearLayout5.setVisibility(View.VISIBLE);
+
 
                             }
                         })

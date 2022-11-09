@@ -3,6 +3,7 @@ package com.rivkaba.atidlanoar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class Login extends AppCompatActivity {
     public FirebaseAuth mAuth;
     public FirebaseFirestore db;
+    String uid = "";
     //  final Task<DocumentSnapshot> type;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +32,19 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+        progressDialog= new ProgressDialog(Login.this);
+        progressDialog.setTitle("loading");
+        progressDialog.setMessage("please wait");
 
     }
 
     @Override
     public void onStart() {
         super.onStart();
+        progressDialog.show();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String uid = "";
+
         if (user != null) {
             ////if have ok from management
             uid = user.getUid();
@@ -49,6 +56,7 @@ public class Login extends AppCompatActivity {
                         DocumentSnapshot document = task1.getResult();
                         if (document.exists()) {
                             startActivity(new Intent(Login.this, Student.class));
+                            progressDialog.hide();
                         } else {
                             Toast.makeText(Login.this, "יש לחכות לאישור המנהל", Toast.LENGTH_LONG).show();
                         }
@@ -59,6 +67,7 @@ public class Login extends AppCompatActivity {
             });
 
         }
+        progressDialog.hide();
         //////
     }
 

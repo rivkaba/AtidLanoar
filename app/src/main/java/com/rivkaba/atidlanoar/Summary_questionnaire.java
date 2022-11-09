@@ -161,22 +161,23 @@ public class Summary_questionnaire extends AppCompatActivity {
 
     public void save(View view) {
         //fulling
-        /////
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            uid = user.getUid();
-            DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("part1");
-            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
-                    if (task1.isSuccessful()) {
-                        DocumentSnapshot document = task1.getResult();
-                        if (document.exists()) {
-                            Toast.makeText(Summary_questionnaire.this, " כבר מילאת שאלון סיום", Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(Summary_questionnaire.this, Student.class));
 
-                        } else {
-                            //////
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        if (user != null) {
+//            uid = user.getUid();
+//            DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("part1");
+//            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//                @Override
+//                public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
+//                    if (task1.isSuccessful()) {
+//                        DocumentSnapshot document = task1.getResult();
+//                        if (document.exists()) {
+//                            Toast.makeText(Summary_questionnaire.this, " כבר מילאת שאלון סיום", Toast.LENGTH_LONG).show();
+//                            startActivity(new Intent(Summary_questionnaire.this, Student.class));
+//
+//                        }
+
+
                             if ((!q110.isChecked()) && (!q111.isChecked()) && (!q112.isChecked())) {
                                 gender.setError("דרוש מגדר");
                                 gender.requestFocus();
@@ -194,11 +195,9 @@ public class Summary_questionnaire extends AppCompatActivity {
                                 Map<String, Object> part1 = new HashMap<>();
                                 part1.put("gender", q1);
                                 part1.put("age", agee.getText().toString());
-//                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//                if (user != null) {
-//                    uid = user.getUid();
-//                }
-                                //   db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part1").set(part1)
+                                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                if (user != null) {
+                                   uid = user.getUid();
                                 db.collection("students").document(uid).collection("Summary questionnaire").document("part1").set(part1)
 
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -218,16 +217,12 @@ public class Summary_questionnaire extends AppCompatActivity {
                                             }
                                         });
                             }
-                            ////
+                                else{
+                                    Toast.makeText(Summary_questionnaire.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
+
+                                }
+
                         }
-                    } else {
-                        Toast.makeText(Summary_questionnaire.this, "הכניסה לשאלון נכשלה", Toast.LENGTH_LONG).show();
                     }
                 }
-            });
-
-        }
-
-        }
-    }
 

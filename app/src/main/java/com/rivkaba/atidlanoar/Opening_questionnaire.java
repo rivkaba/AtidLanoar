@@ -218,7 +218,8 @@ public class Opening_questionnaire extends AppCompatActivity {
 //
 //                            }
 //                        });
-                db.collection("students").document(uid).collection("Opening questionnaire").document("part1").set(part1)
+             //   db.collection("students").document(uid).collection("Opening questionnaire").document("part1").set(part1)
+                          db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part1").set(part1)
 
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

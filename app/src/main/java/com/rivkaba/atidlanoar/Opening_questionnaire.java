@@ -37,7 +37,7 @@ import java.util.Objects;
 
 public class Opening_questionnaire extends AppCompatActivity {
     public FirebaseFirestore db;
-    String uid;
+    String uid="";
     private TextView age;
     private SeekBar q12;
     String q1;
@@ -219,14 +219,14 @@ public class Opening_questionnaire extends AppCompatActivity {
 //                            }
 //                        });
              //   db.collection("students").document(uid).collection("Opening questionnaire").document("part1").set(part1)
-                          db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part1").set(part1)
+                db.collection("students").document(uid).collection("Opening questionnaire").document("part1").set(part1)
 
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 Toast.makeText(Opening_questionnaire.this, " תודה, הטופס נשמר בהצלחה", Toast.LENGTH_LONG).show();
                                 p2.setEnabled(true);
-                                startActivity(new Intent(Opening_questionnaire.this, Summary_questionnaire_2.class));
+                                startActivity(new Intent(Opening_questionnaire.this, Opening_questionnaire_2.class));
 
                             }
                         })

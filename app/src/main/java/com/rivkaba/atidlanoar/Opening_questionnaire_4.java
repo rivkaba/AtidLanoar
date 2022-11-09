@@ -3,6 +3,7 @@ package com.rivkaba.atidlanoar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -62,6 +63,7 @@ public class Opening_questionnaire_4 extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(Opening_questionnaire_4.this, " תודה, הטופס נשלח בהצלחה", Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(Opening_questionnaire_4.this,Student.class));
 
                     }
                 })

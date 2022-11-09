@@ -88,8 +88,29 @@ public class Student extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item)
             {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Student.this,Opening_questionnaire.class));
+                ////fill one time
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    uid = user.getUid();
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Opening questionnaire").document("part4");
+                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
+                            if (task1.isSuccessful()) {
+                                DocumentSnapshot document = task1.getResult();
+                                if (document.exists()) {
+                                    Toast.makeText(Student.this, " כבר מילאת שאלון פתיחה", Toast.LENGTH_LONG).show();
+                                } else {
+                                    startActivity(new Intent(Student.this, Opening_questionnaire.class));
+
+                                }
+                            }
+
+                        }
+
+                    });
+                }
+                /////
                 return true;
             }
         });
@@ -98,7 +119,6 @@ public class Student extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item)
             {
-                FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(Student.this,Profile.class));
                 return true;
             }

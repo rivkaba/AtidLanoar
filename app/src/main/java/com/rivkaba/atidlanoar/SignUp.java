@@ -40,8 +40,9 @@ public class SignUp extends AppCompatActivity {
     public FirebaseFirestore db;
     ArrayList<String> team = new ArrayList<String>();
     ArrayAdapter<String> adapter;
+    int i = 0;
     String teamName;
-    Object teamId;
+   public Object teamId;
     private QuerySnapshot Teams;
 private ProgressDialog progressDialog;
 
@@ -64,7 +65,24 @@ private ProgressDialog progressDialog;
                                                                              int i, long l) {
                                                       teamName=adapter.getItem(i);
                                                     //  Toast.makeText(getApplicationContext(), adapter.getItem(i), Toast.LENGTH_SHORT).show();
-                                               //       teamId=Teams.getDocuments().get(i).getId();
+                                                   //  teamId=Teams.getDocuments().get(i).getId();
+                                                      ///////////////teamId
+                                        db.collection("Teams")
+                                                .whereEqualTo("name", teamName)
+                                                .get()
+                                                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                                        if (task.isSuccessful()) {
+                                                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                                                teamId = document.getReference();
+                                                            }
+                                                        } else {
+                                                            Toast.makeText(getApplicationContext(), "אנא בחר שוב קבוצה", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    }
+                                                });
+                                        ////////////////////
                                                   }
 
                                                   public void onNothingSelected(AdapterView<?> adapterView) {
@@ -111,101 +129,54 @@ private ProgressDialog progressDialog;
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(SignUp.this, " בתור התחלה מס' הפלאפון ישמש כסיסמה", Toast.LENGTH_LONG).show();
-                                    // Sign in success, upda
-                                    // te UI with the signed-in user's information
-                                    //register in waitforapproval
-                                    String id = ID.getText().toString();
-                                    String email = Email.getText().toString();
-                                    String fname = Fname.getText().toString();
-                                    String lname = Lname.getText().toString();
-                                    String phone = Phone.getText().toString();
-                                    String uid="";
+
+                                    String uid = "";
                                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                                     if (user != null) {
-                                         uid = user.getUid();
-                                    }
-                                    /////////////////
-//                                    db.collection("Teams")
-//                                            .whereEqualTo("name", teamName)
-//                                            .get()
-//                                            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//                                                @Override
-//                                                public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                                                    if (task.isSuccessful()) {
-//                                                        for (QueryDocumentSnapshot document : task.getResult()) {
-//                                                            teamId=document.getId();
-//                                                         //   Log.d(TAG, document.getId() + " => " + document.getData());
-//                                                        }
-//                                                    } else {
-//                                                          Toast.makeText(getApplicationContext(), "אנא בחר שוב קבוצה", Toast.LENGTH_SHORT).show();
-//                                                    }
-//                                                }
-//                                            });
-                                    /////////////////////
-                                    /////////////
-                                    db.collection("Teams").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                                        @Override
-                                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                            if (queryDocumentSnapshots.size() > 0) {
-
-                                                for (DocumentSnapshot doc : queryDocumentSnapshots) {
-                                                    if (Objects.equals(doc.getString("name"), teamName)) {
-                                                        teamId= doc.getId();
-                                                    }
-                                                }
-
-                                            }
-                                        }
-                                    }).addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-
-                                        }
-                                    });
-                                    ///////////////////
-                                    // Toast.makeText(SignUp.this,uid,Toast.LENGTH_LONG).show();
-                                    //  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;
-                                    Map<String, Object> waitforapproval = new HashMap<>();
-                                    waitforapproval.put("ID", id);
-                                    waitforapproval.put("approve", false);
-                                    waitforapproval.put("email", email);
-                                    waitforapproval.put("fname", fname);
-                                    waitforapproval.put("lname", lname);
-                                    waitforapproval.put("phone", phone);
-                                    waitforapproval.put("team", teamId);
-                                    waitforapproval.put("teamName", teamName);
-                                    waitforapproval.put("type", "students");
-                                    waitforapproval.put("uid", uid);
+                                        uid = user.getUid();
+                                        String id = ID.getText().toString();
+                                        String email = Email.getText().toString();
+                                        String fname = Fname.getText().toString();
+                                        String lname = Lname.getText().toString();
+                                        String phone = Phone.getText().toString();
+                                        Map<String, Object> waitforapproval = new HashMap<>();
+                                        waitforapproval.put("ID", id);
+                                        waitforapproval.put("approve", false);
+                                        waitforapproval.put("email", email);
+                                        waitforapproval.put("fname", fname);
+                                        waitforapproval.put("lname", lname);
+                                        waitforapproval.put("phone", phone);
+                                        waitforapproval.put("team", teamId);
+                                        waitforapproval.put("teamName", teamName);
+                                        waitforapproval.put("type", "students");
+                                        waitforapproval.put("uid", uid);
 // Add a new document with a generated ID
-                                    db.collection("waitforapproval").document(uid).set(waitforapproval)
-                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                @Override
-                                                public void onSuccess(Void aVoid) {
-                                                    Toast.makeText(SignUp.this, " נרשמת בהצלחה", Toast.LENGTH_LONG).show();
-                                                    Intent intent = new Intent(SignUp.this, MainActivity.class);
-                                                    startActivity(intent);
-                                                }
-                                            })
-                                            .addOnFailureListener(new OnFailureListener() {
-                                                @Override
-                                                public void onFailure(@NonNull Exception e) {
-                                                    Toast.makeText(SignUp.this, "הרשמה נכשלה", Toast.LENGTH_LONG).show();
-
-                                                }
-                                            });
-
-
-
-                            }else {
-                                    Toast.makeText(SignUp.this, "ההרשמה נכשלה:)", Toast.LENGTH_LONG).show();
-                                    // If sign in fails, display a message to the user.
+                                        db.collection("waitforapproval").document(uid).set(waitforapproval)
+                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void aVoid) {
+                                                        Toast.makeText(SignUp.this, " נרשמת בהצלחה", Toast.LENGTH_LONG).show();
+                                                        Intent intent = new Intent(SignUp.this, MainActivity.class);
+                                                        startActivity(intent);
+                                                    }
+                                                })
+                                                .addOnFailureListener(new OnFailureListener() {
+                                                    @Override
+                                                    public void onFailure(@NonNull Exception e) {
+                                                        Toast.makeText(SignUp.this, "הרשמה נכשלה", Toast.LENGTH_LONG).show();
+                                                    }
+                                                });
+                                    } else {
+                                        Toast.makeText(SignUp.this, "ההרשמה נכשלה:)", Toast.LENGTH_LONG).show();
+                                    }
                                 }
                             }
+
                         });
+                }
 
             }
-        }
+
 
     public void login(View view) {
         startActivity(new Intent(SignUp.this,Login.class));
@@ -242,3 +213,27 @@ private ProgressDialog progressDialog;
         });
     }
 }
+/////////////********
+//                                    db.collection("Teams").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//                                        @Override
+//                                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                                            if (queryDocumentSnapshots.size() > 0) {
+//
+//                                                for (DocumentSnapshot doc : queryDocumentSnapshots) {
+//                                                    if (Objects.equals(doc.getString("name"), teamName)) {
+//                                                        teamId= doc.get;
+//                                                    }
+//                                                }
+//
+//                                            }
+//                                        }
+//                                    }).addOnFailureListener(new OnFailureListener() {
+//                                        @Override
+//                                        public void onFailure(@NonNull Exception e) {
+//                                            Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+//
+//                                        }
+//                                    });
+///////////////////*******
+// Toast.makeText(SignUp.this,uid,Toast.LENGTH_LONG).show();
+//  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;

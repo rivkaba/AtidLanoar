@@ -71,7 +71,7 @@ public class Profile extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item)
             {
-                FirebaseAuth.getInstance().signOut();
+
                 startActivity(new Intent(Profile.this,Opening_questionnaire.class));
                 return true;
             }

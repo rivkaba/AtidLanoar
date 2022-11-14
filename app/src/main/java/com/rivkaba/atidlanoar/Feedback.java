@@ -4,12 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -20,6 +23,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.checkerframework.checker.units.qual.C;
+
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,13 +40,49 @@ public class Feedback extends AppCompatActivity  {
     String q4;
     boolean canUpdate=false;
     public FirebaseFirestore db;
+private DatePickerDialog datePickerDialog;
+private Button dataa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
         db = FirebaseFirestore.getInstance();
+        dataa=(Button) findViewById(R.id.data);
+        dataa.setText(getTodayDate());
+        intDatePicker();
 
     }
+    private String getTodayDate(){
+        Calendar cal=Calendar.getInstance();
+        int year= cal.get(Calendar.YEAR);
+        int month=cal.get(Calendar.MONTH);
+        int day=cal.get(Calendar.DAY_OF_MONTH);
+        month=month+1;
+        return makeDateSting( day, month, year);
+    }
+   private void intDatePicker(){
+       DatePickerDialog.OnDateSetListener dateSetListener= new DatePickerDialog.OnDateSetListener() {
+           @Override
+           public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                 month=month+1;
+                 String date= makeDateSting(day,month,year);
+                 dataa.setText(date);
+           }
+
+       };
+       Calendar cal=Calendar.getInstance();
+       int year= cal.get(Calendar.YEAR);
+       int month=cal.get(Calendar.MONTH);
+       int day=cal.get(Calendar.DAY_OF_MONTH);
+       int style =AlertDialog.BUTTON_POSITIVE;
+       datePickerDialog =new DatePickerDialog(this,style,dateSetListener,year,month,day) ;
+
+
+   }
+   private String makeDateSting(int day,int month,int year){
+    return day+"-"+month+"-"+year;
+   }
+
 
     public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
@@ -104,7 +146,7 @@ public class Feedback extends AppCompatActivity  {
     }
 
     public void send(View view) {
-       Date =findViewById(R.id.Date);
+      // Date =findViewById(R.id.Date);
         feedback1=findViewById(R.id.feedback);
         String feedback = feedback1.getText().toString();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -113,7 +155,7 @@ public class Feedback extends AppCompatActivity  {
           //  boolean emailVerified = user.isEmailVerified();
              uid = user.getUid();
         }
-        String date1 = Date.getText().toString();
+        String date1 = dataa.getText().toString();
        // canUpdate
         Map<String, Object> docData = new HashMap<>();
         docData.put("approved", true);
@@ -265,5 +307,9 @@ public class Feedback extends AppCompatActivity  {
                     q4="4";
                 break;
         }
+    }
+
+    public void dateButton(View view) {
+        datePickerDialog.show();
     }
 }

@@ -9,8 +9,8 @@
     android:background="@drawable/pi">
 
     <ScrollView
-        android:layout_width="279dp"
-        android:layout_height="574dp"
+        android:layout_width="265dp"
+        android:layout_height="578dp"
         android:fillViewport="true"
         android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,8 +41,8 @@
                 android:layout_marginTop="32dp"
                 android:ems="10"
                 android:hint="*שם פרטי"
-                android:textSize="22sp"
                 android:inputType="textPersonName"
+                android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_view" />
 
@@ -52,9 +52,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:ems="10"
-                android:textSize="22sp"
                 android:hint="*שם משפחה"
-                android:inputType="textPersonName"></EditText>
+                android:inputType="textPersonName"
+                android:textSize="22sp"></EditText>
 
             <EditText
                 android:id="@+id/Phone"
@@ -62,12 +62,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:ems="10"
-                android:textSize="22sp"
                 android:gravity="right"
                 android:hint="פלאפון*"
                 android:inputType="phone"
+                android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"></EditText>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <TextView
                 android:id="@+id/textView"
@@ -78,8 +82,8 @@
 
             <Spinner
                 android:id="@+id/team_spinner"
-                android:layout_width="249dp"
-                android:layout_height="51dp"
+                android:layout_width="252dp"
+                android:layout_height="46dp"
                 android:layout_marginTop="24dp"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -93,9 +97,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:ems="10"
-                android:textSize="22sp"
                 android:hint="תעודת זהות"
                 android:inputType="textPersonName"
+                android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.482"
                 app:layout_constraintStart_toStartOf="parent"
@@ -107,9 +111,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:ems="10"
-                android:textSize="22sp"
                 android:hint="*מייל"
                 android:inputType="textEmailAddress"
+                android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ID" />
@@ -147,8 +151,7 @@
                 android:text="חזרה לעמוד הראשי"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-              />
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </ScrollView>
 

@@ -19,6 +19,8 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Profile extends AppCompatActivity {
@@ -45,8 +47,8 @@ public class Profile extends AppCompatActivity {
     {
         super.onCreateOptionsMenu(menu);
         MenuItem menuItem1 = menu.add("מילוי משוב");
-        MenuItem menuItem2 = menu.add("שאלון סיום");
-        MenuItem menuItem3 = menu.add("שאלון פתיחה");
+        MenuItem menuItem2 = menu.add("שאלון פתיחה");
+        MenuItem menuItem3 = menu.add("שאלון סיום");
         MenuItem menuItem4 = menu.add("יציאה");
         menuItem1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
         {
@@ -62,7 +64,29 @@ public class Profile extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item)
             {
-                startActivity(new Intent(Profile.this,Summary_questionnaire.class));
+                ////fill one time
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    uid = user.getUid();
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Opening questionnaire").document("part4");
+                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
+                            if (task1.isSuccessful()) {
+                                DocumentSnapshot document = task1.getResult();
+                                if (document.exists()) {
+                                    Toast.makeText(Profile.this, " כבר מילאת שאלון פתיחה", Toast.LENGTH_LONG).show();
+                                } else {
+                                    startActivity(new Intent(Profile.this, Opening_questionnaire.class));
+
+                                }
+                            }
+
+                        }
+
+                    });
+                }
+                /////
                 return true;
             }
         });
@@ -71,11 +95,33 @@ public class Profile extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item)
             {
+                ////fill one time
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    uid = user.getUid();
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("part4");
+                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
+                            if (task1.isSuccessful()) {
+                                DocumentSnapshot document = task1.getResult();
+                                if (document.exists()) {
+                                    Toast.makeText(Profile.this, " כבר מילאת שאלון סיום", Toast.LENGTH_LONG).show();
+                                } else {
+                                    startActivity(new Intent(Profile.this, Summary_questionnaire.class));
 
-                startActivity(new Intent(Profile.this,Opening_questionnaire.class));
+                                }
+                            }
+
+                        }
+
+                    });
+                }
+                /////
                 return true;
             }
         });
+
         menuItem4.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
         {
             @Override

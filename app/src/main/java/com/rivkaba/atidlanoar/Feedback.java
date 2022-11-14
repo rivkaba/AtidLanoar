@@ -17,10 +17,14 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.checkerframework.checker.units.qual.C;
@@ -32,7 +36,7 @@ import java.util.Map;
 public class Feedback extends AppCompatActivity  {
 
     String uid;
-    EditText Date;
+
     EditText feedback1;
     String q1;
     String q2;
@@ -64,13 +68,14 @@ private Button dataa;
        DatePickerDialog.OnDateSetListener dateSetListener= new DatePickerDialog.OnDateSetListener() {
            @Override
            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                 month=month+1;
+               month=month+1;
                  String date= makeDateSting(day,month,year);
                  dataa.setText(date);
            }
 
        };
        Calendar cal=Calendar.getInstance();
+
        int year= cal.get(Calendar.YEAR);
        int month=cal.get(Calendar.MONTH);
        int day=cal.get(Calendar.DAY_OF_MONTH);
@@ -96,7 +101,7 @@ private Button dataa;
     {
         super.onCreateOptionsMenu(menu);
         MenuItem menuItem1 = menu.add("עדכון פרופיל");
-        MenuItem menuItem2 = menu.add("שאלון סיום");
+        MenuItem menuItem2 = menu.add("שאלון פתיחה");
         MenuItem menuItem3 = menu.add("שאלון סיום");
         MenuItem menuItem4 = menu.add("יציאה");
         menuItem1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
@@ -109,24 +114,68 @@ private Button dataa;
             }
         });
         menuItem2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
-         {
-             @Override
-             public boolean onMenuItemClick(MenuItem item)
-             {
-                 startActivity(new Intent(Feedback.this,Summary_questionnaire.class));
-                 return true;
-             }
-         });
+        {
+            @Override
+            public boolean onMenuItemClick(MenuItem item)
+            {
+                ////fill one time
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    uid = user.getUid();
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Opening questionnaire").document("part4");
+                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
+                            if (task1.isSuccessful()) {
+                                DocumentSnapshot document = task1.getResult();
+                                if (document.exists()) {
+                                    Toast.makeText(Feedback.this, " כבר מילאת שאלון פתיחה", Toast.LENGTH_LONG).show();
+                                } else {
+                                    startActivity(new Intent(Feedback.this, Opening_questionnaire.class));
+
+                                }
+                            }
+
+                        }
+
+                    });
+                }
+                /////
+                return true;
+            }
+        });
         menuItem3.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
         {
             @Override
             public boolean onMenuItemClick(MenuItem item)
             {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Feedback.this,Opening_questionnaire.class));
+                ////fill one time
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    uid = user.getUid();
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("part4");
+                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
+                            if (task1.isSuccessful()) {
+                                DocumentSnapshot document = task1.getResult();
+                                if (document.exists()) {
+                                    Toast.makeText(Feedback.this, " כבר מילאת שאלון סיום", Toast.LENGTH_LONG).show();
+                                } else {
+                                    startActivity(new Intent(Feedback.this, Summary_questionnaire.class));
+
+                                }
+                            }
+
+                        }
+
+                    });
+                }
+                /////
                 return true;
             }
         });
+
         menuItem4.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
         {
             @Override

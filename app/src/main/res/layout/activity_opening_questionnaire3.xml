@@ -22,8 +22,8 @@
 
     <LinearLayout
         android:id="@+id/linear_buttons"
-        android:layout_width="411dp"
-        android:layout_height="87dp"
+        android:layout_width="370dp"
+        android:layout_height="78dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,17 +32,16 @@
 
         <Button
             android:id="@+id/p4"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:onClick="P4"
-            android:enabled="false"
-            android:text=" ד'"
+            android:text="ד'"
             android:textSize="22sp"
             tools:ignore="OnClick" />
 
         <ImageView
-            android:layout_width="44dp"
+            android:layout_width="42dp"
             android:layout_height="29dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="24dp"
@@ -50,15 +49,16 @@
 
         <Button
             android:id="@+id/p3"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
+            android:onClick="P3"
             android:text="ג'"
             android:textSize="22sp" />
 
         <ImageView
-            android:layout_width="44dp"
+            android:layout_width="42dp"
             android:layout_height="29dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="24dp"
@@ -66,7 +66,7 @@
 
         <Button
             android:id="@+id/p2"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
@@ -75,7 +75,7 @@
             android:textSize="22sp" />
 
         <ImageView
-            android:layout_width="44dp"
+            android:layout_width="42dp"
             android:layout_height="29dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="24dp"
@@ -83,20 +83,20 @@
 
         <Button
             android:id="@+id/p1"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
             android:onClick="P1"
-            android:text=" א'"
+            android:text="א'"
             android:textSize="22sp"
             tools:ignore="OnClick" />
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/Scroll_view_questionnaire_3"
-        android:layout_width="391dp"
-        android:layout_height="391dp"
+        android:layout_width="334dp"
+        android:layout_height="387dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:visibility="visible"
@@ -122,6 +122,10 @@
                 android:layout_height="wrap_content"
                 android:text="עד כמה את/ה מרגיש/ה שאת/ה יודעת על כל אחד מהנושאים הבאים? "
                 android:textSize="25sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <TextView
                 android:id="@+id/qq31"
@@ -181,6 +185,7 @@
                 android:layout_height="wrap_content"
                 android:numStars="5"
                 android:stepSize="1" />
+
             <Button
                 android:layout_width="150dp"
                 android:layout_height="50dp"

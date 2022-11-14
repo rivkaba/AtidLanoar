@@ -9,13 +9,14 @@
 
     <TextView
         android:id="@+id/text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="363dp"
+        android:layout_height="79dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="שאלון סיכום שנה - תוכנית &quot;עתיד לנוער&quot; "
         android:textSize="30sp"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/linear_buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +24,8 @@
 
     <ScrollView
         android:id="@+id/Scroll_view_questionnaire"
-        android:layout_width="380dp"
-        android:layout_height="438dp"
+        android:layout_width="334dp"
+        android:layout_height="462dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,10 +64,11 @@
                 tools:ignore="OnClick" />
         </LinearLayout>
     </ScrollView>
+
     <LinearLayout
         android:id="@+id/linear_buttons"
-        android:layout_width="411dp"
-        android:layout_height="87dp"
+        android:layout_width="377dp"
+        android:layout_height="86dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         android:visibility="invisible"
@@ -76,15 +78,15 @@
 
         <Button
             android:id="@+id/p4"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
-            android:text=" ד'"
-            android:textSize="22sp"
-            android:enabled="false" />
+            android:enabled="false"
+            android:text="ד'"
+            android:textSize="22sp" />
 
         <ImageView
-            android:layout_width="44dp"
+            android:layout_width="42dp"
             android:layout_height="29dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="24dp"
@@ -92,16 +94,16 @@
 
         <Button
             android:id="@+id/p3"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
-            android:text="ג'"
             android:enabled="false"
+            android:text="ג'"
             android:textSize="22sp" />
 
         <ImageView
-            android:layout_width="44dp"
+            android:layout_width="42dp"
             android:layout_height="29dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="24dp"
@@ -109,17 +111,17 @@
 
         <Button
             android:id="@+id/p2"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
+            android:enabled="false"
             android:onClick="P2"
             android:text="ב'"
-            android:enabled="false"
             android:textSize="22sp" />
 
         <ImageView
-            android:layout_width="44dp"
+            android:layout_width="42dp"
             android:layout_height="29dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="24dp"
@@ -127,12 +129,12 @@
 
         <Button
             android:id="@+id/p1"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
             android:onClick="P1"
-            android:text=" א'"
+            android:text="א'"
             android:textSize="22sp"
             tools:ignore="OnClick" />
     </LinearLayout>
@@ -140,8 +142,8 @@
 <!--q1-->
     <ScrollView
         android:id="@+id/Scroll_view_questionnaire_1"
-        android:layout_width="397dp"
-        android:layout_height="380dp"
+        android:layout_width="334dp"
+        android:layout_height="389dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
         android:visibility="invisible"
@@ -180,17 +182,17 @@
                     android:id="@+id/q110"
                     android:layout_width="122dp"
                     android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked1"
                     android:text="זכר"
                     android:textSize="22sp"
-                    android:onClick="onRadioButtonClicked1"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
                     android:id="@+id/q111"
                     android:layout_width="122dp"
                     android:layout_height="match_parent"
-                    android:text="נקבה"
                     android:onClick="onRadioButtonClicked1"
+                    android:text="נקבה"
                     android:textSize="22sp" />
 
 
@@ -198,8 +200,8 @@
                     android:id="@+id/q112"
                     android:layout_width="122dp"
                     android:layout_height="40dp"
-                    android:text="אחר"
                     android:onClick="onRadioButtonClicked1"
+                    android:text="אחר"
                     android:textSize="22sp" />
             </RadioGroup>
 
@@ -208,9 +210,10 @@
                 android:layout_width="198dp"
                 android:layout_height="40dp"
                 android:ems="10"
-                android:visibility="invisible"
                 android:inputType="textPersonName"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                android:visibility="invisible" />
+
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="50dp" />

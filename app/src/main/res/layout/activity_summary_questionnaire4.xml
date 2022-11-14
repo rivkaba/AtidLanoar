@@ -6,21 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".Summary_questionnaire_4"
     android:background="@drawable/pi" >
+
     <TextView
         android:id="@+id/text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="355dp"
+        android:layout_height="72dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="שאלון סיכום שנה - תוכנית &quot;עתיד לנוער&quot; "
         android:textSize="30sp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linear_buttons"
-        android:layout_width="411dp"
-        android:layout_height="87dp"
+        android:layout_width="373dp"
+        android:layout_height="86dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         android:visibility="visible"
@@ -30,16 +33,16 @@
 
         <Button
             android:id="@+id/p4"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:onClick="P4"
-            android:text=" ד'"
+            android:text="ד'"
             android:textSize="22sp"
             tools:ignore="OnClick" />
 
         <ImageView
-            android:layout_width="44dp"
+            android:layout_width="42dp"
             android:layout_height="29dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="24dp"
@@ -47,7 +50,7 @@
 
         <Button
             android:id="@+id/p3"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
@@ -56,7 +59,7 @@
             android:textSize="22sp" />
 
         <ImageView
-            android:layout_width="44dp"
+            android:layout_width="42dp"
             android:layout_height="29dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="24dp"
@@ -64,7 +67,7 @@
 
         <Button
             android:id="@+id/p2"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
@@ -73,7 +76,7 @@
             android:textSize="22dp" />
 
         <ImageView
-            android:layout_width="44dp"
+            android:layout_width="42dp"
             android:layout_height="29dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="24dp"
@@ -81,20 +84,20 @@
 
         <Button
             android:id="@+id/p1"
-            android:layout_width="65dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="16dp"
             android:onClick="P1"
-            android:text=" א'"
+            android:text="א'"
             android:textSize="22sp"
             tools:ignore="OnClick" />
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/scroll_view_questionnaire_4"
-        android:layout_width="379dp"
-        android:layout_height="367dp"
+        android:layout_width="350dp"
+        android:layout_height="394dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
         android:visibility="visible"
@@ -131,15 +134,14 @@
                 android:text="ימי שיא"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                >
+                app:layout_constraintStart_toStartOf="parent">
 
                 <RadioButton
                     android:id="@+id/q410"
@@ -199,16 +201,15 @@
                 android:text="ועדת היגוי"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                >
+                app:layout_constraintStart_toStartOf="parent">
+
                 <RadioButton
                     android:id="@+id/q420"
                     android:layout_width="match_parent"
@@ -268,16 +269,14 @@
                 android:text="הפקת מיזם חברתי"
                 android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                >
+                app:layout_constraintStart_toStartOf="parent">
 
                 <RadioButton
                     android:id="@+id/q430"
@@ -337,16 +336,14 @@
                 android:text="הכשרה מקצועית"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                >
+                app:layout_constraintStart_toStartOf="parent">
 
                 <RadioButton
                     android:id="@+id/q440"
@@ -395,6 +392,10 @@
                     android:onClick="onRadioButtonClicked4"
                     android:text="למדתי הרבה מאוד"
                     android:textSize="22sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
             </RadioGroup>
 
             <TextView
@@ -461,11 +462,16 @@
                 android:inputType="textPersonName"
                 android:textSize="22sp" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="מה את/ה לוקח/ת איתך מהתוכנית להמשך הדרך?"
                 android:textSize="25sp" />
+
             <EditText
                 android:id="@+id/q48"
                 android:layout_width="match_parent"

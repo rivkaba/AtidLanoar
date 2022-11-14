@@ -46,44 +46,14 @@ public class Student extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu)
     {
         super.onCreateOptionsMenu(menu);
-        MenuItem menuItem1 = menu.add("שאלון סיום");
-        MenuItem menuItem2 = menu.add("שאלון פתיחה");
+        MenuItem menuItem1 = menu.add("שאלון פתיחה");
+        MenuItem menuItem2 = menu.add("שאלון סיום");
         MenuItem menuItem3 = menu.add("עדכון פרופיל");
         MenuItem menuItem4 = menu.add("יציאה");
 
 
+
         menuItem1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
-        {
-            @Override
-            public boolean onMenuItemClick(MenuItem item)
-            {
-                ////fill one time
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                if (user != null) {
-                    uid = user.getUid();
-                    DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("part4");
-                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
-                            if (task1.isSuccessful()) {
-                                DocumentSnapshot document = task1.getResult();
-                                if (document.exists()) {
-                                    Toast.makeText(Student.this, " כבר מילאת שאלון סיום", Toast.LENGTH_LONG).show();
-                                } else {
-                                    startActivity(new Intent(Student.this, Summary_questionnaire.class));
-
-                                }
-                            }
-
-                        }
-
-                    });
-                }
-                /////
-                            return true;
-            }
-        });
-        menuItem2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
         {
             @Override
             public boolean onMenuItemClick(MenuItem item)
@@ -102,6 +72,37 @@ public class Student extends AppCompatActivity {
                                     Toast.makeText(Student.this, " כבר מילאת שאלון פתיחה", Toast.LENGTH_LONG).show();
                                 } else {
                                     startActivity(new Intent(Student.this, Opening_questionnaire.class));
+
+                                }
+                            }
+
+                        }
+
+                    });
+                }
+                /////
+                return true;
+            }
+        });
+        menuItem2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
+        {
+            @Override
+            public boolean onMenuItemClick(MenuItem item)
+            {
+                ////fill one time
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if (user != null) {
+                    uid = user.getUid();
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("part4");
+                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
+                            if (task1.isSuccessful()) {
+                                DocumentSnapshot document = task1.getResult();
+                                if (document.exists()) {
+                                    Toast.makeText(Student.this, " כבר מילאת שאלון סיום", Toast.LENGTH_LONG).show();
+                                } else {
+                                    startActivity(new Intent(Student.this, Summary_questionnaire.class));
 
                                 }
                             }

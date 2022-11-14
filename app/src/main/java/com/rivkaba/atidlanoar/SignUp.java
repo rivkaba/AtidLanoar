@@ -53,7 +53,7 @@ private ProgressDialog progressDialog;
         db = FirebaseFirestore.getInstance();
         progressDialog= new ProgressDialog(SignUp.this);
         progressDialog.setTitle("loading");
-        progressDialog.setMessage("please wait");
+        progressDialog.setMessage("נא להמתין");
          Spinner teamSpinner = (Spinner) findViewById(R.id.team_spinner);
 
         adapter= new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,team);
@@ -213,27 +213,3 @@ private ProgressDialog progressDialog;
         });
     }
 }
-/////////////********
-//                                    db.collection("Teams").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//                                        @Override
-//                                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                                            if (queryDocumentSnapshots.size() > 0) {
-//
-//                                                for (DocumentSnapshot doc : queryDocumentSnapshots) {
-//                                                    if (Objects.equals(doc.getString("name"), teamName)) {
-//                                                        teamId= doc.get;
-//                                                    }
-//                                                }
-//
-//                                            }
-//                                        }
-//                                    }).addOnFailureListener(new OnFailureListener() {
-//                                        @Override
-//                                        public void onFailure(@NonNull Exception e) {
-//                                            Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-//
-//                                        }
-//                                    });
-///////////////////*******
-// Toast.makeText(SignUp.this,uid,Toast.LENGTH_LONG).show();
-//  User user= new User( ID, false,email, fname, lname, phone, team, teamName, "student") ;

@@ -335,4 +335,9 @@ public class Summary_questionnaire_4 extends AppCompatActivity {
 
             }
         }
+
+    public void out(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(Summary_questionnaire_4.this,Login.class));
     }
+}

@@ -546,56 +546,68 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
         if ((!radio210.isChecked()) && (!radio211.isChecked()) && (!radio212.isChecked()) && (!radio213.isChecked()) && (!radio214.isChecked())) {
             radio210.setError("התשובה שלך");
             radio210.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
+
             return 0;
         }
         if ((!radio220.isChecked()) && (!radio221.isChecked()) && (!radio222.isChecked()) && (!radio223.isChecked()) && (!radio224.isChecked())) {
             radio220.setError("התשובה שלך");
             radio220.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         if ((!radio230.isChecked()) && (!radio231.isChecked()) && (!radio232.isChecked()) && (!radio233.isChecked()) && (!radio234.isChecked())) {
             radio230.setError("התשובה שלך");
             radio230.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         if ((!radio240.isChecked()) && (!radio241.isChecked()) && (!radio242.isChecked()) && (!radio243.isChecked()) && (!radio244.isChecked())) {
             radio240.setError("התשובה שלך");
             radio240.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         if ((!radio250.isChecked()) && (!radio251.isChecked()) && (!radio252.isChecked()) && (!radio253.isChecked()) && (!radio254.isChecked())) {
             radio250.setError("התשובה שלך");
             radio250.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         if ((!radio260.isChecked()) && (!radio261.isChecked()) && (!radio262.isChecked()) && (!radio263.isChecked()) && (!radio264.isChecked())) {
             radio260.setError("התשובה שלך");
             radio260.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         if ((!radio270.isChecked()) && (!radio271.isChecked()) && (!radio272.isChecked()) && (!radio273.isChecked()) && (!radio274.isChecked())) {
             radio270.setError("התשובה שלך");
             radio270.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         if ((!radio280.isChecked()) && (!radio281.isChecked()) && (!radio282.isChecked()) && (!radio283.isChecked()) && (!radio284.isChecked())) {
             radio280.setError("התשובה שלך");
             radio280.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         if ((!radio290.isChecked()) && (!radio291.isChecked()) && (!radio292.isChecked()) && (!radio293.isChecked()) && (!radio294.isChecked())) {
             radio290.setError("התשובה שלך");
             radio290.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         if ((!radio2100.isChecked()) && (!radio2101.isChecked()) && (!radio2102.isChecked()) && (!radio2103.isChecked()) && (!radio2104.isChecked())) {
             radio2100.setError("התשובה שלך");
             radio2100.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         if ((!radio2110.isChecked()) && (!radio2111.isChecked()) && (!radio2112.isChecked()) && (!radio2113.isChecked()) && (!radio2114.isChecked())) {
             radio2110.setError("התשובה שלך");
             radio2110.requestFocus();
+            Toast.makeText(Opening_questionnaire_2.this, "יש למלא את כל התשובות", Toast.LENGTH_LONG).show();
             return 0;
         }
         //everything full

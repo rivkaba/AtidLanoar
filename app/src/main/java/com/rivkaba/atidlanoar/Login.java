@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
     public FirebaseFirestore db;
     String uid = "";
     //  final Task<DocumentSnapshot> type;
-    private ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +32,12 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
-        progressDialog= new ProgressDialog(Login.this);
-        progressDialog.setTitle("loading");
-        progressDialog.setMessage("please wait");
 
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        progressDialog.show();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -55,8 +51,7 @@ public class Login extends AppCompatActivity {
                     if (task1.isSuccessful()) {
                         DocumentSnapshot document = task1.getResult();
                         if (document.exists()) {
-                            startActivity(new Intent(Login.this, Student.class));
-                            progressDialog.hide();
+                            startActivity(new Intent(Login.this,Student.class));
                         } else {
                             Toast.makeText(Login.this, "יש לחכות לאישור המנהל", Toast.LENGTH_LONG).show();
                         }
@@ -67,7 +62,6 @@ public class Login extends AppCompatActivity {
             });
 
         }
-        progressDialog.hide();
         //////
     }
 

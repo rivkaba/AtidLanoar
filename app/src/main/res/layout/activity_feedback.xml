@@ -47,22 +47,17 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
                 android:layout_marginTop="32dp"
                 android:text="באיזה מידה המפגש היום חידש לך / למדת דברים חדשים?"
-                android:textSize="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+                android:textSize="25dp" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+    >
 
                 <RadioButton
                     android:id="@+id/radio10"
@@ -70,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה מועטה מאוד"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio11"
@@ -78,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה מועטה"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio12"
@@ -86,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה בינונית"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio13"
@@ -94,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה רבה"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio14"
@@ -102,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה רבה מאוד"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
             </RadioGroup>
 
             <Space
@@ -118,10 +113,8 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+               >
 
                 <RadioButton
                     android:id="@+id/radio20"
@@ -129,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה מועטה מאוד"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio21"
@@ -137,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה מועטה"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio22"
@@ -145,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה בינונית"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio23"
@@ -153,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה רבה"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio24"
@@ -161,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה רבה מאוד"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
             </RadioGroup>
 
             <Space
@@ -172,15 +165,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="באיזה מידה נושא המפגש היה רלוונטי עבורך?"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+          >
 
                 <RadioButton
                     android:id="@+id/radio30"
@@ -188,7 +179,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה מועטה מאוד"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio31"
@@ -196,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה מועטה"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio32"
@@ -204,7 +195,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה בינונית"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio33"
@@ -212,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה רבה"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio34"
@@ -220,7 +211,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה רבה מאוד"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
             </RadioGroup>
 
             <Space
@@ -231,15 +222,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="באיזה מידה לקחת חלק פעיל במפגש היום?"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+              >
 
                 <RadioButton
                     android:id="@+id/radio40"
@@ -247,7 +235,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה מועטה מאוד"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio41"
@@ -255,7 +243,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה מועטה"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio42"
@@ -263,7 +251,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה בינונית"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio43"
@@ -271,7 +259,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה רבה"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
 
                 <RadioButton
                     android:id="@+id/radio44"
@@ -279,7 +267,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה רבה מאוד"
-                    android:textSize="22dp" />
+                    android:textSize="22sp" />
             </RadioGroup>
 
             <Space
@@ -290,12 +278,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=" מה את/ה לוקח/ת מהמפגש היום?"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="25dp" />
 
             <EditText
                 android:id="@+id/feedback"
@@ -304,28 +288,28 @@
                 android:ems="10"
                 android:hint="התשובה שלך"
                 android:inputType="textPersonName"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="send"
                 android:text="דווח נוכחות ושלח משוב"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="back"
                 android:text="חזרה לתפריט"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="logout"
                 android:text="התנתק"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
         </LinearLayout>
     </ScrollView>
 

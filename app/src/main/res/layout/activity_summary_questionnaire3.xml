@@ -120,7 +120,7 @@
 
             <TextView
 
-                android:layout_width="400dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="עד כמה את/ה מרגיש/ה שאת/ה יודעת על כל אחד מהנושאים הבאים? "
                 android:textSize="25sp" />

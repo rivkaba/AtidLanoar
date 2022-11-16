@@ -96,8 +96,8 @@
 
     <ScrollView
         android:id="@+id/scroll_view_questionnaire_4"
-        android:layout_width="350dp"
-        android:layout_height="394dp"
+        android:layout_width="346dp"
+        android:layout_height="336dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
         android:visibility="visible"
@@ -139,7 +139,6 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -206,7 +205,6 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -274,7 +272,6 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -341,7 +338,6 @@
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -392,18 +388,22 @@
                     android:onClick="onRadioButtonClicked4"
                     android:text="למדתי הרבה מאוד"
                     android:textSize="22sp" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp" />
             </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <TextView
 
-                android:layout_width="400dp"
-                android:layout_height="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text=" עד כמה הרגשת שאת/ה למדת על עולם התעסוקה והעסקים מהדמויות הבאות?"
                 android:textSize="25sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -420,11 +420,15 @@
 
                 <TextView
                     android:id="@+id/qq45"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="מדריכ/ת הקבוצה "
                     android:textSize="22sp" />
             </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -441,12 +445,16 @@
 
                 <TextView
                     android:id="@+id/qq46"
-                    android:layout_width="200dp"
+                    android:layout_width="155dp"
                     android:layout_height="wrap_content"
                     android:text="מנחה עסקי/ת"
                     android:textSize="22sp" />
 
             </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -492,13 +500,13 @@
 
     <LinearLayout
         android:id="@+id/Linear_layout"
-        android:layout_width="352dp"
-        android:layout_height="366dp"
+        android:layout_width="360dp"
+        android:layout_height="371dp"
         android:layout_marginTop="20dp"
         android:gravity="right"
         android:orientation="vertical"
         android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/scroll_view_questionnaire_4"
         app:layout_constraintTop_toBottomOf="@+id/text_view">
 
         <TextView
@@ -509,5 +517,12 @@
     צוות מנהיגות עסקית צעירה,
     תוכנית 'עתיד לנוער'.  "
             android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="out"
+            android:text="יציאה" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

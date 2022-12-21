@@ -37,6 +37,7 @@
             android:layout_marginTop="16dp"
             android:onClick="P4"
             android:text="ד'"
+            android:enabled="false"
             android:textSize="22sp"
             tools:ignore="OnClick" />
 

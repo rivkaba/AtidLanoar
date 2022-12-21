@@ -192,13 +192,15 @@ public class Summary_questionnaire extends AppCompatActivity {
                             }
 
                             if (((q110.isChecked()) || (q111.isChecked()) || (q112.isChecked())) && (ch)) {
+                             //   Map<String, Object> form = new HashMap<>();
                                 Map<String, Object> part1 = new HashMap<>();
                                 part1.put("gender", q1);
                                 part1.put("age", agee.getText().toString());
+                               // form.put("form",part1);
                                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                                 if (user != null) {
                                    uid = user.getUid();
-                                db.collection("students").document(uid).collection("Summary questionnaire").document("part1").set(part1)
+                                db.collection("students").document(uid).collection("Summary questionnaire").document("form").set(part1)
 
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override

@@ -299,21 +299,21 @@ public class Summary_questionnaire_4 extends AppCompatActivity {
             if (send2() == 1) {
                 Map<String, Object> part4 = new HashMap<>();
 
-                part4.put("q41", Q41);
-                part4.put("q42", Q42);
-                part4.put("q43", Q43);
-                part4.put("q44", Q44);
+                part4.put("q3_1", Q41);
+                part4.put("q3_2", Q42);
+                part4.put("q3_3", Q43);
+                part4.put("q3_4", Q44);
 
-                part4.put("q45", q45.getProgress());
-                part4.put("q46", q46.getProgress());
-                part4.put("q47", q47.getText().toString());
-                part4.put("q48", q48.getText().toString());
+                part4.put("q4_1", q45.getProgress());
+                part4.put("q4_2", q46.getProgress());
+                part4.put("experience", q47.getText().toString());
+                part4.put("take", q48.getText().toString());
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
                     uid = user.getUid();
                 }
                // db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part4").set(part4)
-                db.collection("students").document(uid).collection("Summary questionnaire").document("part4").set(part4)
+                db.collection("students").document(uid).collection("Summary questionnaire").document("part4").update(part4)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {

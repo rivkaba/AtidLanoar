@@ -146,6 +146,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked21"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -154,6 +155,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked21"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -162,6 +164,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked21"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -170,6 +173,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked21"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -178,6 +182,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked21"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
             </RadioGroup>
@@ -205,6 +210,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked22"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -213,6 +219,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked22"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -221,6 +228,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked22"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -230,6 +238,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked22"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -239,6 +248,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked22"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -267,6 +277,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked23"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -275,6 +286,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked23"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -284,6 +296,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked23"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -292,6 +305,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked23"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -301,6 +315,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked23"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -329,6 +344,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked24"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -337,6 +353,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked24"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -346,6 +363,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked24"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -355,6 +373,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked24"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -364,6 +383,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked24"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -391,6 +411,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked25"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -400,6 +421,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked25"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -409,6 +431,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked25"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -418,6 +441,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked25"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -427,6 +451,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked25"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -454,6 +479,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked26"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -463,6 +489,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked26"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -472,6 +499,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked26"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -481,6 +509,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked26"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -490,6 +519,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked26"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -517,6 +547,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked27"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -526,6 +557,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked27"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -535,6 +567,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked27"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -544,6 +577,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked27"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -553,6 +587,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked27"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -580,6 +615,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked28"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -589,6 +625,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked28"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -598,6 +635,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked28"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -607,6 +645,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked28"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -616,6 +655,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked28"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -644,6 +684,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked29"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -653,6 +694,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked29"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -662,6 +704,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked29"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -671,6 +714,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked29"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -680,6 +724,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked29"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -707,6 +752,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked210"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -716,6 +762,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked210"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -725,6 +772,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked210"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -734,6 +782,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked210"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -743,6 +792,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked210"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -770,6 +820,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked211"
                     android:text="בכלל לא"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -779,6 +830,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked211"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -788,6 +840,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked211"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -797,6 +850,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked211"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -806,6 +860,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked211"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 

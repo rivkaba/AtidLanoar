@@ -148,6 +148,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="לא הגעתי לפעילות זו"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -156,6 +157,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="לא למדתי בכלל	"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -164,6 +166,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="למדתי מעט מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -172,6 +175,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="למדתי מספיק"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -180,6 +184,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="	למדתי הרבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -188,6 +193,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="למדתי הרבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
             </RadioGroup>
             <!--q2-->
@@ -214,6 +220,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="לא הגעתי לפעילות זו"
+                    app:buttonTint="@color/black"
                     android:textSize="22dp" />
 
                 <RadioButton
@@ -222,6 +229,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="לא למדתי בכלל	"
+                    app:buttonTint="@color/black"
                     android:textSize="22dp" />
 
                 <RadioButton
@@ -230,6 +238,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="למדתי מעט מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22dp" />
 
                 <RadioButton
@@ -238,6 +247,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="למדתי מספיק"
+                    app:buttonTint="@color/black"
                     android:textSize="22dp" />
 
                 <RadioButton
@@ -246,6 +256,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="	למדתי הרבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22dp" />
 
 
@@ -255,6 +266,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="למדתי הרבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22dp" />
             </RadioGroup>
             <!--q3-->
@@ -281,6 +293,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="לא הגעתי לפעילות זו"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -289,6 +302,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="לא למדתי בכלל	"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -297,6 +311,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="למדתי מעט מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -305,6 +320,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="למדתי מספיק"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -313,6 +329,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="	למדתי הרבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -321,6 +338,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="למדתי הרבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
             </RadioGroup>
             <!--q4-->
@@ -347,6 +365,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="לא הגעתי לפעילות זו"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -355,6 +374,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="לא למדתי בכלל	"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -363,6 +383,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="למדתי מעט מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -371,6 +392,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="למדתי מספיק"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -379,6 +401,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="	למדתי הרבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -387,6 +410,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="למדתי הרבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
             </RadioGroup>
 

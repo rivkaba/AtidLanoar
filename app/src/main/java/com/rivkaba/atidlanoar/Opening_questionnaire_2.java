@@ -504,7 +504,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
 
     public void save(View view) {
         if(send2()==1) {
-            Map<String, Object> answers = new HashMap<>();
+            Map<String, Object> form = new HashMap<>();
             Map<String, Object> part2 = new HashMap<>();
             part2.put("q1", q21);
             part2.put("q2", q22);
@@ -522,7 +522,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
                 uid = user.getUid();
             }
        //     db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part2").set(part2)
-            db.collection("students").document(uid).collection("Opening questionnaire").document("part2").set(part2)
+            db.collection("students").document(uid).collection("Opening questionnaire").document("form").update(part2)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {

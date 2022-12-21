@@ -65,6 +65,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה מועטה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -73,6 +74,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -81,6 +83,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה בינונית"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -89,6 +92,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -97,6 +101,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
             </RadioGroup>
 
@@ -122,6 +127,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה מועטה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -130,6 +136,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -138,6 +145,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה בינונית"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -146,6 +154,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -154,6 +163,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked2"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
             </RadioGroup>
 
@@ -179,6 +189,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה מועטה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -187,6 +198,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -195,6 +207,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה בינונית"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -203,6 +216,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -211,6 +225,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked3"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
             </RadioGroup>
 
@@ -235,6 +250,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה מועטה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -243,6 +259,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה מועטה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -251,6 +268,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה בינונית"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -259,6 +277,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה רבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
                 <RadioButton
@@ -267,6 +286,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked4"
                     android:text="במידה רבה מאוד"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
             </RadioGroup>
 

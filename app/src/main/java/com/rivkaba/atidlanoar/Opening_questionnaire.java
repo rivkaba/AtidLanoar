@@ -177,49 +177,17 @@ public class Opening_questionnaire extends AppCompatActivity {
         ////
 
         if (((q110.isChecked()) || (q111.isChecked()) || (q112.isChecked())) && (ch)) {
+            //Map<String, Object> form = new HashMap<>();
             Map<String, Object> part1 = new HashMap<>();
             part1.put("gender", q1);
             part1.put("age", age.getText().toString());
+          //  form.put("form",part1);
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
                 uid = user.getUid();
 
-
-                ////
-//                if (teamm.getText().toString().equals("")) {
-//                    teamm.setHintTextColor(getResources().getColor(R.color.design_default_color_error));
-//                }
-
-//            if (((q110.isChecked()) || (q111.isChecked()) || (q112.isChecked())) && (ch)) {
-//
-//                Map<String, Object> part1 = new HashMap<>();
-//                part1.put("gender", q1);
-//                part1.put("age", age.getText().toString());
-//                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//                if (user != null) {
-//                    uid = user.getUid();
-//                }
-                //  db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part1").set(part1)
-//               db.collection("students").document(uid).collection("Opening questionnaire").document("part1").set(part1)
-//                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-//                            @Override
-//                            public void onSuccess(Void aVoid) {
-//                                Toast.makeText(Opening_questionnaire.this, " תודה, הטופס נשמר בהצלחה", Toast.LENGTH_LONG).show();
-//                                p2.setEnabled(true);
-//                                startActivity(new Intent(Opening_questionnaire.this, Opening_questionnaire_2.class));
-//
-//
-//                            }
-//                        })
-//                        .addOnFailureListener(new OnFailureListener() {
-//                            @Override
-//                            public void onFailure(@NonNull Exception e) {
-//                                Toast.makeText(Opening_questionnaire.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
-//
-//                            }
-//                        });
-             //   db.collection("students").document(uid).collection("Opening questionnaire").document("part1").set(part1)
-                db.collection("students").document(uid).collection("Opening questionnaire").document("part1").set(part1)
+                db.collection("students").document(uid).collection("Opening questionnaire").document("form").set(part1)
+            //    db.collection("students").document(uid).collection("Opening questionnaire").document("part1").set(part1)
 
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

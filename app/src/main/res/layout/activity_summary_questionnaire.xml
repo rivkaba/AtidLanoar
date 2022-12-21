@@ -184,6 +184,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked1"
                     android:text="זכר"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -193,6 +194,7 @@
                     android:layout_height="match_parent"
                     android:onClick="onRadioButtonClicked1"
                     android:text="נקבה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -202,6 +204,7 @@
                     android:layout_height="40dp"
                     android:onClick="onRadioButtonClicked1"
                     android:text="אחר"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
             </RadioGroup>
 

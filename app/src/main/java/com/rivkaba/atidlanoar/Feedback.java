@@ -62,14 +62,14 @@ private Button dataa;
         int month=cal.get(Calendar.MONTH);
         int day=cal.get(Calendar.DAY_OF_MONTH);
         month=month+1;
-        return makeDateSting( day, month, year);
+        return makeDateSting( year, month,day );
     }
    private void intDatePicker(){
        DatePickerDialog.OnDateSetListener dateSetListener= new DatePickerDialog.OnDateSetListener() {
            @Override
            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                month=month+1;
-                 String date= makeDateSting(day,month,year);
+                 String date= makeDateSting(year,month,day);
                  dataa.setText(date);
            }
 
@@ -84,8 +84,8 @@ private Button dataa;
 
 
    }
-   private String makeDateSting(int day,int month,int year){
-    return day+"-"+month+"-"+year;
+   private String makeDateSting(int year,int month,int day){
+    return year+"-"+month+"-"+day;
    }
 
 
@@ -122,7 +122,7 @@ private Button dataa;
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
                     uid = user.getUid();
-                    DocumentReference docRef = db.collection("students").document(uid).collection("Opening questionnaire").document("part4");
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Opening questionnaire").document("form");
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
@@ -153,7 +153,7 @@ private Button dataa;
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
                     uid = user.getUid();
-                    DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("part4");
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("form");
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<DocumentSnapshot> task1) {

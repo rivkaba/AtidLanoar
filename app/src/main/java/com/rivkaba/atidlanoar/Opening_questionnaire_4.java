@@ -12,10 +12,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +27,7 @@ public class Opening_questionnaire_4 extends AppCompatActivity {
     EditText q41;
     EditText q42;
     String uid;
+    Task<DocumentSnapshot> form;
     public FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +53,8 @@ public class Opening_questionnaire_4 extends AppCompatActivity {
             q42.requestFocus();
             return;
         }
-        part4.put("q41", q41.getText().toString());
-        part4.put("q42", q42.getText().toString());
+        part4.put("hopeTostudy", q41.getText().toString());
+        part4.put("needTostudy", q42.getText().toString());
 
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -58,7 +62,7 @@ public class Opening_questionnaire_4 extends AppCompatActivity {
             uid = user.getUid();
         }
        // db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part4").set(part4)
-        db.collection("students").document(uid).collection("Opening questionnaire").document("part4").set(part4)
+        db.collection("students").document(uid).collection("Opening questionnaire").document("form").update(part4)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
@@ -74,5 +78,14 @@ public class Opening_questionnaire_4 extends AppCompatActivity {
 
                     }
                 });
+    /*  form =  db.collection("students").document(uid).collection("Opening questionnaire").document("form").get();
+        Map<String, Object> form1 = new HashMap<>();
+        for (DocumentSnapshot item:form) {
+            form1.put(item);
+
+        }
+        form1.put("form",form);
+        db.collection("students").document(uid).collection("Opening questionnaire").document("form").set(form1);
+*/
     }
 }

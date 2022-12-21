@@ -110,17 +110,17 @@ public class Summary_questionnaire_3 extends AppCompatActivity {
 
             Map<String, Object> part3 = new HashMap<>();
 
-            part3.put("q31", q31.getRating());
-            part3.put("q32", q32.getRating());
-            part3.put("q33", q33.getRating());
-            part3.put("q34", q34.getRating());
+            part3.put("q2_1", q31.getRating());
+            part3.put("q2_2", q32.getRating());
+            part3.put("q2_3", q33.getRating());
+            part3.put("q2_4", q34.getRating());
 
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
                 uid = user.getUid();
             }
          //   db.collection("students").document(uid).collection("questionnaires").document("Summary questionnaire").collection("answers").document("part3").set(part3)
-            db.collection("students").document(uid).collection("Summary questionnaire").document("part3").set(part3)
+            db.collection("students").document(uid).collection("Summary questionnaire").document("part3").update(part3)
 
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override

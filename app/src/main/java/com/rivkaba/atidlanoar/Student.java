@@ -62,7 +62,7 @@ public class Student extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
                     uid = user.getUid();
-                    DocumentReference docRef = db.collection("students").document(uid).collection("Opening questionnaire").document("part4");
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Opening questionnaire").document("form");
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<DocumentSnapshot> task1) {
@@ -93,7 +93,7 @@ public class Student extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 if (user != null) {
                     uid = user.getUid();
-                    DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("part4");
+                    DocumentReference docRef = db.collection("students").document(uid).collection("Summary questionnaire").document("form");
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<DocumentSnapshot> task1) {

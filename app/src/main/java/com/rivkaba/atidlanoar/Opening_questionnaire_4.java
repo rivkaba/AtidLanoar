@@ -39,7 +39,8 @@ public class Opening_questionnaire_4 extends AppCompatActivity {
         q42 = findViewById(R.id.q42);
     }
     public void save4(View view) {
-        Map<String, Object> part4 = new HashMap<>();
+        Map<String, Object> form = new HashMap<>();
+        Map<String, Object> form1 = new HashMap<>();
 
         if(q41.getText().toString().equals(""))
         {
@@ -53,16 +54,33 @@ public class Opening_questionnaire_4 extends AppCompatActivity {
             q42.requestFocus();
             return;
         }
-        part4.put("hopeTostudy", q41.getText().toString());
-        part4.put("needTostudy", q42.getText().toString());
-
+        form.put("gender", getIntent().getExtras().getString("gender"));
+        form.put("age", getIntent().getExtras().getString("age"));
+        form.put("q1", getIntent().getExtras().getString("q1"));
+        form.put("q2", getIntent().getExtras().getString("q2"));
+        form.put("q3", getIntent().getExtras().getString("q3"));
+        form.put("q4", getIntent().getExtras().getString("q4"));
+        form.put("q5", getIntent().getExtras().getString("q5"));
+        form.put("q6", getIntent().getExtras().getString("q6"));
+        form.put("q7", getIntent().getExtras().getString("q7"));
+        form.put("q8", getIntent().getExtras().getString("q8"));
+        form.put("q9", getIntent().getExtras().getString("q9"));
+        form.put("q10", getIntent().getExtras().getString("q10"));
+        form.put("q11", getIntent().getExtras().getString("q11"));
+        form.put("q2_1", getIntent().getExtras().getString("q2_1"));
+        form.put("q2_2", getIntent().getExtras().getString("q2_2"));
+        form.put("q2_3", getIntent().getExtras().getString("q2_3"));
+        form.put("q2_4",getIntent().getExtras().getString("q2_4"));
+        form.put("hopeTostudy", q41.getText().toString());
+        form.put("needTostudy", q42.getText().toString());
+        form1.put("form",form);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             uid = user.getUid();
         }
        // db.collection("students").document(uid).collection("questionnaires").document("Opening questionnaire").collection("answers").document("part4").set(part4)
-        db.collection("students").document(uid).collection("Opening questionnaire").document("form").update(part4)
+        db.collection("students").document(uid).collection("Opening questionnaire").document("form").set(form1)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {

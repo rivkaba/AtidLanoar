@@ -193,7 +193,12 @@ public class Summary_questionnaire extends AppCompatActivity {
 
                             if (((q110.isChecked()) || (q111.isChecked()) || (q112.isChecked())) && (ch)) {
                              //   Map<String, Object> form = new HashMap<>();
-                                Map<String, Object> part1 = new HashMap<>();
+                                p2.setEnabled(true);
+                                Intent intent = new Intent(Summary_questionnaire.this, Summary_questionnaire_2.class);
+                                intent.putExtra("gender", q1);
+                                intent.putExtra("age", agee.getText().toString());
+                                startActivity(intent);
+                              /*  Map<String, Object> part1 = new HashMap<>();
                                 part1.put("gender", q1);
                                 part1.put("age", agee.getText().toString());
                                // form.put("form",part1);
@@ -222,7 +227,7 @@ public class Summary_questionnaire extends AppCompatActivity {
                                 else{
                                     Toast.makeText(Summary_questionnaire.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
 
-                                }
+                                }*/
 
                         }
                     }

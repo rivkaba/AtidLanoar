@@ -79,22 +79,22 @@ public class Summary_questionnaire_3 extends AppCompatActivity {
 
     public int  send2(){
 
-        if(Objects.equals(q31.getRating(), "0.0")) {
+        if(Objects.equals(q31.getRating(), 0.0)) {
              qq31.setError("דרושה התשובה שלך");
             qq31.requestFocus();
             return 0;
         }
-        if(Objects.equals(q32.getRating(), "0.0")) {
+        if(Objects.equals(q32.getRating(), 0.0)) {
             qq32.setError("דרושה התשובה שלך");
             qq32.requestFocus();
             return 0;
         }
-        if(Objects.equals(q33.getRating(), "0.0")) {
+        if(Objects.equals(q33.getRating(), 0.0)) {
             qq33.setError("דרושה התשובה שלך");
             qq33.requestFocus();
             return 0;
         }
-        if(Objects.equals(q34.getRating(), "0.0")) {
+        if(Objects.equals(q34.getRating(), 0.0)) {
             qq34.setError("דרושה התשובה שלך");
             qq34.requestFocus();
             return 0;
@@ -106,8 +106,33 @@ public class Summary_questionnaire_3 extends AppCompatActivity {
 
     public void save(View view) {
         if  (send2()==1) {
-            //  FirebaseFirestore.setLoggingEnabled(true);
 
+            String q311= String.valueOf(Math.round(q31.getRating()));
+            String q321= String.valueOf(Math.round(q32.getRating()));
+            String q331= String.valueOf(Math.round(q33.getRating()));
+            String q341= String.valueOf(Math.round(q34.getRating()));
+            p4.setEnabled(true);
+            Intent intent = new Intent(Summary_questionnaire_3.this, Summary_questionnaire_4.class);
+            intent.putExtra("gender", getIntent().getExtras().getString("gender"));
+            intent.putExtra("age", getIntent().getExtras().getString("age"));
+            intent.putExtra("q1", getIntent().getExtras().getString("q1"));
+            intent.putExtra("q2", getIntent().getExtras().getString("q2"));
+            intent.putExtra("q3", getIntent().getExtras().getString("q3"));
+            intent.putExtra("q4", getIntent().getExtras().getString("q4"));
+            intent.putExtra("q5", getIntent().getExtras().getString("q5"));
+            intent.putExtra("q6", getIntent().getExtras().getString("q6"));
+            intent.putExtra("q7", getIntent().getExtras().getString("q7"));
+            intent.putExtra("q8", getIntent().getExtras().getString("q8"));
+            intent.putExtra("q9", getIntent().getExtras().getString("q9"));
+            intent.putExtra("q10", getIntent().getExtras().getString("q10"));
+            intent.putExtra("q11", getIntent().getExtras().getString("q11"));
+            intent.putExtra("q2_1",  q311);
+            intent.putExtra("q2_2", q321);
+            intent.putExtra("q2_3", q331);
+            intent.putExtra("q2_4", q341);
+            startActivity(intent);
+            //  FirebaseFirestore.setLoggingEnabled(true);
+/*
             Map<String, Object> part3 = new HashMap<>();
 
             part3.put("q2_1", q31.getRating());
@@ -137,7 +162,7 @@ public class Summary_questionnaire_3 extends AppCompatActivity {
                             Toast.makeText(Summary_questionnaire_3.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
 
                         }
-                    });
+                    });*/
 
 
         }

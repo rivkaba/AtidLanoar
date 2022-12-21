@@ -134,7 +134,6 @@
                 android:layout_marginTop="32dp"
                 android:text="יש לי מיומנויות שיעזרו לי להשתלב בשוק העבודה (עמידה בזמנים, יכולת הצגה עצמית, התמדה)."
                 android:textSize="22sp"
-                android:textColor="@color/black"
                 />
 
             <RadioGroup
@@ -232,6 +231,7 @@
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked22"
                     android:text="במידה סבירה"
+                    app:buttonTint="@color/black"
                     android:textSize="22sp" />
 
 
@@ -252,7 +252,6 @@
                     android:onClick="onRadioButtonClicked22"
                     android:text="במידה רבה מאוד"
                     app:buttonTint="@color/black"
-                    android:shadowColor="@color/black"
                     android:textSize="22sp" />
 
 

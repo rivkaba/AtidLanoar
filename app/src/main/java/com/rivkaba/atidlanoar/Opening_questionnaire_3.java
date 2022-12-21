@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.Console;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -52,7 +53,6 @@ Button p4;
         qq33 = (TextView) findViewById(R.id.qq33);
         qq34 = (TextView) findViewById(R.id.qq34);
 
-
     }
 
     public void P1(View view) {
@@ -76,7 +76,32 @@ Button p4;
 //part3
     public void save(View view) {
         if(send2()==1) {
-            Map<String, Object> part3 = new HashMap<>();
+            String q311= String.valueOf(Math.round(q31.getRating()));
+            String q321= String.valueOf(Math.round(q32.getRating()));
+            String q331= String.valueOf(Math.round(q33.getRating()));
+            String q341= String.valueOf(Math.round(q34.getRating()));
+
+            p4.setEnabled(true);
+            Intent intent = new Intent(Opening_questionnaire_3.this, Opening_questionnaire_4.class);
+            intent.putExtra("gender", getIntent().getExtras().getString("gender"));
+            intent.putExtra("age", getIntent().getExtras().getString("age"));
+            intent.putExtra("q1", getIntent().getExtras().getString("q1"));
+            intent.putExtra("q2", getIntent().getExtras().getString("q2"));
+            intent.putExtra("q3", getIntent().getExtras().getString("q3"));
+            intent.putExtra("q4", getIntent().getExtras().getString("q4"));
+            intent.putExtra("q5", getIntent().getExtras().getString("q5"));
+            intent.putExtra("q6", getIntent().getExtras().getString("q6"));
+            intent.putExtra("q7", getIntent().getExtras().getString("q7"));
+            intent.putExtra("q8", getIntent().getExtras().getString("q8"));
+            intent.putExtra("q9", getIntent().getExtras().getString("q9"));
+            intent.putExtra("q10", getIntent().getExtras().getString("q10"));
+            intent.putExtra("q11", getIntent().getExtras().getString("q11"));
+            intent.putExtra("q2_1",  q311);
+            intent.putExtra("q2_2", q321);
+            intent.putExtra("q2_3", q331);
+            intent.putExtra("q2_4", q341);
+            startActivity(intent);
+         /*   Map<String, Object> part3 = new HashMap<>();
 
             part3.put("q2_1", q31.getRating());
             part3.put("q2_2", q32.getRating());
@@ -103,7 +128,7 @@ Button p4;
                             Toast.makeText(Opening_questionnaire_3.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
 
                         }
-                    });
+                    });*/
         }
 
     }

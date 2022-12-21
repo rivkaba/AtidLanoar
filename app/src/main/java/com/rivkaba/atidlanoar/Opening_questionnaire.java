@@ -178,11 +178,16 @@ public class Opening_questionnaire extends AppCompatActivity {
 
         if (((q110.isChecked()) || (q111.isChecked()) || (q112.isChecked())) && (ch)) {
             //Map<String, Object> form = new HashMap<>();
-            Map<String, Object> part1 = new HashMap<>();
+           /* Map<String, Object> part1 = new HashMap<>();
             part1.put("gender", q1);
-            part1.put("age", age.getText().toString());
+            part1.put("age", age.getText().toString());*/
+            p2.setEnabled(true);
+            Intent intent = new Intent(Opening_questionnaire.this, Opening_questionnaire_2.class);
+            intent.putExtra("gender", q1);
+            intent.putExtra("age", age.getText().toString());
+            startActivity(intent);
           //  form.put("form",part1);
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+          /*  FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             if (user != null) {
                 uid = user.getUid();
 
@@ -204,7 +209,7 @@ public class Opening_questionnaire extends AppCompatActivity {
                                 Toast.makeText(Opening_questionnaire.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
 
                             }
-                        });
+                        });*/
             }
             else {
                 Toast.makeText(Opening_questionnaire.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
@@ -213,4 +218,3 @@ public class Opening_questionnaire extends AppCompatActivity {
             }
         }
 
-}

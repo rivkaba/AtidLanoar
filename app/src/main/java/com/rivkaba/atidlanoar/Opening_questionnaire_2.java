@@ -504,6 +504,23 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
 
     public void save(View view) {
         if(send2()==1) {
+        p3.setEnabled(true);
+        Intent intent = new Intent(Opening_questionnaire_2.this, Opening_questionnaire_3.class);
+        intent.putExtra("gender", getIntent().getExtras().getString("gender"));
+        intent.putExtra("age", getIntent().getExtras().getString("age"));
+        intent.putExtra("q1", q21);
+        intent.putExtra("q2", q22);
+        intent.putExtra("q3", q23);
+        intent.putExtra("q4", q24);
+        intent.putExtra("q5", q25);
+        intent.putExtra("q6", q26);
+        intent.putExtra("q7", q27);
+        intent.putExtra("q8", q28);
+        intent.putExtra("q9", q29);
+        intent.putExtra("q10", q210);
+        intent.putExtra("q11", q211);
+        startActivity(intent);
+      /*  if(send2()==1) {
             Map<String, Object> form = new HashMap<>();
             Map<String, Object> part2 = new HashMap<>();
             part2.put("q1", q21);
@@ -538,7 +555,7 @@ public class Opening_questionnaire_2 extends AppCompatActivity {
                             Toast.makeText(Opening_questionnaire_2.this, "השמירה נכשלה", Toast.LENGTH_LONG).show();
 
                         }
-                    });
+                    });*/
         }
 
     }
